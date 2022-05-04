@@ -1,0 +1,10 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
+
+.ex {
+  font-family: "NanumSquare", san-serif;
+  margin: 1rem 1rem;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}

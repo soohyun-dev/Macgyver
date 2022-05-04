@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&family=Yeon+Sung&display=swap");
+
+* {
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.loginTitle {
+  padding-bottom: 50px;
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 20px;
+  color: #4b636e;
+}
+
+#login {
+  margin: 50px auto 0 auto;
+  align-items: center;
+  border: none;
+  padding: 60px;
+  width: 400px;
+  height: 100%;
+  text-align: center;
+}
+
+.loginBlock {
+  font-size: 15px;
+  padding: 10px;
+  width: 260px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border: 3px solid #babdbe;
+}
+
+.loginClick {
+  font-size: 15px;
+  padding: 5px 20px 5px 20px;
+  margin: 20px 0 20px 10px;
+  border: none;
+  width: 260px;
+  color: #fff;
+  background-color: #00e676;
+}
+
+.loginClick:hover {
+  background-color: #babdbe;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.loginClick a {
+  color: #fff;
+}
+
+.loginBack {
+  text-decoration-line: none;
+}
+
+.signUp {
+  font-size: 15px;
+  padding: 5px 20px 5px 20px;
+  margin: 0px 0 20px 10px;
+  border: none;
+  width: 260px;
+  color: #fff;
+  background-color: #00b248;
+}
+
+.signUp:hover {
+  background-color: #babdbe;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link {
+  text-align: right;
+  font-size: 12px;
+  color: #9b9b9b;
+  opacity: 70%;
+  padding-bottom: 120px;
+  margin-top: 10px;
+  margin-right: 15px;
+}

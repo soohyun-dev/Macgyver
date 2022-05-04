@@ -1,0 +1,110 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&family=Yeon+Sung&display=swap");
+
+* {
+  margin: 0rem;
+}
+
+.main-box {
+  background-image: url("./images/campfire.jpg");
+  background-size: 210vh 130vh;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.main-text {
+  justify-content: right;
+  display: flex;
+  flex-direction: column;
+  padding-right: 200px;
+}
+
+.main-text i {
+  color: white;
+  display: block;
+}
+
+.catagory {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-size: 48px;
+  padding-right: 15px;
+  margin-bottom: 70px;
+}
+.catagory a {
+  padding: 15px 18px;
+  text-decoration: none;
+  color: white;
+}
+
+.catagory a:nth-child(1) {
+  color: yellow;
+}
+
+.catagory a:nth-child(2) {
+  color: greenyellow;
+}
+
+.catagory a:nth-child(3) {
+  color: rgb(241, 177, 66);
+}
+
+.catagory a:nth-child(4) {
+  color: rgb(47, 175, 255);
+}
+
+.catagory a:hover {
+  opacity: 60%;
+  transition: 0.4s;
+}
+
+.content {
+  text-align: right;
+}
+
+.content span {
+  color: white;
+  display: block;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.content span:nth-child(1) {
+  font-size: 40px;
+  font-family: "Do Hyeon", sans-serif;
+}
+
+.content span:nth-child(2) {
+  font-size: 40px;
+  font-family: "Do Hyeon", sans-serif;
+}
+.content span:nth-child(3) {
+  margin-top: 15px;
+  font-size: 50px;
+  font-family: "Do Hyeon", sans-serif;
+  opacity: 20%;
+}
+
+.content span:nth-child(3):after {
+  display: block;
+  content: "";
+  border-bottom: solid 4px #90cc00;
+  transform: scaleX(0);
+  transition: transform 700ms ease-in-out;
+}
+
+.content span:nth-child(3):hover {
+  opacity: 100%;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.content span:nth-child(3):hover:after {
+  transform: scaleX(1);
+  transform-origin: 0% 50%;
+}
