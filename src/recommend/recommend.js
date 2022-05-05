@@ -1,25 +1,27 @@
 import "./recommend.css";
 import "../style.css";
 import Navi from "../Navi";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
+import RecommendTitle from "./recommendTitle";
 
 const Recommend = () => {
   return (
     <>
       <Navi />
-      <section id="myPageTitle">
-        <h1 className="titleText">
-          <span>윤수현</span>님에게 추천해드려요!
-        </h1>
-      </section>
+      <RecommendTitle />
       <section className="recommend">
         <div className="recommendBlock">
-          <div className="recommendImg"></div>
+          <div className="recommendImg">
+            <img src={"img/rec01.jpg"} alt="recommend01" />
+          </div>
           <div className="rating">
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
-            <i className="fa fa-star"></i>
+            <FontAwesomeIcon icon={faStar} className="star" />
+            <FontAwesomeIcon icon={faStar} className="star" />
+            <FontAwesomeIcon icon={faStar} className="star" />
+            <FontAwesomeIcon icon={faStar} className="star" />
+            <FontAwesomeIcon icon={faStar} className="star" />
           </div>
           <div className="recommendContent">
             <div className="recommendContentTitle">

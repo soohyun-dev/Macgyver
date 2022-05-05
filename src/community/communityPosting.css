@@ -1,0 +1,64 @@
+#posting {
+  width: 100%;
+  display: inline-block;
+}
+
+.postingBlock {
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 80px;
+}
+
+.postingBlock .postingContent {
+  display: inline-block;
+  justify-content: space-between;
+  width: 49vh;
+  height: 50vh;
+  margin: 40px 20px 20px 50px;
+  border-radius: 10px;
+  background-color: #eeeeee;
+  text-align: center;
+  overflow: hidden;
+}
+
+.postingContent:hover {
+  cursor: pointer;
+  box-shadow: 0 15px 20px rgba(92, 89, 89, 0.2),
+    0 10px 14px rgba(92, 79, 79, 0.2);
+  transform: translateY(-10px) translateX(5px);
+  transition: 0.6s;
+}
+
+.postingTitle {
+  font-size: 18px;
+  margin-bottom: 20px 0;
+  padding: 15px 0;
+}
+
+/* 포스팅 제목 */
+.postingTitle p {
+  text-decoration-line: none;
+  font-weight: bold;
+}
+
+.postingTitle p:hover {
+  color: rgb(120, 118, 118);
+}
+
+.tag {
+  margin: 20px 0 10px 20px;
+  text-align: left;
+  opacity: 0.5;
+}
+
+.tag p {
+  cursor: pointer;
+  display: inline-block;
+}
+
+#posting .postingImg img {
+  height: auto;
+  max-width: 90%;
+  max-height: 270px;
+  border-radius: 5px;
+}

@@ -1,0 +1,130 @@
+p {
+  display: inline;
+}
+
+#postingBlock {
+  margin: 50px auto 0 auto;
+  align-items: center;
+  border: none;
+  padding: 20px;
+  width: 800px;
+  height: 100%;
+  text-align: center;
+  font-size: 32px;
+  border-bottom: 1px solid #000;
+}
+
+#postingBlock p {
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+.postingImg {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.postingImg img {
+  height: auto;
+  max-width: 90%;
+  max-height: 500px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.postingContent {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.postingComment {
+  text-align: center;
+  padding: 30px 0;
+}
+.postingComment p {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.postingComment input {
+  width: 500px;
+  height: 25px;
+  margin: 0 10px;
+}
+
+.likeDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonContainer {
+  margin-left: 20px;
+}
+.buttonContainer button:hover {
+  cursor: pointer;
+}
+
+.like {
+  background-color: #fff;
+  border: 2px solid #2f9fe9;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #2199e8;
+}
+.like:hover {
+  border: 2px solid #bcbcbc;
+  transition: 0.5s;
+}
+
+.dislike {
+  background-color: #fff;
+  border: 2px solid #ef4d4d;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #ed4545;
+}
+.dislike:hover {
+  border: 2px solid #bcbcbc;
+  transition: 0.5s;
+}
+
+hr {
+  text-align: center;
+  width: 50%;
+  margin-left: 375px;
+  margin-top: 20px;
+}
+
+.commentWrite {
+  display: inline-block;
+  padding: 20px 0;
+  width: 57%;
+  text-align: center;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.commentWrite div {
+  text-align: center;
+  display: inline-block;
+}
+
+.postingComment .commentContent {
+  width: 50%;
+}
+
+.postingComment .commentId {
+  width: 20%;
+}
+
+.commentId span {
+  color: rgb(120, 118, 118);
+  cursor: pointer;
+}
+
+.postingComment .commentDay {
+  width: 25%;
+}
+
+.commentDay span {
+  color: rgb(120, 118, 118);
+}

@@ -1,0 +1,21 @@
+#announceBlock {
+  margin: 20px auto 0 auto;
+  align-items: center;
+  border: none;
+  padding: 60px;
+  width: 800px;
+  height: 100%;
+  text-align: center;
+  font-size: 32px;
+}
+
+#announceBlock p {
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+.announceTitle {
+  display: inline;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,82 @@
+#reportClassify {
+  margin-top: 60px;
+  display: inline-block;
+  margin-left: 100px;
+  padding: 10px 0;
+  width: 87%;
+  border-bottom: 2px solid #000f;
+}
+
+#reportClassify div {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+}
+
+.reportName {
+  width: 63%;
+}
+
+.reportId {
+  width: 12%;
+}
+
+.reportDay {
+  width: 10%;
+}
+
+.postingPage {
+  margin: 100px 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.postingPage li {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.postingPage li p {
+  text-decoration-line: none;
+  font-size: 17px;
+  padding: 5px 5px;
+}
+
+.postingPage li p:hover {
+  color: blue;
+}
+
+#reportPost {
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 110px;
+  padding: 10px 0;
+  width: 85%;
+  border-bottom: 1px solid #000f;
+}
+
+#reportPost div {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+}
+
+.postName {
+  width: 63%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.postId {
+  width: 13%;
+  font-size: 14px;
+}
+
+.postId p {
+  color: rgb(120, 118, 118);
+}
+
+.postDay {
+  width: 10%;
+  font-size: 14px;
+}

@@ -1,9 +1,10 @@
 import "./App.css";
-import Recommend from "./recommend/recommend";
+import Report from "./community/report";
+
 const App = () => {
   return (
     <>
-      <Recommend />
+      <Report />
     </>
   );
 };

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+.postingPage {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.postingPage li {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.postingPage li p {
+  text-decoration-line: none;
+  font-size: 17px;
+  padding: 5px 5px;
+}
+
+.postingPage li p:hover {
+  color: blue;
+}
+
+#postingBlock {
+  display: inline-block;
+}

@@ -1,0 +1,21 @@
+p {
+  display: inline;
+}
+
+.reportTitle {
+  margin: 60px 80px 0 80px;
+  padding-left: 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.reportTitle p {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.reportTitle p span {
+  font-size: 24px;
+  margin-left: 50px;
+  color: rgb(230, 94, 94);
+}

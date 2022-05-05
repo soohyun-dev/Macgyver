@@ -1,0 +1,172 @@
+#myPageTitle {
+  margin: 20px auto 0 auto;
+  align-items: center;
+  border: none;
+  padding: 60px;
+  width: 100%;
+  max-width: 170vh;
+  height: 100%;
+  text-align: left;
+  font-size: 28px;
+}
+
+#myPageTitle p span {
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.recommend {
+  margin: 20px auto 0 auto;
+  width: 100%;
+  height: 100%;
+  max-width: 170vh;
+}
+
+.recommendBlock {
+  width: 30%;
+  display: inline-block;
+  margin: 0 20px 50px 0;
+}
+
+.recommendImg img {
+  height: auto;
+  width: 100%;
+  max-height: 200px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.rating {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.rating:hover {
+  cursor: pointer;
+}
+
+.rating {
+  color: #edf034;
+  font-size: 24px;
+}
+
+.recommendContent {
+  width: 100%;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.recommendContent div {
+  display: block;
+}
+
+.recommendContentTitle p {
+  font-size: 24px;
+  font-weight: 900;
+  padding: 20px 0;
+}
+
+.recommendContentTitle i {
+  font-size: 32px;
+  float: right;
+  margin-right: 20px;
+}
+
+.recommendContentTitle i:hover {
+  cursor: pointer;
+}
+
+.recommendContentContent p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.recommendContentButton p {
+  background-color: rgb(39, 198, 39);
+  border-radius: 5px;
+  max-width: 70px;
+  padding: 5px 10px;
+}
+
+.recommendContentButton p:hover {
+  background-color: rgb(163, 247, 247);
+  color: black;
+  transition: 0.5s;
+}
+
+#myComment {
+  margin: 20px 0 100px 0;
+  display: inline-block;
+  margin-left: 110px;
+  padding: 10px 0;
+  width: 85%;
+  border-bottom: 1px solid #000f;
+}
+
+#myComment div {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+}
+
+.delComment {
+  background-color: rgb(248, 115, 115);
+  color: #000;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+
+.delComment:hover {
+  cursor: pointer;
+  background-color: #bcbcbc;
+  transition: 0.3;
+}
+
+.loginSetting {
+  text-align: center;
+}
+
+.loginSettingBlock {
+  padding: 50px 0;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+.loginSettingBlock p {
+  border: none;
+  margin: 0px 50px 10px 0;
+  width: 100%;
+  max-width: 50px;
+  text-decoration: none;
+}
+
+.loginModify {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 20px 5px 20px;
+  background-color: rgb(98, 246, 209);
+  border-radius: 5px;
+}
+
+.loginModify:hover {
+  cursor: pointer;
+  background-color: #babdbe;
+  color: white;
+  transition: 0.3s;
+}
+
+.widrawalBlock {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 40px 5px 40px;
+  background-color: rgb(246, 98, 98);
+  border-radius: 5px;
+}
+
+.widrawalBlock:hover {
+  cursor: pointer;
+  background-color: #babdbe;
+  color: white;
+  transition: 0.3s;
+}

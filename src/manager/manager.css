@@ -1,0 +1,197 @@
+p {
+  display: inline-block;
+}
+
+.managerTitle {
+  margin: 60px 80px 0 80px;
+  padding-left: 60px;
+  border-bottom: 1px solid #000;
+}
+
+.managerTitle p {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.managerTitle p span {
+  font-size: 24px;
+  margin-left: 50px;
+  color: rgb(230, 94, 94);
+}
+
+#managerClassify {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 100px;
+  padding: 10px 0;
+  width: 87%;
+  border-bottom: 2px solid #000f;
+  font-size: 16px;
+}
+
+#managerClassify div {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+}
+
+#managerCatagory {
+  margin-top: 60px;
+  display: inline-block;
+  margin-left: 100px;
+  width: 87%;
+  border-bottom: 4px solid #000f;
+}
+
+#managerCatagory div {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* 관리자 모드 카테고리*/
+
+#managerCatagory p {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 0 0;
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid;
+  cursor: pointer;
+}
+
+.memberManage {
+  max-width: 33%;
+  width: 100%;
+}
+
+.postingManage {
+  max-width: 33%;
+  width: 100%;
+}
+
+.announceWrite {
+  max-width: 33%;
+  width: 100%;
+}
+
+.memberManage p {
+  background-color: black;
+  color: #fff;
+}
+
+.memberManage p:hover {
+  background-color: #fff;
+  color: black;
+  transition: 0.3s;
+}
+
+.postingManage p:hover {
+  background-color: rgb(153, 148, 148);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.announceWrite p:hover {
+  background-color: rgb(153, 148, 148);
+  color: #fff;
+  transition: 0.3s;
+}
+
+/* 관리자 모드 회원관리 분류 */
+
+#managerClassify p {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 0 0;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.managerId {
+  max-width: 33%;
+  width: 100%;
+}
+
+.managerDay {
+  max-width: 33%;
+  width: 100%;
+}
+
+.managerModify {
+  max-width: 33%;
+  width: 100%;
+}
+
+/* 관리자 모드 회원관리 내용 */
+
+.memberManagePost {
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 110px;
+
+  width: 85%;
+  border-bottom: 1px solid #000f;
+}
+
+.memberManagePost div {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+}
+
+.postId {
+  width: 33%;
+  font-size: 14px;
+}
+
+.postId p {
+  color: rgb(120, 118, 118);
+}
+
+.postDay {
+  width: 33%;
+  font-size: 14px;
+}
+
+.postModify {
+  width: 33%;
+  font-size: 14px;
+}
+
+.postModify p {
+  cursor: pointer;
+  background-color: rgb(244, 140, 140);
+  color: #fff;
+  padding: 5px 20px;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+
+.postModify p:hover {
+  background-color: #fff;
+  color: rgb(77, 76, 76);
+  transition: 0.4s;
+}
+
+.postingPage {
+  margin: 100px 0;
+  text-align: center;
+}
+
+.postingPage li {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.postingPage li p {
+  text-decoration-line: none;
+  font-size: 17px;
+  padding: 5px 5px;
+}
+
+.postingPage li p:hover {
+  color: blue;
+}

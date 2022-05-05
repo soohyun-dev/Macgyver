@@ -1,0 +1,34 @@
+#reportPost {
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 110px;
+  padding: 10px 0;
+  width: 85%;
+  border-bottom: 1px solid #000f;
+}
+
+#reportPost div {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+}
+
+.postName {
+  width: 63%;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.postId {
+  width: 13%;
+  font-size: 14px;
+}
+
+.postId p {
+  color: rgb(120, 118, 118);
+}
+
+.postDay {
+  width: 10%;
+  font-size: 14px;
+}

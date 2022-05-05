@@ -1,0 +1,59 @@
+p {
+  display: inline-block;
+}
+
+#recommendContent {
+  margin: 0px auto 0 auto;
+  align-items: center;
+  border: none;
+  padding: 20px;
+  width: 800px;
+  height: 100%;
+  text-align: center;
+  font-size: 32px;
+}
+
+.campingName {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.campingImg img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.campingRating {
+  color: #edf034;
+  font-size: 24px;
+}
+
+.campingContent {
+  margin: 50px 0;
+}
+
+.campingContent p {
+  font-size: 16px;
+}
+
+.campingContent p {
+  font-size: 14px;
+}
+
+.campingTag {
+  margin: 100px 0;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.campingTag p {
+  color: rgb(77, 76, 76);
+}
+
+.campingLocation {
+  margin: 50px 0;
+  font-size: 20px;
+  font-weight: 900;
+}

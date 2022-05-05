@@ -1,0 +1,97 @@
+p {
+  display: inline-block;
+}
+
+.memberManage p:nth-child(1) {
+  background-color: #fff;
+  color: #000;
+}
+
+.memberManage p:hover {
+  background-color: rgb(153, 148, 148);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.postingManage p {
+  background-color: #000;
+  color: #fff;
+}
+
+.announceWrite p {
+  background-color: #fff;
+  color: #000;
+}
+
+.managerPostingTitle {
+  max-width: 45%;
+  width: 100%;
+}
+
+.managerPostingId {
+  max-width: 15%;
+  width: 100%;
+}
+
+.managerPostingDay {
+  max-width: 15%;
+  width: 100%;
+}
+.managerPostingModify {
+  max-width: 20%;
+  width: 100%;
+}
+
+.managerPosting {
+  margin-top: 20px;
+  display: inline-block;
+  margin-left: 110px;
+
+  width: 85%;
+  border-bottom: 1px solid #000f;
+}
+
+.managerPosting div {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+}
+
+.postingTitle {
+  max-width: 45%;
+  width: 100%;
+}
+
+.postingTitle a {
+  color: rgb(120, 118, 118);
+}
+
+.postingId {
+  max-width: 15%;
+  width: 100%;
+}
+
+.postingDay {
+  max-width: 15%;
+  width: 100%;
+}
+.postingModify {
+  max-width: 20%;
+  width: 100%;
+}
+
+.postingModify p {
+  cursor: pointer;
+  background-color: rgb(244, 140, 140);
+  color: #fff;
+  padding: 5px 20px;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+
+.postingModify p:hover {
+  background-color: #fff;
+  color: rgb(77, 76, 76);
+  border: 1px solid;
+  transition: 0.4s;
+}

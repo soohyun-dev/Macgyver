@@ -7,7 +7,7 @@
 }
 
 .main-box {
-  background-image: url("./images/campfire.jpg");
+  background-image: url("../public/img/campfire.jpg");
   background-size: 210vh 130vh;
   height: 100vh;
   width: 100%;

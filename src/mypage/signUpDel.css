@@ -1,0 +1,40 @@
+p {
+  display: inline-block;
+}
+
+.idFindBlock div {
+  padding: 20px 0;
+}
+
+.signUpDelText p {
+  color: rgb(231, 36, 36);
+  display: inline-block;
+  font-weight: 700;
+}
+
+.signUpDelText p:nth-child(1) {
+  margin-top: 20px;
+}
+
+.signUpDelButton {
+  padding-top: 30px;
+}
+
+.signUpDelSubmit p {
+  font-weight: 700;
+}
+
+.signUpDelSubmit {
+  font-size: 14px;
+  padding: 5px 20px 5px 20px;
+  background-color: #c0cfff;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.signUpDelSubmit:hover {
+  cursor: pointer;
+  background-color: #5870cb;
+  color: white;
+  transition: 0.3s;
+}

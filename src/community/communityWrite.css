@@ -1,0 +1,112 @@
+p {
+  display: inline;
+}
+
+.managerTitle {
+  margin: 60px 80px 0 80px;
+  padding-left: 60px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.managerTitle p {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.managerTitle p span {
+  font-size: 24px;
+  margin-left: 50px;
+  color: rgb(230, 94, 94);
+}
+
+.memberManage p {
+  background-color: #fff;
+  color: #000;
+}
+
+.postingManage p {
+  background-color: #fff;
+  color: #000;
+}
+
+.announceWrite p {
+  background-color: #000;
+  color: #fff;
+}
+
+.announceWrite p:hover {
+  background-color: rgb(153, 148, 148);
+  color: #fff;
+  transition: 0.3s;
+}
+
+#announceWrite {
+  margin: 20px auto 0 auto;
+  align-items: center;
+  border: none;
+  padding: 60px;
+  width: 800px;
+  height: 100%;
+  text-align: center;
+}
+
+.annWriteTitle {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.annWriteFile {
+  font-size: 11px;
+}
+
+.annWriteTitle input {
+  width: 300px;
+  height: 20px;
+}
+
+.annWriteFile input {
+  width: 300px;
+  height: 20px;
+}
+
+.annWriteWrite {
+  margin: 40px 0;
+}
+
+.annWriteWrite input {
+  width: 800px;
+  height: 700px;
+  border-radius: 5px;
+}
+
+#announceWriteSubmit {
+  text-align: center;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+#announceWriteSubmit p {
+  background-color: aquamarine;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+#announceWriteSubmit p:nth-child(2) {
+  background-color: rgb(237, 150, 245);
+  padding: 10px 17px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+#announceWriteSubmit p:hover {
+  background-color: azure;
+  color: #000;
+  transition: 0.4s;
+}
+
+.communityCatagory {
+  margin-right: 230px;
+  font-size: 11px;
+  padding: 10px 0;
+}

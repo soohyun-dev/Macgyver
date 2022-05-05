@@ -1,0 +1,31 @@
+p {
+  display: inline-block;
+}
+
+#myPageTitle {
+  margin: 20px auto 0 auto;
+  align-items: center;
+  border: none;
+  padding: 60px;
+  width: 100%;
+  max-width: 170vh;
+  height: 100%;
+  text-align: left;
+  font-size: 28px;
+}
+
+#myPageTitle p {
+  font-weight: 900;
+  font-size: 24px;
+}
+
+#myPageTitle p span {
+  font-weight: 900;
+  font-size: 32px;
+}
+
+hr {
+  border: 0;
+  height: 10px;
+  box-shadow: 0 10px 10px -10px #bbb inset;
+}
