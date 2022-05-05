@@ -1,7 +1,5 @@
 # Macgyver Reac Code
 
-<hr />
-
 2022년 5월 5일 ~ 6일
 React Code 생성
 - 메인화면
