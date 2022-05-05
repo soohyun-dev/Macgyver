@@ -1,15 +1,15 @@
-#posting {
+#cmPosting {
   width: 100%;
   display: inline-block;
 }
 
-.postingBlock {
+.cmPostingBlock {
   margin-top: 20px;
   display: inline-block;
   margin-left: 80px;
 }
 
-.postingBlock .postingContent {
+.cmPostingBlock .cmPostingContent {
   display: inline-block;
   justify-content: space-between;
   width: 49vh;
@@ -21,7 +21,7 @@
   overflow: hidden;
 }
 
-.postingContent:hover {
+.cmPostingContent:hover {
   cursor: pointer;
   box-shadow: 0 15px 20px rgba(92, 89, 89, 0.2),
     0 10px 14px rgba(92, 79, 79, 0.2);
@@ -29,19 +29,19 @@
   transition: 0.6s;
 }
 
-.postingTitle {
+.cmPostingTitle {
   font-size: 18px;
   margin-bottom: 20px 0;
   padding: 15px 0;
 }
 
 /* 포스팅 제목 */
-.postingTitle p {
+.cmPostingTitle p {
   text-decoration-line: none;
   font-weight: bold;
 }
 
-.postingTitle p:hover {
+.cmPostingTitle p:hover {
   color: rgb(120, 118, 118);
 }
 
@@ -52,11 +52,12 @@
 }
 
 .tag p {
+  font-size: 15px;
   cursor: pointer;
   display: inline-block;
 }
 
-#posting .postingImg img {
+#cmPosting .cmPostingImg img {
   height: auto;
   max-width: 90%;
   max-height: 270px;

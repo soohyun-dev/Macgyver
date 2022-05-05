@@ -1,15 +1,18 @@
+import { Link } from "react-router-dom";
 import "./communityPosting.css";
 
 const CommunityPosting = () => {
   return (
     <>
-      <section id="posting">
-        <div className="postingBlock">
-          <div className="postingContent">
-            <div className="postingTitle">
-              <p>풍경 죽이죠?</p>
+      <section id="cmPosting">
+        <div className="cmPostingBlock">
+          <div className="cmPostingContent">
+            <div className="cmPostingTitle">
+              <Link to="/posting">
+                <p>풍경 죽이죠?</p>
+              </Link>
             </div>
-            <div className="postingImg">
+            <div className="cmPostingImg">
               <img src={"img/postingImg.jpg"} alt="" />
             </div>
             <div className="tag">

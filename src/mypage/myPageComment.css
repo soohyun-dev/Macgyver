@@ -1,0 +1,27 @@
+#myComment {
+  margin: 20px 0 0px 0;
+  display: inline-block;
+  margin-left: 110px;
+  padding: 10px 0;
+  width: 85%;
+  border-bottom: 1px solid #000f;
+}
+
+#myComment div {
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+}
+
+.delComment {
+  background-color: rgb(248, 115, 115);
+  color: #000;
+  border-radius: 5px;
+  padding: 5px 5px;
+}
+
+.delComment:hover {
+  cursor: pointer;
+  background-color: #bcbcbc;
+  transition: 0.3;
+}

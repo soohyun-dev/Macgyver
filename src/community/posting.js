@@ -2,21 +2,22 @@ import Navi from "../Navi";
 import "./posting.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import "./communityPosting.css";
 
 const Posting = () => {
   return (
     <>
       <Navi />
-      <section id="postingBlock">
-        <p className="postingTitle">풍경 죽이죠?</p>
+      <section id="cmPostingBlock">
+        <p className="cmPostingTitle">풍경 죽이죠?</p>
       </section>
       <section id="psImg">
-        <div className="postingImg">
+        <div className="cmPostingImg">
           <img src={"img/postingImg.jpg"} alt="" />
         </div>
       </section>
       <section>
-        <div className="postingContent">
+        <div className="cmPostingContent">
           <p>이번에 고원가서 찍은 사진입니다. 잘나와서 올려봅니다 ㅎㅎ</p>
         </div>
       </section>
@@ -38,7 +39,7 @@ const Posting = () => {
       <hr />
 
       <section>
-        <div className="postingComment">
+        <div className="cmPostingComment">
           <p>댓글</p>
           <input />
           <button>확인</button>
@@ -48,7 +49,7 @@ const Posting = () => {
       <hr />
 
       <section id="comment">
-        <div className="postingComment">
+        <div className="cmPostingComment">
           <div className="commentWrite">
             <div className="commentContent">
               <p>오 잘나왔네요</p>

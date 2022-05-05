@@ -1,6 +1,7 @@
 import Navi from "../Navi";
 import "./signUpDel.css";
 import "../login/idFind.css";
+import { Link } from "react-router-dom";
 
 const SignUpDel = () => {
   return (
@@ -23,9 +24,11 @@ const SignUpDel = () => {
           <p href="login.html" className="signUpDelSubmit">
             예
           </p>
-          <p href="login.html" className="signUpDelSubmit">
-            아니오
-          </p>
+          <Link to="/mypage">
+            <p href="login.html" className="signUpDelSubmit">
+              아니오
+            </p>
+          </Link>
         </div>
       </section>
     </>

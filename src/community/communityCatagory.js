@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./communityCatagory.css";
 
 const communityCatagory = () => {
@@ -6,30 +7,43 @@ const communityCatagory = () => {
       <section id="communityCatagoryBlock">
         <div>
           <div className="leftBlock">
-            <li>
-              <p>HOT</p>
-            </li>
-
-            <li>
-              <p>팁공유</p>
-            </li>
-            <li>
-              <p>자유</p>
-            </li>
-            <li>
-              <p>후기</p>
-            </li>
+            <Link to="/hot">
+              <li style={{ backgroundColor: "#ff5983" }}>
+                <p>HOT</p>
+              </li>
+            </Link>
+            <Link to="/tip">
+              <li style={{ backgroundColor: "#b2ff59" }}>
+                <p>팁공유</p>
+              </li>
+            </Link>
+            <Link to="/free">
+              <li style={{ backgroundColor: "#00e5ff" }}>
+                <p>자유</p>
+              </li>
+            </Link>
+            <Link to="/review">
+              <li style={{ backgroundColor: "#ff9e80" }}>
+                <p>후기</p>
+              </li>
+            </Link>
           </div>
           <div className="rightBlock">
-            <li>
-              <p>신고방</p>
-            </li>
-            <li>
-              <p>공지</p>
-            </li>
-            <li>
-              <p>글쓰기</p>
-            </li>
+            <Link to="/report">
+              <li>
+                <p>신고방</p>
+              </li>
+            </Link>
+            <Link to="/announce">
+              <li>
+                <p>공지</p>
+              </li>
+            </Link>
+            <Link to="/communityWrite">
+              <li>
+                <p>글쓰기</p>
+              </li>
+            </Link>
           </div>
         </div>
       </section>

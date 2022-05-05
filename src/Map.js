@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect } from "react";
+import Navi from "./Navi";
 
 const Map = () => {
   const new_script = (src) => {
@@ -47,6 +48,7 @@ const Map = () => {
   }, []);
   return (
     <>
+      <Navi />
       <div className="App">
         <div id="map" className="map" />
       </div>

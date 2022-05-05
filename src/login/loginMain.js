@@ -2,6 +2,7 @@ import React from "react";
 import Navi from "../Navi";
 import "./loginMain.css";
 import "../style.css";
+import { Link } from "react-router-dom";
 
 const LoginMain = () => {
   return (
@@ -21,13 +22,13 @@ const LoginMain = () => {
             className="loginBlock"
             placeholder="비밀번호"
           />
-          <div className="loginClick">
-            <a href="../myPage.html">로그인</a>
-          </div>
+          <Link to="/myPage">
+            <div className="loginClick">
+              <a href="../myPage.html">로그인</a>
+            </div>
+          </Link>
           <div className="signUp">
-            <a href="signUp.html" className="loginBack">
-              회원가입
-            </a>
+            <a href="signUp.html">회원가입</a>
           </div>
         </form>
         <div className="link">

@@ -2,7 +2,7 @@ import Navi from "../Navi";
 import "./reportPostingContent.css";
 import ReportTitle from "./reportTitle";
 
-const ReportPosting = () => {
+const ReportPostingContent = () => {
   return (
     <>
       <Navi />
@@ -29,4 +29,4 @@ const ReportPosting = () => {
   );
 };
 
-export default ReportPosting;
+export default ReportPostingContent;

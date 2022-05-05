@@ -1,4 +1,4 @@
-#postingBlock {
+#annPostingBlock {
   margin: 50px auto 0 auto;
   align-items: center;
   border: none;
@@ -10,7 +10,7 @@
   border-bottom: 1px solid #000;
 }
 
-#postingBlock p {
+#annPostingBlock p {
   margin-left: 5px;
   font-weight: 700;
 }
@@ -28,12 +28,12 @@
   text-align: center;
 }
 
-.postingContent {
+.annPostingContent {
   margin: 50px 0;
   text-align: center;
 }
 
-.postingContent p {
+.annPostingContent p {
   display: block;
   font-size: 18px;
   font-weight: 600;
@@ -44,6 +44,6 @@
   cursor: pointer;
 }
 
-#content {
+#annPostingContent {
   padding-bottom: 100px;
 }

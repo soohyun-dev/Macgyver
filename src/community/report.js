@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navi from "../Navi";
 import "./report.css";
 import ReportPosting from "./reportPosting";
@@ -19,10 +20,16 @@ const Report = () => {
           <p>작성일</p>
         </div>
       </section>
+      <Link to="/reportPostingContent">
+        <ReportPosting />
+      </Link>
+      <Link to="/reportPostingContent">
+        <ReportPosting />
+      </Link>
+      <Link to="/reportPostingContent">
+        <ReportPosting />
+      </Link>
 
-      <ReportPosting />
-      <ReportPosting />
-      <ReportPosting />
       <section>
         <div className="postingPage">
           <li>
