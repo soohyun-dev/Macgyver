@@ -4,7 +4,8 @@ import "../community/report.css";
 import "../community/reportTitle.css";
 import { Link } from "react-router-dom";
 import MyPageComment from "./myPageCommnet";
-import MyPageRecommend from "./myPageRecommend";
+import CampingContent from "../campingContent";
+import campingItems from "../mock/rcMock.json";
 
 const mypage = () => {
   return (
@@ -15,8 +16,7 @@ const mypage = () => {
           <span>윤수현</span>님의 페이지.
         </p>
       </section>
-      <MyPageRecommend />
-      <MyPageRecommend />
+      <CampingContent items={campingItems} />
 
       <section>
         <div className="reportTitle">
@@ -34,7 +34,6 @@ const mypage = () => {
           <p>작성일</p>
         </div>
       </section>
-      <MyPageComment />
       <MyPageComment />
       <MyPageComment />
 

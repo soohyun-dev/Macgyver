@@ -16,6 +16,10 @@ const Community = () => {
       <section id="postingBlock">
         <CommunityPosting />
         <CommunityPosting />
+        <CommunityPosting />
+        <CommunityPosting />
+        <CommunityPosting />
+        <CommunityPosting />
       </section>
     </>
   );

@@ -13,28 +13,23 @@ p {
   transition: 0.3s;
 }
 
-.postingManage p {
-  background-color: #000;
-  color: #fff;
-}
-
 .announceWrite p {
   background-color: #fff;
   color: #000;
 }
 
 .managerPostingTitle {
-  max-width: 45%;
+  max-width: 40%;
   width: 100%;
 }
 
 .managerPostingId {
-  max-width: 15%;
+  max-width: 17%;
   width: 100%;
 }
 
 .managerPostingDay {
-  max-width: 15%;
+  max-width: 17%;
   width: 100%;
 }
 .managerPostingModify {
@@ -58,7 +53,7 @@ p {
 }
 
 .postingTitle {
-  max-width: 45%;
+  max-width: 40%;
   width: 100%;
 }
 
@@ -67,12 +62,12 @@ p {
 }
 
 .postingId {
-  max-width: 15%;
+  max-width: 17%;
   width: 100%;
 }
 
 .postingDay {
-  max-width: 15%;
+  max-width: 17%;
   width: 100%;
 }
 .postingModify {
@@ -80,18 +75,18 @@ p {
   width: 100%;
 }
 
-.postingModify p {
+.postingModify button {
   cursor: pointer;
   background-color: rgb(244, 140, 140);
   color: #fff;
   padding: 5px 20px;
   margin-left: 30px;
   border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
 }
 
-.postingModify p:hover {
-  background-color: #fff;
-  color: rgb(77, 76, 76);
-  border: 1px solid;
+.postingModify button:hover {
+  background-color: rgb(139, 139, 139);
   transition: 0.4s;
 }

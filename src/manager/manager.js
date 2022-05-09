@@ -1,7 +1,17 @@
+import { Link } from "react-router-dom";
 import Navi from "../Navi";
 import "./manager.css";
+import mockItems from "../mock/userMock.json";
+import MemberList from "./component/memberList";
+import { useState } from "react";
 
 const Manager = () => {
+  const [items, setItems] = useState(mockItems);
+
+  const handleDelete = (id) => {
+    const nextItems = items.filter((item) => item.id !== id);
+    setItems(nextItems);
+  };
   return (
     <>
       <Navi />
@@ -12,15 +22,23 @@ const Manager = () => {
       </section>
 
       <section id="managerCatagory">
-        <div className="memberManage">
-          <p href="#">회원 관리</p>
-        </div>
-        <div className="postingManage">
-          <p href="postMange.html">게시물 관리</p>
-        </div>
-        <div className="announceWrite">
-          <p href="announceWrite.html">공지 작성</p>
-        </div>
+        <Link to="/manager">
+          <div className="memberManage">
+            <p style={{ backgroundColor: "#000", color: "#fff" }}>회원 관리</p>
+          </div>
+        </Link>
+
+        <Link to="/postManager">
+          <div className="postingManage">
+            <p>게시물 관리</p>
+          </div>
+        </Link>
+
+        <Link to="/announceWrite">
+          <div className="announceWrite">
+            <p style={{ backgroundColor: "#fff", color: "#000" }}>공지 작성</p>
+          </div>
+        </Link>
       </section>
 
       <section id="managerClassify">
@@ -35,30 +53,7 @@ const Manager = () => {
         </div>
       </section>
 
-      <section>
-        <div className="memberManagePost">
-          <div className="postId">
-            <p>ilsanCamper</p>
-          </div>
-          <div className="postDay">
-            <p>2022-04-16</p>
-          </div>
-          <div className="postModify">
-            <p href="#">회원 삭제</p>
-          </div>
-        </div>
-        <div className="memberManagePost">
-          <div className="postId">
-            <p>가천컴공생</p>
-          </div>
-          <div className="postDay">
-            <p>2022-04-16</p>
-          </div>
-          <div className="postModify">
-            <p href="#">회원 삭제</p>
-          </div>
-        </div>
-      </section>
+      <MemberList items={items} onDelete={handleDelete} />
 
       <section>
         <div className="postingPage">

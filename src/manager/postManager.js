@@ -1,8 +1,18 @@
 import Navi from "../Navi";
 import "./postManager.css";
 import "./manager.css";
+import { Link } from "react-router-dom";
+import PostingList from "./component/postingList";
+import mockItems from "../mock/cmMock.json";
+import { useState } from "react";
 
 const PostManager = () => {
+  const [items, setItems] = useState(mockItems);
+
+  const handleDelete = (id) => {
+    const nextItems = items.filter((item) => item.id !== id);
+    setItems(nextItems);
+  };
   return (
     <>
       <Navi />
@@ -13,15 +23,25 @@ const PostManager = () => {
       </section>
 
       <section id="managerCatagory">
-        <div className="memberManage">
-          <p href="manager.html">회원 관리</p>
-        </div>
-        <div className="postingManage">
-          <p href="#">게시물 관리</p>
-        </div>
-        <div className="announceWrite">
-          <p href="announceWrite.html">공지 작성</p>
-        </div>
+        <Link to="/manager">
+          <div className="memberManage">
+            <p>회원 관리</p>
+          </div>
+        </Link>
+
+        <Link to="/postManager">
+          <div className="postingManage">
+            <p style={{ backgroundColor: "#000", color: "#fff" }}>
+              게시물 관리
+            </p>
+          </div>
+        </Link>
+
+        <Link to="/announceWrite">
+          <div className="announceWrite">
+            <p style={{ backgroundColor: "#fff", color: "#000" }}>공지 작성</p>
+          </div>
+        </Link>
       </section>
 
       <section id="managerClassify">
@@ -39,37 +59,7 @@ const PostManager = () => {
         </div>
       </section>
 
-      <section>
-        <div className="managerPosting">
-          <div className="postingTitle">
-            <p>풍경 죽이죠?</p>
-          </div>
-          <div className="postingId">
-            <p>라이언</p>
-          </div>
-          <div className="postingDay">
-            <p>2022-04-16</p>
-          </div>
-          <div className="postingModify">
-            <p>게시물 삭제</p>
-          </div>
-        </div>
-
-        <div className="managerPosting">
-          <div className="postingTitle">
-            <p>참좋아요 캠핑장 주기적으로 올라옵니다. 광고 의심됩니다.</p>
-          </div>
-          <div className="postingId">
-            <p>ilsanCamper</p>
-          </div>
-          <div className="postingDay">
-            <p>2022-04-16</p>
-          </div>
-          <div className="postingModify">
-            <p>게시물 삭제</p>
-          </div>
-        </div>
-      </section>
+      <PostingList items={items} onDelete={handleDelete} />
 
       <section>
         <div className="postingPage">

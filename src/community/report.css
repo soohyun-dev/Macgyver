@@ -61,22 +61,22 @@
   font-weight: 700;
 }
 
-.postName {
+.reportPostName {
   width: 63%;
   font-size: 18px;
   cursor: pointer;
 }
 
-.postId {
+.reportPostId {
   width: 13%;
   font-size: 14px;
 }
 
-.postId p {
+.reportPostId p {
   color: rgb(120, 118, 118);
 }
 
-.postDay {
+.reportPostDay {
   width: 10%;
   font-size: 14px;
 }

@@ -1,5 +1,4 @@
 #cmPosting {
-  width: 100%;
   display: inline-block;
 }
 
@@ -7,6 +6,7 @@
   margin-top: 20px;
   display: inline-block;
   margin-left: 80px;
+  max-width: 50vh;
 }
 
 .cmPostingBlock .cmPostingContent {
@@ -14,7 +14,7 @@
   justify-content: space-between;
   width: 49vh;
   height: 50vh;
-  margin: 40px 20px 20px 50px;
+  margin: 40px 0px 20px 30px;
   border-radius: 10px;
   background-color: #eeeeee;
   text-align: center;

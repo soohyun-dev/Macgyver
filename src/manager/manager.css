@@ -76,11 +76,6 @@ p {
   width: 100%;
 }
 
-.memberManage p {
-  background-color: black;
-  color: #fff;
-}
-
 .memberManage p:hover {
   background-color: #fff;
   color: black;
@@ -130,7 +125,6 @@ p {
   margin-top: 20px;
   display: inline-block;
   margin-left: 110px;
-
   width: 85%;
   border-bottom: 1px solid #000f;
 }
@@ -141,35 +135,37 @@ p {
   font-weight: 700;
 }
 
-.postId {
+.managerPostId {
   width: 33%;
   font-size: 14px;
 }
 
-.postId p {
+.managerPpostId p {
   color: rgb(120, 118, 118);
 }
 
-.postDay {
+.managerPostDay {
   width: 33%;
   font-size: 14px;
 }
 
-.postModify {
+.managerPostModify {
   width: 33%;
   font-size: 14px;
 }
 
-.postModify p {
+.managerPostModify button {
   cursor: pointer;
   background-color: rgb(244, 140, 140);
   color: #fff;
   padding: 5px 20px;
   margin-left: 30px;
+  margin-bottom: 10px;
   border-radius: 5px;
+  border: none;
 }
 
-.postModify p:hover {
+.managerPostModify button:hover {
   background-color: #fff;
   color: rgb(77, 76, 76);
   transition: 0.4s;

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "userid": "name1@naver.com",
+    "username": "name1",
+    "tel": "010-1111-1111",
+    "sex": "F",
+    "birthyear": "2000",
+    "birtyday": "01-01",
+    "signUpDay": "2022-04-16"
+  },
+  {
+    "id": 2,
+    "userid": "sunjoo@naver.com",
+    "username": "sunjoo",
+    "tel": "010-1111-1111",
+    "sex": "F",
+    "birthyear": "2000",
+    "birtyday": "01-01",
+    "signUpDay": "2022-04-16"
+  },
+  {
+    "id": 3,
+    "userid": "soohyun@naver.com",
+    "username": "soohyun",
+    "tel": "010-1111-1111",
+    "sex": "M",
+    "birthyear": "2000",
+    "birtyday": "01-01",
+    "signUpDay": "2022-04-16"
+  },
+  {
+    "id": 4,
+    "userid": "chemi@naver.com",
+    "username": "chemi",
+    "tel": "010-1111-1111",
+    "sex": "M",
+    "birthyear": "2000",
+    "birtyday": "01-01",
+    "signUpDay": "2022-04-16"
+  },
+  {
+    "id": 5,
+    "userid": "ruby@naver.com",
+    "username": "ruby",
+    "tel": "010-1111-1111",
+    "sex": "M",
+    "birthyear": "2000",
+    "birtyday": "01-01",
+    "signUpDay": "2022-04-16"
+  }
+]

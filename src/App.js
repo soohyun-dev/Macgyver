@@ -18,12 +18,17 @@ import Tip from "./community/catagory/tip";
 import Free from "./community/catagory/free";
 import Review from "./community/catagory/review";
 import LoginMain from "./login/loginMain";
+import Manager from "./manager/manager";
+import PostManager from "./manager/postManager";
+import AnnounceWrite from "./manager/announceWrite";
+import CheckList from "./checkList";
 
 const App = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Main />} />
+        <Route path="/checkList" element={<CheckList />} />
         <Route path="/recommend" element={<Recommend />} />
         <Route path="/recommendContent" element={<RecommendContent />} />
         <Route path="/map" element={<Map />} />
@@ -44,6 +49,9 @@ const App = () => {
         <Route path="/login" element={<LoginMain />} />
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/signUpDel" element={<SignUpDel />} />
+        <Route path="/manager" element={<Manager />} />
+        <Route path="/postManager" element={<PostManager />} />
+        <Route path="/announceWrite" element={<AnnounceWrite />} />
       </Routes>
     </>
   );

@@ -1,0 +1,65 @@
+#checkList {
+  margin: 30px auto 0 auto;
+  align-items: center;
+  border: none;
+  padding: 60px;
+  width: 800px;
+  height: 100%;
+  text-align: center;
+}
+
+.checkListTitle {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.checkListIcon {
+  margin-right: 5px;
+}
+
+.checkListOrder {
+  font-size: 16px;
+  padding: 20px;
+  font-weight: 600;
+  color: rgb(83, 82, 81);
+}
+
+.checkListBlock {
+  border-radius: 15px;
+  background-color: #ffffe5;
+  height: 900px;
+}
+
+.checkListQue {
+  font-size: 18px;
+  text-align: left;
+  padding: 20px;
+  font-weight: 900;
+  color: rgb(71, 48, 140);
+  margin: 20px 0;
+}
+
+.checkListAnSwer {
+  text-align: left;
+}
+
+.checkListAnSwer div {
+  padding: 5px 10px 5px 0px;
+  margin-left: 20px;
+  display: inline-block;
+  background-color: #8187ff;
+  border: none;
+}
+
+.checkListAnSwer input {
+  padding: 5px;
+  margin: 10px 5px 10px 10px;
+}
+
+.checkListAnSwer span {
+  font-size: 16px;
+  padding: 10px;
+  font-weight: 700;
+  color: #fff;
+  margin-right: 5px;
+}

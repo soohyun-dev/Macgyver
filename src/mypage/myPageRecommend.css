@@ -3,22 +3,20 @@ p {
 }
 
 .recommend {
-  margin: 20px auto 0 auto;
-  width: 25%;
+  margin: 20px auto 0 90px;
   height: 100%;
-  max-width: 170vh;
   border-radius: 5px;
+  display: inline;
 }
 
 .recommendBlock {
-  width: 100%;
   display: inline-block;
   margin: 0 20px 50px 0;
+  max-width: 50vh;
 }
 
 .recommendImg img {
   height: auto;
-  width: 100%;
   max-height: 200px;
   border-radius: 5px;
   display: inline-block;
@@ -49,7 +47,7 @@ p {
 }
 
 .recommendContentTitle p {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 900;
   padding: 10px 0;
 }

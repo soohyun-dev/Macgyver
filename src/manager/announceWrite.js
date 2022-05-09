@@ -1,7 +1,7 @@
 import Navi from "../Navi";
 import "./announceWrite.css";
 import "./manager.css";
-
+import { Link } from "react-router-dom";
 const AnnounceWrite = () => {
   return (
     <>
@@ -14,15 +14,23 @@ const AnnounceWrite = () => {
       </section>
 
       <section id="managerCatagory">
-        <div className="memberManage">
-          <p href="manager.html">회원 관리</p>
-        </div>
-        <div className="postingManage">
-          <p href="postMange.html">게시물 관리</p>
-        </div>
-        <div className="announceWrite">
-          <p href="announceWrite.html">공지 작성</p>
-        </div>
+        <Link to="/manager">
+          <div className="memberManage">
+            <p>회원 관리</p>
+          </div>
+        </Link>
+
+        <Link to="/postManager">
+          <div className="postingManage">
+            <p>게시물 관리</p>
+          </div>
+        </Link>
+
+        <Link to="/announceWrite">
+          <div className="announceWrite">
+            <p style={{ backgroundColor: "#000", color: "#fff" }}>공지 작성</p>
+          </div>
+        </Link>
       </section>
 
       <section id="announceWrite">

@@ -55,6 +55,11 @@ const Main = () => {
           <span>MacGyver</span>
         </div>
       </div>
+      <div className="managerMod">
+        <Link to="/Manager">
+          <p>관리자모드</p>
+        </Link>
+      </div>
     </div>
   );
 };
