@@ -1,7 +1,7 @@
 import Navi from "../components/Navi";
 import "./mypage.css";
-import "../community/report.css";
-import "../community/reportTitle.css";
+import "../community/report/report.css";
+import "../community/report/reportTitle.css";
 import { Link } from "react-router-dom";
 import MyPageComment from "./myPageCommnet";
 import CampingContent from "../campingContent";

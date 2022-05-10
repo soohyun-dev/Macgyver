@@ -3,16 +3,40 @@ import "./postManager.css";
 import "./manager.css";
 import { Link } from "react-router-dom";
 import PostingList from "./component/postingList";
-import mockItems from "../mock/cmMock.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getPosting } from "../api/api";
+
+const LIMIT = 8;
 
 const PostManager = () => {
-  const [items, setItems] = useState(mockItems);
+  const [offset, setOffset] = useState(0);
+  const [items, setItems] = useState([]);
+  const [hasNext, setHasNext] = useState(false);
 
   const handleDelete = (id) => {
     const nextItems = items.filter((item) => item.id !== id);
     setItems(nextItems);
   };
+
+  const handleLoad = async (options) => {
+    const { reviews, paging } = await getPosting(options);
+    if (options.offset === 0) {
+      setItems(reviews);
+    } else {
+      setItems([...items, ...reviews]);
+    }
+    setOffset(options.offset + reviews.length);
+    setHasNext(paging.hasNext);
+  };
+
+  const handleLoadMore = () => {
+    handleLoad({ offset, limit: LIMIT });
+  };
+
+  useEffect(() => {
+    handleLoad({ offset: 0, limit: LIMIT });
+  }, []);
+
   return (
     <>
       <Navi />
@@ -60,46 +84,11 @@ const PostManager = () => {
       </section>
 
       <PostingList items={items} onDelete={handleDelete} />
-
-      <section>
-        <div className="postingPage">
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              1
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              2
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              3
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              4
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              5
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              6
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              7
-            </p>
-          </li>
-        </div>
-      </section>
+      <div class="loadButton">
+        <button disabled={!hasNext} onClick={handleLoadMore}>
+          더보기
+        </button>
+      </div>
     </>
   );
 };

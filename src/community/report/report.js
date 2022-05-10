@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Navi from "../components/Navi";
+import Navi from "../../components/Navi";
 import "./report.css";
 import ReportPosting from "./reportPosting";
 import ReportTitle from "./reportTitle";

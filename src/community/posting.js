@@ -9,16 +9,16 @@ const Posting = () => {
     <>
       <Navi />
       <section id="cmPostingBlock">
-        <p className="cmPostingTitle">풍경 죽이죠?</p>
+        <p className="cmPostingTitle"></p>
       </section>
       <section id="psImg">
         <div className="cmPostingImg">
-          <img src={"img/postingImg.jpg"} alt="" />
+          <img src={""} alt="" />
         </div>
       </section>
       <section>
         <div className="cmPostingContent">
-          <p>이번에 고원가서 찍은 사진입니다. 잘나와서 올려봅니다 ㅎㅎ</p>
+          <p></p>
         </div>
       </section>
 

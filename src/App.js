@@ -7,12 +7,12 @@ import Map from "./Map";
 import Mypage from "./mypage/mypage";
 import SignUpDel from "./mypage/signUpDel";
 import Posting from "./community/posting";
-import Announce from "./community/announce";
-import Report from "./community/report";
+import Announce from "./community/announce/announce";
+import Report from "./community/report/report";
 import CoummunityWrite from "./community/communityWrite";
 import RecommendContent from "./recommend/recommendContent";
-import AnnounceContent from "./community/announceContent";
-import ReportPostingContent from "./community/reportPostingContent";
+import AnnounceContent from "./community/announce/announceContent";
+import ReportPostingContent from "./community/report/reportPostingContent";
 import Hot from "./community/catagory/hot";
 import Tip from "./community/catagory/tip";
 import Free from "./community/catagory/free";
@@ -37,7 +37,7 @@ const App = () => {
         <Route path="/tip" element={<Tip />} />
         <Route path="/free" element={<Free />} />
         <Route path="/review" element={<Review />} />
-        <Route path="/posting" element={<Posting />} />
+        <Route path="/posting/:id" element={<Posting />} />
         <Route path="/communityWrite" element={<CoummunityWrite />} />
         <Route path="/announce" element={<Announce />} />
         <Route path="/announceContent" element={<AnnounceContent />} />

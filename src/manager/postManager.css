@@ -90,3 +90,20 @@ p {
   background-color: rgb(139, 139, 139);
   transition: 0.4s;
 }
+
+.loadButton {
+  text-align: center;
+  margin: 50px;
+}
+
+.loadButton button {
+  cursor: pointer;
+  padding: 10px 40px;
+  border: none;
+}
+
+.loadButton button:hover {
+  border: 0.3px solid #000;
+  transition: 0.3s;
+  background-color: aliceblue;
+}

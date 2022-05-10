@@ -12,10 +12,10 @@ const PostingListItem = ({ item, onDelete }) => {
             <p>{item.title}</p>
           </div>
           <div className="postingId">
-            <p>{item.username}</p>
+            <p>{item.id}</p>
           </div>
           <div className="postingDay">
-            <p>{item.registerDay}</p>
+            <p>{item.createdAt}</p>
           </div>
           <div className="postingModify">
             <button onClick={handleDeleteClick}>게시물 삭제</button>

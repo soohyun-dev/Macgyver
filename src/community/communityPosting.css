@@ -46,18 +46,16 @@
 
 .tag {
   margin: 20px 0 10px 20px;
-  text-align: left;
-  opacity: 0.5;
-}
-
-.tag p {
-  font-size: 15px;
-  cursor: pointer;
-  display: inline-block;
+  text-align: center;
+  font-size: 20px;
 }
 
 #cmPosting .cmPostingImg img {
   max-width: 90%;
   max-height: 250px;
   border-radius: 5px;
+}
+
+.cmInline {
+  display: inline;
 }

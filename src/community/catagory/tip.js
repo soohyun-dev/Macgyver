@@ -1,7 +1,7 @@
 import React from "react";
 import Navi from "../../components/Navi";
 import "../community.css";
-import CommunityCatagory from "../communityCatagory";
+import CommunityCatagory from "../../components/communityCatagory";
 
 const Tip = () => {
   return (

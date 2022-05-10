@@ -1,8 +1,7 @@
 import React from "react";
 import Navi from "../../components/Navi";
 import "../community.css";
-import CommunityCatagory from "../communityCatagory";
-import CommunityPosting from "../communityPosting";
+import CommunityCatagory from "../../components/communityCatagory";
 
 const Hot = () => {
   return (
@@ -12,10 +11,6 @@ const Hot = () => {
 
       <section>
         <div className="postingLocate"></div>
-      </section>
-      <section id="postingBlock">
-        <CommunityPosting />
-        <CommunityPosting />
       </section>
     </>
   );

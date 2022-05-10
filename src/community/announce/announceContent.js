@@ -1,4 +1,4 @@
-import Navi from "../components/Navi";
+import Navi from "../../components/Navi";
 import "./announceContent.css";
 
 const AnnounceContent = () => {

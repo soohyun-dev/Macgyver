@@ -46,7 +46,7 @@ p {
   align-items: center;
   border: none;
   padding: 60px;
-  width: 800px;
+  width: 50%;
   height: 100%;
   text-align: center;
 }
@@ -74,9 +74,9 @@ p {
   margin: 40px 0;
 }
 
-.annWriteWrite input {
-  width: 800px;
-  height: 700px;
+.annWriteWrite textarea {
+  width: 100%;
+  height: 300px;
   border-radius: 5px;
 }
 
