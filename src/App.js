@@ -17,11 +17,11 @@ import Hot from "./community/catagory/hot";
 import Tip from "./community/catagory/tip";
 import Free from "./community/catagory/free";
 import Review from "./community/catagory/review";
-import LoginMain from "./login/loginMain";
 import Manager from "./manager/manager";
 import PostManager from "./manager/postManager";
 import AnnounceWrite from "./manager/announceWrite";
 import CheckList from "./checkList";
+import LoginMain from "./login/loginMain";
 
 const App = () => {
   return (

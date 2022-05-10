@@ -1,15 +1,46 @@
-* {
-  margin: 0;
-  padding: 0;
+.mapBlock {
+  width: 100%;
+  display: flex;
 }
 
-.map {
-  width: 100%;
-  height: 600px;
+.mapCatagory {
+  margin-top: 50px;
+  width: 27%;
+  float: left;
+  display: block;
+}
+
+.mapCatagory div {
   align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+}
+
+.mapCatagory input {
+  width: 200px;
+  padding: 0.8em 0.5em;
+  margin: 20px;
+  border-radius: 0px;
+}
+
+.mapCatagory p {
+  margin-bottom: 20px;
+  display: block;
+  font-weight: 900;
+}
+
+.mapCatagory div select {
+  width: 200px;
+  padding: 0.8em 0.5em;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 0px;
+}
+
+#myMap {
+  width: 80%;
+  height: 80vh;
+  margin: 50px 30px 20px 50px;
+  float: right;
   border-style: solid;
   border-width: medium;
   border-color: #d8d8d8;

@@ -1,8 +1,9 @@
 import React from "react";
-import Navi from "../Navi";
+import Navi from "../components/Navi";
 import "./community.css";
 import CommunityCatagory from "./communityCatagory";
 import CommunityPosting from "./communityPosting";
+import communityItems from "../mock/cmMock.json";
 
 const Community = () => {
   return (
@@ -14,12 +15,7 @@ const Community = () => {
         <div className="postingLocate"></div>
       </section>
       <section id="postingBlock">
-        <CommunityPosting />
-        <CommunityPosting />
-        <CommunityPosting />
-        <CommunityPosting />
-        <CommunityPosting />
-        <CommunityPosting />
+        <CommunityPosting items={communityItems} />
       </section>
     </>
   );

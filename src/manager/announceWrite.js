@@ -1,4 +1,4 @@
-import Navi from "../Navi";
+import Navi from "../components/Navi";
 import "./announceWrite.css";
 import "./manager.css";
 import { Link } from "react-router-dom";

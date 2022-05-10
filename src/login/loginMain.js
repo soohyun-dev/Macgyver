@@ -1,5 +1,5 @@
 import React from "react";
-import Navi from "../Navi";
+import Navi from "../components/Navi";
 import "./loginMain.css";
 import "../style.css";
 import { Link } from "react-router-dom";

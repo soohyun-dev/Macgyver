@@ -1,4 +1,4 @@
-import Navi from "../Navi";
+import Navi from "../components/Navi";
 import "./recommendContent.css";
 import "./recommend.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

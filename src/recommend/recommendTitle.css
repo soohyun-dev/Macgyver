@@ -23,9 +23,3 @@ p {
   font-weight: 900;
   font-size: 32px;
 }
-
-.recommendHr {
-  border: 0;
-  height: 10px;
-  box-shadow: 0 10px 10px -10px #bbb inset;
-}

@@ -1,4 +1,4 @@
-import Navi from "../Navi";
+import Navi from "../components/Navi";
 import "./reportPostingContent.css";
 import ReportTitle from "./reportTitle";
 

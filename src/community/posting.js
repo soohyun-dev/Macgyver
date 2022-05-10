@@ -1,4 +1,4 @@
-import Navi from "../Navi";
+import Navi from "../components/Navi";
 import "./posting.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";

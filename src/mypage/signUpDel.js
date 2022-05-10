@@ -1,4 +1,4 @@
-import Navi from "../Navi";
+import Navi from "../components/Navi";
 import "./signUpDel.css";
 import "../login/idFind.css";
 import { Link } from "react-router-dom";

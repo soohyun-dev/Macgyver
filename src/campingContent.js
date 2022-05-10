@@ -1,11 +1,13 @@
 import "./mypage/myPageRecommend.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import Rating from "./rating";
 
 const CampingContentItem = ({ item }) => {
   const { imgUrl, rating, title, location } = item;
+  const [bookMarkIcon, setbookMarkIcon] = useState(false);
 
   return (
     <>
@@ -15,17 +17,27 @@ const CampingContentItem = ({ item }) => {
             <img src={imgUrl} alt={title} />
           </div>
           <div className="rating">
-            <FontAwesomeIcon icon={faStar} className="star" />
-            <FontAwesomeIcon icon={faStar} className="star" />
-            <FontAwesomeIcon icon={faStar} className="star" />
-            <FontAwesomeIcon icon={faStar} className="star" />
-            <FontAwesomeIcon icon={faStar} className="star" />
-            <p>{rating}</p>
+            <Rating value={rating} />
           </div>
           <div className="recommendContent">
             <div className="recommendContentTitle">
               <p>{title}</p>
-              <FontAwesomeIcon icon={faBookmark} className="BookMark" />
+              <div>
+                {bookMarkIcon === true ? (
+                  <FontAwesomeIcon
+                    icon={faBookmark}
+                    className="BookMark"
+                    onClick={() => setbookMarkIcon(!bookMarkIcon)}
+                  />
+                ) : (
+                  <FontAwesomeIcon
+                    icon={faBookmark}
+                    className="BookMark"
+                    style={{ color: "color: rgb(169, 169, 169);" }}
+                    onClick={() => setbookMarkIcon(!bookMarkIcon)}
+                  />
+                )}
+              </div>
             </div>
             <div className="recommendContentContent">
               <p>{location}</p>

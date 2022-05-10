@@ -40,7 +40,7 @@ const communityCatagory = () => {
               </li>
             </Link>
             <Link to="/communityWrite">
-              <li>
+              <li style={{ backgroundColor: "#000", color: "#fff" }}>
                 <p>글쓰기</p>
               </li>
             </Link>

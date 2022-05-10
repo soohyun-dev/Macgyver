@@ -1,4 +1,4 @@
-import Navi from "../Navi";
+import Navi from "../components/Navi";
 import "./mypage.css";
 import "../community/report.css";
 import "../community/reportTitle.css";

@@ -54,6 +54,7 @@
 .checkListAnSwer input {
   padding: 5px;
   margin: 10px 5px 10px 10px;
+  cursor: pointer;
 }
 
 .checkListAnSwer span {

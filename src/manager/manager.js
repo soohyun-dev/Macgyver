@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Navi from "../Navi";
+import Navi from "../components/Navi";
 import "./manager.css";
 import mockItems from "../mock/userMock.json";
 import MemberList from "./component/memberList";

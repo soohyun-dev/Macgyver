@@ -71,21 +71,21 @@
   color: white;
   display: block;
   text-decoration: none;
-  font-weight: 900;
+  font-weight: 500;
 }
 
 .MainContent span:nth-child(1) {
-  font-size: 40px;
+  font-size: 55px;
   font-family: "Do Hyeon", sans-serif;
 }
 
 .MainContent span:nth-child(2) {
-  font-size: 40px;
+  font-size: 55px;
   font-family: "Do Hyeon", sans-serif;
 }
 .MainContent span:nth-child(3) {
   margin-top: 15px;
-  font-size: 50px;
+  font-size: 70px;
   font-family: "Do Hyeon", sans-serif;
   opacity: 20%;
 }

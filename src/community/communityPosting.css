@@ -31,7 +31,6 @@
 
 .cmPostingTitle {
   font-size: 18px;
-  margin-bottom: 20px 0;
   padding: 15px 0;
 }
 
@@ -58,8 +57,7 @@
 }
 
 #cmPosting .cmPostingImg img {
-  height: auto;
   max-width: 90%;
-  max-height: 270px;
+  max-height: 250px;
   border-radius: 5px;
 }

@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import "./communityPosting.css";
 
-const CommunityPosting = () => {
+const CommunityPostingItem = ({ item }) => {
+  const { title, imgUrl } = item;
+
   return (
     <>
       <section id="cmPosting">
@@ -9,11 +11,11 @@ const CommunityPosting = () => {
           <div className="cmPostingContent">
             <div className="cmPostingTitle">
               <Link to="/posting">
-                <p>풍경 죽이죠?</p>
+                <p>{title}</p>
               </Link>
             </div>
             <div className="cmPostingImg">
-              <img src={"img/postingImg.jpg"} alt="" />
+              <img src={imgUrl} alt={title} />
             </div>
             <div className="tag">
               <p>#풍경사진전</p>
@@ -22,6 +24,16 @@ const CommunityPosting = () => {
           </div>
         </div>
       </section>
+    </>
+  );
+};
+
+const CommunityPosting = ({ items }) => {
+  return (
+    <>
+      {items.map((item) => {
+        return <CommunityPostingItem item={item} />;
+      })}
     </>
   );
 };

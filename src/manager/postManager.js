@@ -1,4 +1,4 @@
-import Navi from "../Navi";
+import Navi from "../components/Navi";
 import "./postManager.css";
 import "./manager.css";
 import { Link } from "react-router-dom";
