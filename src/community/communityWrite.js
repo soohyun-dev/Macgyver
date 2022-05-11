@@ -3,6 +3,7 @@ import FileInput from "../components/fileInput";
 import "./communityWrite.css";
 import handleCreateSuccess from "./community";
 import { createPosting } from "../api/api";
+import { Link } from "react-router-dom";
 
 const INITIAL_VALUES = {
   title: "",
@@ -36,9 +37,11 @@ const CoummunityWrite = ({
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
+    console.log(formData);
     formData.append("title", values.title);
     formData.append("content", values.content);
     formData.append("imgFile", values.imgFile);
+    console.log(formData);
     let result;
     try {
       setSubmittingError(null);
@@ -68,6 +71,7 @@ const CoummunityWrite = ({
                   onChange={handleChange}
                 />
               </div>
+              <p>제목</p>
               <input
                 name="title"
                 value={values.title}
@@ -90,6 +94,11 @@ const CoummunityWrite = ({
                     글 작성
                   </button>
                   {onCancel && <button onClick={onCancel}>취소</button>}
+                  {!onCancel && (
+                    <Link to="/community" style={{ fontSize: "16px" }}>
+                      되돌아가기
+                    </Link>
+                  )}
                 </div>
               </section>
               {submittingError && <div>{submittingError.message}</div>}

@@ -64,3 +64,13 @@
   color: #fff;
   margin-right: 5px;
 }
+
+#checkList button {
+  border: none;
+  padding: 7px 20px;
+  margin: 20px 0;
+}
+
+#checkList button:hover {
+  opacity: 70%;
+}

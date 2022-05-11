@@ -4,7 +4,7 @@ import "./community.css";
 import CommunityCatagory from "../components/communityCatagory";
 import CommunityPosting from "./communityPosting";
 import { useEffect, useState } from "react";
-import { deleteReview, getPosting, updatePosting } from "../api/api";
+import { deletePosting, getPosting, updatePosting } from "../api/api";
 
 const LIMIT = 6;
 
@@ -16,7 +16,7 @@ const Community = () => {
   const [hasNext, setHasNext] = useState(false);
 
   const handleDelete = async (id) => {
-    const result = await deleteReview(id);
+    const result = await deletePosting(id);
     if (!result) return;
 
     setItems((prevItems) => prevItems.filter((item) => item.id !== id));

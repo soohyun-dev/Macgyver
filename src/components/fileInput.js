@@ -34,14 +34,21 @@ const FileInput = ({ name, value, initialPreview, onChange }) => {
 
   return (
     <div>
-      <img src={preview} alt="이미지 미리보기" />
-      <input
-        type="file"
-        accept="image/png, image/jpeg"
-        onChange={handleChange}
-        ref={inputRef}
+      <img
+        src={preview}
+        alt="이미지 미리보기"
+        style={{ width: "300px", height: "300px", fontSize: "14px" }}
       />
-      {value && <button onClick={handleClearClick}>X</button>}
+      <div>
+        <input
+          type="file"
+          accept="image/png, image/jpeg"
+          onChange={handleChange}
+          ref={inputRef}
+        />
+
+        {value && <button onClick={handleClearClick}>X</button>}
+      </div>
     </div>
   );
 };

@@ -42,7 +42,7 @@ export async function updatePosting(id, formData) {
 
 // 삭제
 
-export async function deleteReview(id) {
+export async function deletePosting(id) {
   const response = await fetch(`${BASE_URL}/film-reviews/${id}`, {
     method: "DELETE",
   });

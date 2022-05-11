@@ -4,7 +4,7 @@ import "./manager.css";
 import { Link } from "react-router-dom";
 import PostingList from "./component/postingList";
 import { useEffect, useState } from "react";
-import { getPosting } from "../api/api";
+import { getPosting, deletePosting } from "../api/api";
 
 const LIMIT = 8;
 
@@ -13,9 +13,11 @@ const PostManager = () => {
   const [items, setItems] = useState([]);
   const [hasNext, setHasNext] = useState(false);
 
-  const handleDelete = (id) => {
-    const nextItems = items.filter((item) => item.id !== id);
-    setItems(nextItems);
+  const handleDelete = async (id) => {
+    const result = await deletePosting(id);
+    if (!result) return;
+
+    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
   const handleLoad = async (options) => {
