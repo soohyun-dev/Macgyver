@@ -36,9 +36,9 @@ HTML 코드로 작성했던 파일들을 React 코드로 재작성.
 <br><br>
 ## 2022년 5월 11일
 - posting 상세페이지 문제 해결.
-- 1. Route를 통해 posting/:id 값으로 각 id 에 맞는 포스팅 상세페이지로 이동
-- 2. Link 태그 내에서 state 로 props 를 전달해줌
-- 3. useLocation 을 이용하여 해당 상세페이지에서 값을 전달받음.
+1. Route를 통해 posting/:id 값으로 각 id 에 맞는 포스팅 상세페이지로 이동
+2. Link 태그 내에서 state 로 props 를 전달해줌
+3. useLocation 을 이용하여 해당 상세페이지에서 값을 전달받음.
 - 이때,
   const location = useLocation();<br>
   const item = location.state.item;<br>
