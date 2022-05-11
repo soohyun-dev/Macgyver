@@ -11,6 +11,11 @@ const Recommend = () => {
   return (
     <>
       <Navi />
+      <div className="rcBack">
+        <Link to="/checkList">
+          <p>체크리스트</p>
+        </Link>
+      </div>
       <RecommendTitle />
       <CampingContent items={campingItems} />
       <Link to="/checkList">

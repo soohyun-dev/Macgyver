@@ -99,3 +99,13 @@
   color: black;
   transition: 0.5s;
 }
+
+.rcBack {
+  background-image: url(../../public/img/rcBack.jpg);
+  width: 100%;
+  height: 520px;
+}
+
+.rcBack p {
+  background-color: rgba(255, 255, 255, 0.5);
+}

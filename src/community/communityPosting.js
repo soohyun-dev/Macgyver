@@ -20,7 +20,7 @@ const CommunityPostingItem = ({ item, onEdit, onDelete }) => {
         <div className="cmPostingBlock">
           <div className="cmPostingContent">
             <div className="cmPostingTitle">
-              <Link to={`/posting/${item.id}`}>
+              <Link to={`/posting/${item.id}`} state={{ item: item }}>
                 <p>{title}</p>
               </Link>
             </div>

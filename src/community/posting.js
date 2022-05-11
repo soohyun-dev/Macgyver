@@ -3,22 +3,28 @@ import "./posting.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import "./communityPosting.css";
+import { useLocation } from "react-router-dom";
 
 const Posting = () => {
+  // 전달 받은 props 활용
+  const location = useLocation();
+  const item = location.state.item;
+  const { title, imgUrl, content } = item;
+
   return (
     <>
       <Navi />
       <section id="cmPostingBlock">
-        <p className="cmPostingTitle"></p>
+        <p className="cmPostingTitle">{title}</p>
       </section>
       <section id="psImg">
         <div className="cmPostingImg">
-          <img src={""} alt="" />
+          <img src={imgUrl} alt="" />
         </div>
       </section>
       <section>
         <div className="cmPostingContent">
-          <p></p>
+          <p>{content}</p>
         </div>
       </section>
 
