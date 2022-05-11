@@ -43,5 +43,11 @@ HTML 코드로 작성했던 파일들을 React 코드로 재작성.
   const location = useLocation();<br>
   const item = location.state.item;<br>
   를 사용하여 item 값에 직접 접근하여 각 item 을 바로 사용 할 수 있게해줌.<br>
-- 이를 통해 상세페이지 구현
+- 이를 통해 상세페이지 구현.<br>
+- 추천페이지 UI
+- 체크리스트 checkOnlyOne 함수 구현
+- 체크리스트 체크 여부 상태관리
+- 공지방 데이터 랜더링 구현
+- 관리자모드 게시글 삭제 구현
+
   
