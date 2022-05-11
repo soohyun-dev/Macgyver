@@ -28,3 +28,20 @@ HTML 코드로 작성했던 파일들을 React 코드로 재작성.
 <br><br>
 ## 2022년 5월 10일
 - api.js 에 getPosting, createPosting 함수 생성
+- 커뮤니티 글 쓰기, 글 수정, 글 삭제 구현
+- 글 수정 부분에서 문제 발생. 게시된 글을 수정누르면 기존 값이 들어가있어야하는데, 빈칸으로 나옴. <br> 3시간 넘게 고민한 결과 타이핑 오류가 있었음.
+- 동적인 경로 생성이 어려움. useParams 사용해서 id 값을 비교해야하는데 잘안됨.
+
+
+<br><br>
+## 2022년 5월 11일
+- posting 상세페이지 문제 해결.
+- 1. Route를 통해 posting/:id 값으로 각 id 에 맞는 포스팅 상세페이지로 이동
+- 2. Link 태그 내에서 state 로 props 를 전달해줌
+- 3. useLocation 을 이용하여 해당 상세페이지에서 값을 전달받음.
+- 이때,
+  const location = useLocation();<br>
+  const item = location.state.item;<br>
+  를 사용하여 item 값에 직접 접근하여 각 item 을 바로 사용 할 수 있게해줌.<br>
+- 이를 통해 상세페이지 구현
+  
