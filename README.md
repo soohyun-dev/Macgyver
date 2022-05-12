@@ -50,4 +50,4 @@ HTML 코드로 작성했던 파일들을 React 코드로 재작성.
 <br><br>
 ## 2022년 5월 12일
 - 추천페이지 캠핑장 상세보기 구현
-- bottomPage 
+- bottomPage 구현
