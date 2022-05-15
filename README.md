@@ -39,9 +39,22 @@ HTML 코드로 작성했던 파일들을 React 코드로 재작성.
 1. Route를 통해 posting/:id 값으로 각 id 에 맞는 포스팅 상세페이지로 이동
 2. Link 태그 내에서 state 로 props 를 전달해줌
 3. useLocation 을 이용하여 해당 상세페이지에서 값을 전달받음.
-- 이때,
-  const location = useLocation();<br>
-  const item = location.state.item;<br>
-  를 사용하여 item 값에 직접 접근하여 각 item 을 바로 사용 할 수 있게해줌.<br>
-- 이를 통해 상세페이지 구현
-  
+이때, const location = useLocation(); const item = location.state.item; 를 <br>사용하여 item 값에 직접 접근하여 각 item 을 바로 사용 할 수 있게해줌. 이를 통해 상세페이지 구현.<br>
+- 추천페이지 UI
+- 체크리스트 checkOnlyOne 함수 구현
+- 체크리스트 체크 여부 상태관리
+- 공지방 데이터 랜더링 구현
+- 관리자모드 게시글 삭제 구현
+- 공지 작성 Input 구현
+
+<br><br>
+## 2022년 5월 12일
+- 추천페이지 캠핑장 상세보기 구현
+- bottomPage 구현
+- 지도페이지 검색 구현
+- 마이페이지 작성글 모아보기 구현
+
+
+<br><br>
+## 2022년 5월 14일
+- 북마크 기능 구현
