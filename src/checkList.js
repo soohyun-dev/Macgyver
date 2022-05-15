@@ -2,6 +2,7 @@ import Navi from "./components/Navi";
 import "./checkList.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCommentsDollar, faUserTag } from "@fortawesome/free-solid-svg-icons";
+import BottomPage from "./components/bottomPage.";
 
 const CheckList = () => {
   const checkOnlyOne1 = (checkThis) => {
@@ -71,29 +72,29 @@ const CheckList = () => {
         msg["Q1"] = checkBoxes1[i].value;
       }
     }
-    for (var i = 0; i < checkBoxes2.length; i++) {
-      if (checkBoxes2[i].checked) {
-        msg["Q2"] = checkBoxes2[i].value;
+    for (var j = 0; j < checkBoxes2.length; j++) {
+      if (checkBoxes2[j].checked) {
+        msg["Q2"] = checkBoxes2[j].value;
       }
     }
-    for (var i = 0; i < checkBoxes3.length; i++) {
-      if (checkBoxes3[i].checked) {
-        msg["Q3"] = checkBoxes3[i].value;
+    for (var k = 0; k < checkBoxes3.length; k++) {
+      if (checkBoxes3[k].checked) {
+        msg["Q3"] = checkBoxes3[k].value;
       }
     }
-    for (var i = 0; i < checkBoxes4.length; i++) {
-      if (checkBoxes4[i].checked) {
-        msg["Q4"] = checkBoxes4[i].value;
+    for (var l = 0; l < checkBoxes4.length; l++) {
+      if (checkBoxes4[l].checked) {
+        msg["Q4"] = checkBoxes4[l].value;
       }
     }
-    for (var i = 0; i < checkBoxes5.length; i++) {
-      if (checkBoxes5[i].checked) {
-        msg["Q5"] = checkBoxes5[i].value;
+    for (var m = 0; m < checkBoxes5.length; m++) {
+      if (checkBoxes5[m].checked) {
+        msg["Q5"] = checkBoxes5[m].value;
       }
     }
-    for (var i = 0; i < checkBoxes6.length; i++) {
-      if (checkBoxes6[i].checked) {
-        msg["Q6"] = checkBoxes6[i].value;
+    for (var n = 0; n < checkBoxes6.length; n++) {
+      if (checkBoxes6[n].checked) {
+        msg["Q6"] = checkBoxes6[n].value;
       }
     }
 
@@ -125,7 +126,7 @@ const CheckList = () => {
                 <input
                   type="checkbox"
                   name="Q1"
-                  value="O"
+                  value="1"
                   onClick={(e) => checkOnlyOne1(e.target)}
                 />
                 <span>O</span>
@@ -134,7 +135,7 @@ const CheckList = () => {
                 <input
                   type="checkbox"
                   name="Q1"
-                  value="X"
+                  value="0"
                   onClick={(e) => checkOnlyOne1(e.target)}
                 />
                 <span>X</span>
@@ -150,7 +151,7 @@ const CheckList = () => {
                 <input
                   type="checkbox"
                   name="Q2"
-                  value="O"
+                  value="1"
                   onClick={(e) => checkOnlyOne2(e.target)}
                 />
                 <span>O</span>
@@ -159,7 +160,7 @@ const CheckList = () => {
                 <input
                   type="checkbox"
                   name="Q2"
-                  value="X"
+                  value="0"
                   onClick={(e) => checkOnlyOne2(e.target)}
                 />
                 <span>X</span>
@@ -175,7 +176,7 @@ const CheckList = () => {
                 <input
                   type="checkbox"
                   name="Q3"
-                  value="O"
+                  value="1"
                   onClick={(e) => checkOnlyOne3(e.target)}
                 />
                 <span>O</span>
@@ -184,7 +185,7 @@ const CheckList = () => {
                 <input
                   type="checkbox"
                   name="Q3"
-                  value="X"
+                  value="0"
                   onClick={(e) => checkOnlyOne3(e.target)}
                 />
                 <span>X</span>
@@ -199,7 +200,7 @@ const CheckList = () => {
                 <input
                   type="checkbox"
                   name="Q4"
-                  value="친구, 연인"
+                  value="0"
                   onClick={(e) => checkOnlyOne4(e.target)}
                 />
                 <span>친구, 연인</span>
@@ -208,7 +209,7 @@ const CheckList = () => {
                 <input
                   type="checkbox"
                   name="Q4"
-                  value="가족 (아이동반)"
+                  value="1"
                   onClick={(e) => checkOnlyOne4(e.target)}
                 />
                 <span>가족 (아이동반)</span>
@@ -224,7 +225,7 @@ const CheckList = () => {
                 <input
                   type="checkbox"
                   name="Q5"
-                  value="간다"
+                  value="0"
                   onClick={(e) => checkOnlyOne5(e.target)}
                 />
                 <span>간다</span>
@@ -233,7 +234,7 @@ const CheckList = () => {
                 <input
                   type="checkbox"
                   name="Q5"
-                  value="캠핑에 집중한다"
+                  value="1"
                   onClick={(e) => checkOnlyOne5(e.target)}
                 />
                 <span>캠핑에 집중한다</span>
@@ -248,7 +249,7 @@ const CheckList = () => {
                 <input
                   type="checkbox"
                   name="Q6"
-                  value="동물 동반 여부"
+                  value="0"
                   onClick={(e) => checkOnlyOne6(e.target)}
                 />
                 <span>동물 동반 여부</span>
@@ -257,27 +258,25 @@ const CheckList = () => {
                 <input
                   type="checkbox"
                   name="Q6"
-                  value="계절에 맞는 장소"
+                  value="1"
                   onClick={(e) => checkOnlyOne6(e.target)}
                 />
                 <span>계절에 맞는 명소</span>
               </div>
-              <div style={{ backgroundColor: "#7ecb20" }}>
-                <input
-                  type="checkbox"
-                  name="Q6"
-                  value="캠핑장 내 이벤트 및 체험"
-                  onClick={(e) => checkOnlyOne6(e.target)}
-                />
-                <span>캠핑장 내 이벤트 및 체험</span>
-              </div>
             </div>
           </div>
         </div>
-        <button type="submit" onClick={report}>
-          확인
+        <button
+          type="submit"
+          onClick={() => {
+            report();
+            alert("제출되었습니다!");
+          }}
+        >
+          제출
         </button>
       </section>
+      <BottomPage />
     </>
   );
 };

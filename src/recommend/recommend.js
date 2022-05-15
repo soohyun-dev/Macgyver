@@ -8,12 +8,13 @@ import campingItems from "../mock/rcMock.json";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
+import BottomPage from "../components/bottomPage.";
 
 const Recommend = () => {
   return (
     <>
       <Navi />
-      <div className="rcBack">
+      <div className="rcBlock">
         <div>
           <Link to="/checkList">
             <p>
@@ -29,6 +30,7 @@ const Recommend = () => {
       </div>
       <RecommendTitle />
       <CampingContent items={campingItems} />
+      <BottomPage />
     </>
   );
 };

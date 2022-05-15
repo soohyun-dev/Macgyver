@@ -32,24 +32,53 @@ p {
   text-align: center;
 }
 
+#cmPostingContent {
+  width: 50%;
+  margin: 40px auto;
+  background-color: rgb(252, 245, 245);
+  padding: 10px;
+}
+
 .cmPostingContent {
-  margin: 50px 0;
+  margin: 100px 0;
   text-align: center;
 }
 
 .cmPostingComment {
+  width: 60%;
+  margin: 0 auto 0 auto;
   text-align: center;
   padding: 30px 0;
+  vertical-align: top;
 }
+
+.cmPostingComment div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .cmPostingComment p {
   font-size: 14px;
   font-weight: 700;
+  margin-right: 10px;
 }
 
-.cmPostingComment input {
+.cmPostingComment textarea {
   width: 500px;
-  height: 25px;
+  height: 60px;
   margin: 0 10px;
+  border-radius: 0;
+}
+
+.cmPostingComment button {
+  padding: 10px 20px;
+  border: 1px solid #888;
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.cmPostingComment button:hover {
+  opacity: 100%;
 }
 
 .likeDiv {

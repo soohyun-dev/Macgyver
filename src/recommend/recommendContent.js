@@ -1,48 +1,46 @@
 import Navi from "../components/Navi";
 import "./recommendContent.css";
 import "./recommend.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
+import Rating from "../rating";
 import RecommendTitle from "./recommendTitle";
+import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const RecommendContent = () => {
+  const location = useLocation();
+  const item = location.state.item;
+  const { title, imgUrl, rating, content, address, tag } = item;
+
   return (
     <>
       <Navi />
       <RecommendTitle />
       <section id="recommendContent">
         <div className="campingName">
-          <p>서울 북한산 럭셔리 글램핑</p>
+          <p>{title}</p>
         </div>
         <div className="campingImg">
-          <img src={"img/rec01.jpg"} alt="" />
+          <img src={imgUrl} alt="" />
         </div>
         <div className="campingRating">
-          <FontAwesomeIcon icon={faStar} className="star" />
-          <FontAwesomeIcon icon={faStar} className="star" />
-          <FontAwesomeIcon icon={faStar} className="star" />
-          <FontAwesomeIcon icon={faStar} className="star" />
-          <FontAwesomeIcon icon={faStar} className="star" />
+          <Rating value={rating} />
         </div>
 
         <div className="campingContent">
-          <p>
-            서울시 은평구 북한산로 242번지 입력후 세븐차이나 주차장으로
-            들어오시면 뒤쪽에 서울북한산글램핑 전용주차장이 보입니다.(택시도
-            반드시 주차장에서 하차)
-          </p>
+          <p>{content}</p>
         </div>
 
         <div className="campingTag">
-          <p>
-            독채, 침대방, 개별바비큐, 카라반, 글램핑, 수영장, 바비큐장,
-            공용시설, 와이파이, 잔디, 온돌방, 스파
-          </p>
+          <p>{tag}</p>
         </div>
 
         <div className="campingLocation">
-          <p>서울 은평구 북한산로 242</p>
+          <p>{address}</p>
         </div>
+
+        <Link to="/recommend">
+          <div class="rcBackBlock">되돌아가기</div>
+        </Link>
       </section>
     </>
   );

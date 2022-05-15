@@ -1,7 +1,26 @@
 import { Link } from "react-router-dom";
 import "./communityCatagory.css";
 
-const communityCatagory = () => {
+const communityCatagory = ({ category }) => {
+  const categories = [
+    {
+      name: "hot",
+      text: "HOT",
+    },
+    {
+      name: "tip",
+      text: "팁공유",
+    },
+    {
+      name: "free",
+      text: "자유",
+    },
+    {
+      name: "review",
+      text: "후기",
+    },
+  ];
+
   return (
     <>
       <section id="communityCatagoryBlock">
@@ -28,6 +47,15 @@ const communityCatagory = () => {
               </li>
             </Link>
           </div>
+          {categories.map((c) => (
+            <p
+              key={c.name}
+              active={category === c.name}
+              onClick={() => onselect(c.name)}
+            >
+              {c.text}
+            </p>
+          ))}
           <div className="rightBlock">
             <Link to="/report">
               <li>

@@ -53,16 +53,21 @@ p {
 
 .annWriteTitle {
   font-size: 20px;
-  margin: 10px 0;
+  margin: 10px 0px;
+}
+
+.annWriteTitle {
+  margin: 0 20px;
 }
 
 .annWriteFile {
   font-size: 11px;
 }
 
-.annWriteTitle input {
-  width: 300px;
+.titleInput {
+  width: 400px;
   height: 20px;
+  margin: 20px 0;
 }
 
 .annWriteFile input {

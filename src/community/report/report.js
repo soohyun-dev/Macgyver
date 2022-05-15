@@ -1,10 +1,44 @@
-import { Link } from "react-router-dom";
+import BottomPage from "../../components/bottomPage.";
 import Navi from "../../components/Navi";
 import "./report.css";
-import ReportPosting from "./reportPosting";
 import ReportTitle from "./reportTitle";
+import { useState, useEffect } from "react";
+import PostingList from "../../manager/component/postingList";
+import { getPosting, deletePosting } from "../../api/api";
+
+const LIMIT = 8;
 
 const Report = () => {
+  const [offset, setOffset] = useState(0);
+  const [items, setItems] = useState([]);
+  const [hasNext, setHasNext] = useState(false);
+
+  const handleDelete = async (id) => {
+    const result = await deletePosting(id);
+    if (!result) return;
+
+    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
+  const handleLoad = async (options) => {
+    const { reviews, paging } = await getPosting(options);
+    if (options.offset === 0) {
+      setItems(reviews);
+    } else {
+      setItems([...items, ...reviews]);
+    }
+    setOffset(options.offset + reviews.length);
+    setHasNext(paging.hasNext);
+  };
+
+  const handleLoadMore = () => {
+    handleLoad({ offset, limit: LIMIT });
+  };
+
+  useEffect(() => {
+    handleLoad({ offset: 0, limit: LIMIT });
+  }, []);
+
   return (
     <>
       <Navi />
@@ -20,55 +54,13 @@ const Report = () => {
           <p>작성일</p>
         </div>
       </section>
-      <Link to="/reportPostingContent">
-        <ReportPosting />
-      </Link>
-      <Link to="/reportPostingContent">
-        <ReportPosting />
-      </Link>
-      <Link to="/reportPostingContent">
-        <ReportPosting />
-      </Link>
-
-      <section>
-        <div className="postingPage">
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              1
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              2
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              3
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              4
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              5
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              6
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              7
-            </p>
-          </li>
-        </div>
-      </section>
+      <PostingList items={items} onDelete={handleDelete} />
+      <div class="loadButton">
+        <button disabled={!hasNext} onClick={handleLoadMore}>
+          더보기
+        </button>
+      </div>
+      <BottomPage />
     </>
   );
 };

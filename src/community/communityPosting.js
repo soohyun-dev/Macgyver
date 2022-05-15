@@ -39,7 +39,13 @@ const CommunityPostingItem = ({ item, onEdit, onDelete }) => {
   );
 };
 
-const CommunityPosting = ({ items, onDelete, onUpdate, onUpdateSuccess }) => {
+const CommunityPosting = ({
+  items,
+  onDelete,
+  onUpdate,
+  onUpdateSuccess,
+  category,
+}) => {
   const [editingId, setEditingId] = useState(null);
 
   const handleCancel = () => setEditingId(null);

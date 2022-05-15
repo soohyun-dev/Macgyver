@@ -22,7 +22,7 @@ const Posting = () => {
           <img src={imgUrl} alt="" />
         </div>
       </section>
-      <section>
+      <section id="cmPostingContent">
         <div className="cmPostingContent">
           <p>{content}</p>
         </div>
@@ -46,13 +46,19 @@ const Posting = () => {
 
       <section>
         <div className="cmPostingComment">
-          <p>댓글</p>
-          <input />
-          <button>확인</button>
+          <div>
+            <p>댓글</p>
+          </div>
+          <div>
+            <textarea placeholder="댓글을 입력해주세요" />
+          </div>
+          <div>
+            <button type="submit">등록</button>
+          </div>
         </div>
       </section>
 
-      <hr />
+      <hr style={{ opacity: "30%" }} />
 
       <section id="comment">
         <div className="cmPostingComment">
@@ -73,7 +79,7 @@ const Posting = () => {
           </div>
 
           <div className="commentWrite">
-            <div class="commentContent">
+            <div className="commentContent">
               <p>굿굿</p>
             </div>
             <div className="commentId">

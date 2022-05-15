@@ -1,23 +1,22 @@
 import "./App.css";
-import { useEffect } from "react";
 import Navi from "./components/Navi";
 import "./Map.css";
+import { useState } from "react";
+import MapContainer from "./MapContainer";
 
-const { kakao } = window;
+const Map = ({ searchPlace }) => {
+  const [inputText, setInputText] = useState("");
+  const [place, setPlace] = useState("");
 
-const KakaoMapScript = () => {
-  const container = document.getElementById("myMap");
-  const options = {
-    center: new kakao.maps.LatLng(37.45075962674148, 127.12968520031045),
-    level: 3,
+  const onChange = (e) => {
+    setInputText(e.target.value);
   };
-  const map = new kakao.maps.Map(container, options);
-};
 
-export default function Map() {
-  useEffect(() => {
-    KakaoMapScript();
-  }, []);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setPlace(inputText);
+    setInputText("");
+  };
 
   return (
     <>
@@ -26,39 +25,28 @@ export default function Map() {
         <div class="mapCatagory">
           <div>
             <p>캠핑장 조회</p>
-            <input value={"검색"} style={{ backgroundColor: "#d8d8d8" }} />
-            <select>
-              <option>서울</option>
-              <option>경기도</option>
-              <option>강원도</option>
-              <option>충청북도</option>
-              <option>충청남도</option>
-              <option>전라북도</option>
-              <option>전라남도</option>
-              <option>경상북도</option>
-              <option>경상남도</option>
-              <option>제주도</option>
-            </select>
+            <form className="inputForm" onSubmit={handleSubmit}>
+              <input
+                placeholder="검색"
+                onChange={onChange}
+                value={inputText}
+                style={{ backgroundColor: "#d8d8d8" }}
+              />
+              <button type="submit">검색</button>
+            </form>
           </div>
-          <div>
-            <select>
-              <option>파주시</option>
-              <option>고양시</option>
-              <option>김포시</option>
-              <option>양주시</option>
-              <option>연천시</option>
-              <option>동두천</option>
-              <option>포천시</option>
-              <option>의정부</option>
-              <option>가평군</option>
-              <option>남양주</option>
-              <option>구리시</option>
-              <option>양평시</option>
-            </select>
+          <div className="mapText">
+            <p>
+              ※ 원하시는 캠핑장의 주소나 명칭을 검색하시면 지도에 위치가
+              표시됩니다.
+            </p>
           </div>
         </div>
-        <div id="myMap" />
+
+        <MapContainer searchPlace={place} />
       </div>
     </>
   );
-}
+};
+
+export default Map;

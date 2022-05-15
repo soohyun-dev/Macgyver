@@ -34,6 +34,7 @@ const LoginMain = () => {
         <div className="link">
           <a href="loginShit.html">로그인이 안되시나요?</a>
         </div>
+        <Link to="/naverLogin">네이버 로그인</Link>
       </section>
     </>
   );

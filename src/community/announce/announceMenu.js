@@ -5,13 +5,6 @@ import AnnounceWrite from "../../manager/announceWrite";
 
 const AnnounceItem = ({ item, onEdit, onDelete }) => {
   const { title } = item;
-  const handleDeleteClick = () => {
-    onDelete(item.id);
-  };
-
-  const handleEditClick = () => {
-    onEdit(item.id);
-  };
 
   return (
     <>
@@ -22,8 +15,6 @@ const AnnounceItem = ({ item, onEdit, onDelete }) => {
               <p>{title}</p>
             </Link>
           </li>
-          <button onClick={handleEditClick}>수정</button>
-          <button onClick={handleDeleteClick}>삭제</button>
         </div>
       </div>
     </>

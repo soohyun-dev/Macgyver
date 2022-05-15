@@ -100,30 +100,30 @@
   transition: 0.5s;
 }
 
-.rcBack {
-  background-image: url(../../public/img/rcBack.jpg);
+.rcBlock {
+  background-image: url(../../public/img/rcBlock.jpg);
   width: 100%;
   height: 520px;
   display: flex;
 }
-.rcBack div {
+.rcBlock div {
   display: flex;
   align-items: center;
   z-index: 1000;
   position: absolute;
   top: 37%;
-  left: 37%;
+  left: 40%;
 }
 
-.rcBack div:hover {
+.rcBlock div:hover {
   opacity: 80%;
   transition: 0.3s;
 }
 
-.rcBack p {
+.rcBlock p {
   background-color: rgba(255, 255, 255, 0.5);
   text-align: center;
   padding: 20px 40px;
-  font-weight: 900;
-  font-size: 24px;
+  font-weight: 600;
+  font-size: 20px;
 }

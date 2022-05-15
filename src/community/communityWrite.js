@@ -64,6 +64,13 @@ const CoummunityWrite = ({
           <div className="annWriteTitle">
             <form onSubmit={handleSubmit}>
               <div>
+                <p>제목</p>
+                <input
+                  className="titleInput"
+                  name="title"
+                  value={values.title}
+                  onChange={handleInputChange}
+                />
                 <FileInput
                   name="imgFile"
                   value={values.imgFile}
@@ -71,12 +78,6 @@ const CoummunityWrite = ({
                   onChange={handleChange}
                 />
               </div>
-              <p>제목</p>
-              <input
-                name="title"
-                value={values.title}
-                onChange={handleInputChange}
-              ></input>
               <div className="annWriteWrite">
                 <textarea
                   name="content"

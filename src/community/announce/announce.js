@@ -3,9 +3,9 @@ import "./announce.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBullhorn } from "@fortawesome/free-solid-svg-icons";
 import AnnounceMenu from "./announceMenu";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { deletePosting, getPosting, updatePosting } from "../../api/api";
+import BottomPage from "../../components/bottomPage.";
 
 const Announce = () => {
   const [offset, setOffset] = useState(0);
@@ -90,6 +90,7 @@ const Announce = () => {
           {loadingError?.message && <span>{loadingError.message}</span>}
         </div>
       </section>
+      <BottomPage />
     </>
   );
 };

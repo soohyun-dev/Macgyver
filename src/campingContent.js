@@ -1,14 +1,17 @@
 import "./mypage/myPageRecommend.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
+
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Rating from "./rating";
 
 const CampingContentItem = ({ item }) => {
-  const { imgUrl, rating, title, location } = item;
-  const [bookMarkIcon, setbookMarkIcon] = useState(false);
-
+  const { imgUrl, rating, title, address, bookmark } = item;
+  const [bookMarkIcon, setBookMarkIcon] = useState(bookmark);
+  const bookmarkChange = (v) => {
+    item.bookmark = v;
+  };
   return (
     <>
       <section className="recommend">
@@ -27,24 +30,30 @@ const CampingContentItem = ({ item }) => {
                   <FontAwesomeIcon
                     icon={faBookmark}
                     className="BookMark"
-                    onClick={() => setbookMarkIcon(!bookMarkIcon)}
+                    onClick={() => {
+                      bookmarkChange(false);
+                      setBookMarkIcon(!bookMarkIcon);
+                    }}
                   />
                 ) : (
                   <FontAwesomeIcon
                     icon={faBookmark}
                     className="BookMark"
-                    style={{ color: "color: rgb(169, 169, 169);" }}
-                    onClick={() => setbookMarkIcon(!bookMarkIcon)}
+                    style={{ color: "#888" }}
+                    onClick={() => {
+                      bookmarkChange(true);
+                      setBookMarkIcon(!bookMarkIcon);
+                    }}
                   />
                 )}
               </div>
             </div>
             <div className="recommendContentContent">
-              <p>{location}</p>
+              <p>{address}</p>
             </div>
-            <Link to="/recommendContent">
+            <Link to={`/recommendContent/${item.id}`} state={{ item: item }}>
               <div className="recommendContentButton">
-                <p href="#">보러가기</p>
+                <p>보러가기</p>
               </div>
             </Link>
           </div>

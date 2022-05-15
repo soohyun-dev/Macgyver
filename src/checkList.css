@@ -69,6 +69,7 @@
   border: none;
   padding: 7px 20px;
   margin: 20px 0;
+  cursor: pointer;
 }
 
 #checkList button:hover {

@@ -22,6 +22,7 @@ import PostManager from "./manager/postManager";
 import AnnounceWrite from "./manager/announceWrite";
 import CheckList from "./checkList";
 import LoginMain from "./login/loginMain";
+import NaverLogin from "./NaverLogin";
 
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const App = () => {
         <Route path="/" element={<Main />} />
         <Route path="/checkList" element={<CheckList />} />
         <Route path="/recommend" element={<Recommend />} />
-        <Route path="/recommendContent" element={<RecommendContent />} />
+        <Route path="/recommendContent/:id" element={<RecommendContent />} />
         <Route path="/map" element={<Map />} />
         <Route path="/community" element={<Community />} />
         <Route path="/hot" element={<Hot />} />
@@ -52,6 +53,7 @@ const App = () => {
         <Route path="/manager" element={<Manager />} />
         <Route path="/postManager" element={<PostManager />} />
         <Route path="/announceWrite" element={<AnnounceWrite />} />
+        <Route path="/naverLogin" element={<NaverLogin />} />
       </Routes>
     </>
   );

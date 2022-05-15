@@ -45,3 +45,27 @@
   border-width: medium;
   border-color: #d8d8d8;
 }
+
+.inputForm {
+  margin-left: 20px;
+}
+
+.inputForm input {
+  border: 1px solid #888;
+}
+
+.inputForm button {
+  padding: 5px 20px;
+  cursor: pointer;
+  border: 1px solid #888;
+}
+
+.inputForm button:hover {
+  opacity: 70%;
+}
+
+.mapText {
+  width: 92%;
+  margin: 0 auto;
+  padding-left: 10px;
+}
