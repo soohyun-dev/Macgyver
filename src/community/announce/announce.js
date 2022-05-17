@@ -81,9 +81,13 @@ const Announce = () => {
           onUpdate={updatePosting}
           onUpdateSuccess={handleUpdateSuccess}
         />
-        <div class="pBbutton">
+        <div>
           {hasNext && (
-            <button disabled={isLoading} onClick={handleLoadMore}>
+            <button
+              className="pButton"
+              disabled={isLoading}
+              onClick={handleLoadMore}
+            >
               더 보기
             </button>
           )}

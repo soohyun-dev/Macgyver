@@ -76,7 +76,9 @@ const Mypage = () => {
           <p>관리</p>
         </div>
       </section>
+
       <PostingList items={items} onDelete={handleDelete} />
+
       <div class="loadButton">
         <button disabled={!hasNext} onClick={handleLoadMore}>
           더보기

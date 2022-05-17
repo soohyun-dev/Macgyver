@@ -1,17 +1,45 @@
 import { Link } from "react-router-dom";
 import Navi from "../components/Navi";
 import "./manager.css";
-import mockItems from "../mock/userMock.json";
 import MemberList from "./component/memberList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { deleteMember, getMember } from "../api/api";
+
+const LIMIT = 8;
 
 const Manager = () => {
-  const [items, setItems] = useState(mockItems);
+  const [offset, setOffset] = useState(0);
+  const [items, setItems] = useState([]);
+  const [hasNext, setHasNext] = useState(false);
 
-  const handleDelete = (id) => {
-    const nextItems = items.filter((item) => item.id !== id);
-    setItems(nextItems);
+  const handleLoad = async (options) => {
+    const { contacts, paging } = await getMember(options);
+    if (options.offset === 0) {
+      setItems(contacts);
+    } else {
+      setItems([...items, ...contacts]);
+    }
+    setOffset(options.offset + contacts.length);
+    setHasNext(paging.hasNext);
   };
+
+  const handleDelete = async (id) => {
+    const result = await deleteMember(id);
+    if (!result) return;
+
+    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+
+  const handleLoadMore = () => {
+    handleLoad({ offset, limit: LIMIT });
+  };
+
+  useEffect(() => {
+    handleLoad({ offset: 0, limit: LIMIT });
+  }, []);
+
+  console.log(items);
+
   return (
     <>
       <Navi />
@@ -55,45 +83,11 @@ const Manager = () => {
 
       <MemberList items={items} onDelete={handleDelete} />
 
-      <section>
-        <div className="postingPage">
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              1
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              2
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              3
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              4
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              5
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              6
-            </p>
-          </li>
-          <li>
-            <p href="#" name="page" onclick="checkOnlyOne(this)">
-              7
-            </p>
-          </li>
-        </div>
-      </section>
+      <div class="loadButton">
+        <button disabled={!hasNext} onClick={handleLoadMore}>
+          더보기
+        </button>
+      </div>
     </>
   );
 };

@@ -7,10 +7,13 @@ const MemberListItem = ({ item, onDelete }) => {
       <section>
         <div className="memberManagePost">
           <div className="managerPostId">
-            <p>{item.username}</p>
+            <p>{item.name}</p>
           </div>
           <div className="managerPostDay">
-            <p>{item.signUpDay}</p>
+            <p>{item.email}</p>
+          </div>
+          <div className="managerPostDay">
+            <p>{item.gender}</p>
           </div>
           <div className="managerPostModify">
             <button onClick={handleDeleteClick}>회원 삭제</button>

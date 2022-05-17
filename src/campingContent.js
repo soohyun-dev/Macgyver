@@ -25,7 +25,7 @@ const CampingContentItem = ({ item }) => {
           <div className="recommendContent">
             <div className="recommendContentTitle">
               <p>{title}</p>
-              <div>
+              <div style={{ display: "inline" }}>
                 {bookMarkIcon === true ? (
                   <FontAwesomeIcon
                     icon={faBookmark}

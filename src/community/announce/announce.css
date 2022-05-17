@@ -19,3 +19,13 @@
   padding-left: 10px;
   margin-bottom: 20px;
 }
+
+.pButton {
+  padding: 10px 30px;
+  cursor: pointer;
+  border: none;
+}
+
+.pButton:hover {
+  opacity: 70%;
+}

@@ -3,7 +3,7 @@ p {
 }
 
 .recommend {
-  margin: 20px auto 0 90px;
+  margin: 0 40px;
   height: 100%;
   border-radius: 5px;
   display: inline;
@@ -16,6 +16,7 @@ p {
 }
 
 .recommendImg img {
+  width: 350px;
   height: auto;
   max-height: 230px;
   border-radius: 5px;

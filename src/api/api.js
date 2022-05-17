@@ -52,3 +52,29 @@ export async function deletePosting(id) {
   const body = await response.json();
   return body;
 }
+
+// 로그인 api GET
+
+export async function getMember() {
+  const response = await fetch("https://api.androidhive.info/contacts/", {
+    method: "GET",
+  });
+  if (!response.ok) {
+    throw new Error("멤버 리스트를 불러오는데 실패했습니다.");
+  }
+  const body = await response.json();
+  return body;
+}
+
+// 로그인 api DELETE
+
+export async function deleteMember(id) {
+  const response = await fetch(`https://api.androidhive.info/contacts/${id}`, {
+    method: "DELETE",
+  });
+  if (!response.ok) {
+    throw new Error("멤버 리스트를 삭제하는데 실패했습니다.");
+  }
+  const body = await response.json();
+  return body;
+}
