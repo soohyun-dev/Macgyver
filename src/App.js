@@ -23,6 +23,7 @@ import AnnounceWrite from "./manager/announceWrite";
 import CheckList from "./checkList";
 import LoginMain from "./login/loginMain";
 import NaverLogin from "./NaverLogin";
+import NotFound from "./NotFound";
 
 const App = () => {
   return (
@@ -54,6 +55,7 @@ const App = () => {
         <Route path="/postManager" element={<PostManager />} />
         <Route path="/announceWrite" element={<AnnounceWrite />} />
         <Route path="/naverLogin" element={<NaverLogin />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

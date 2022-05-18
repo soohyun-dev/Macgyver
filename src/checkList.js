@@ -1,7 +1,7 @@
 import Navi from "./components/Navi";
 import "./checkList.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCommentsDollar, faUserTag } from "@fortawesome/free-solid-svg-icons";
+import { faUserTag } from "@fortawesome/free-solid-svg-icons";
 import BottomPage from "./components/bottomPage.";
 
 const CheckList = () => {

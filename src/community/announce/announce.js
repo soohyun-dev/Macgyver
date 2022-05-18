@@ -51,10 +51,6 @@ const Announce = () => {
     await handleLoad({ offset, limit: LIMIT });
   };
 
-  const handleCreateSuccess = (review) => {
-    setItems((prevItems) => [review, ...prevItems]);
-  };
-
   const handleUpdateSuccess = (review) => {
     setItems((prevItems) => {
       const splitIdx = prevItems.findIndex((item) => item.id === review.id);

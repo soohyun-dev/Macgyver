@@ -15,18 +15,19 @@ import styled from "styled-components";
 
 const Recommend = () => {
   const Container = styled.div`
+    text-align: center;
     width: 90%;
     margin: 0 auto;
     overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
   `;
   const Button = styled.button`
     margin: 0 20px;
-    padding: 10px 20px;
+    padding: 10px 30px;
     cursor: pointer;
     border: none;
     &:hover {
       transition: all 0.3s ease-in-out;
-      opacity: 70%;
+      opacity: 60%;
     }
   `;
   const SliderContainer = styled.div`
