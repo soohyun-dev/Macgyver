@@ -19,11 +19,14 @@ const NotFound = () => {
           </p>
         </div>
         <div className="emptyButton">
-          <Link to="/">
+          <Link to="/main">
             <button>
               <p>
                 되돌아가기
-                <FontAwesomeIcon icon={faArrowRight} />
+                <FontAwesomeIcon
+                  className="emptyButtonIcon"
+                  icon={faArrowRight}
+                />
               </p>
             </button>
           </Link>
