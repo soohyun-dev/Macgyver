@@ -46,5 +46,9 @@
   "devDependencies": {
     "gh-pages": "^4.0.0"
   },
+<<<<<<< HEAD
   "homepage": "http://soohyun-dev.github.io/Macgyver"
+=======
+  "homepage": "http://soohyun-dev.github.io/Macgyver/"
+>>>>>>> 429938b64117d552ed06df9c57c4b4766008ee78
 }
