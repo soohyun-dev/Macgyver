@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Macgyver/static/css/main.26c4fa34.css",
+    "main.js": "/Macgyver/static/js/main.a94722a7.js",
+    "static/media/empty2.jpg": "/Macgyver/static/media/empty2.f84363ff9bf052158e18.jpg",
+    "static/media/rcBlock.jpg": "/Macgyver/static/media/rcBlock.c4ba66c58fe24c3dcbac.jpg",
+    "static/media/campfire.jpg": "/Macgyver/static/media/campfire.e1b663e556bde3fce34f.jpg",
+    "index.html": "/Macgyver/index.html",
+    "main.26c4fa34.css.map": "/Macgyver/static/css/main.26c4fa34.css.map",
+    "main.a94722a7.js.map": "/Macgyver/static/js/main.a94722a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26c4fa34.css",
+    "static/js/main.a94722a7.js"
+  ]
+}
