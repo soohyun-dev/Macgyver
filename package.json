@@ -2,6 +2,7 @@
   "name": "learn-redux",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://soohyun-dev.github.io/Macgyver/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
@@ -45,10 +46,5 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
-  },
-<<<<<<< HEAD
-  "homepage": "http://soohyun-dev.github.io/Macgyver"
-=======
-  "homepage": "http://soohyun-dev.github.io/Macgyver/"
->>>>>>> 429938b64117d552ed06df9c57c4b4766008ee78
+  }
 }
