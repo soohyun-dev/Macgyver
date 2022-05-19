@@ -20,6 +20,11 @@ p {
   padding: 0 10px;
 }
 
+#myPageBookmark {
+  width: 94%;
+  margin: 0 auto;
+}
+
 .loginSetting {
   text-align: center;
 }

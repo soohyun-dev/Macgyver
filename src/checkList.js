@@ -98,6 +98,28 @@ const CheckList = () => {
       }
     }
 
+    // 결과값 송신
+
+    onclick = () => {
+      const textbox = {
+        inText: this.state.text,
+      };
+      fetch("http://localhost:3001/text", {
+        method: "post", //통신방법
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(textbox),
+      })
+        .then((res) => res.json())
+        .then((json) => {
+          console.log(json);
+          this.setState({
+            text: json.text,
+          });
+        });
+    };
+
     console.log(msg);
   };
 
@@ -269,7 +291,7 @@ const CheckList = () => {
         <button
           type="submit"
           onClick={() => {
-            report();
+            this.onclick();
             alert("제출되었습니다!");
           }}
         >

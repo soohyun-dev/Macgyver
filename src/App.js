@@ -48,7 +48,7 @@ const App = () => {
           path="/reportPostingContent"
           element={<ReportPostingContent />}
         />
-        <Route path="/login" element={<LoginMain />} />
+        <Route path="/login" element={<Mypage />} />
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/signUpDel" element={<SignUpDel />} />
         <Route path="/manager" element={<Manager />} />

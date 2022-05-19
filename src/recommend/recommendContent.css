@@ -1,5 +1,9 @@
-p {
-  display: inline-block;
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&family=Yeon+Sung&display=swap");
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
 #recommendContent {
@@ -7,67 +11,215 @@ p {
   align-items: center;
   border: none;
   padding: 20px;
-  width: 800px;
+  width: 70%;
   height: 100%;
   text-align: center;
   font-size: 32px;
 }
 
+.titleText span {
+  font-size: 44px;
+  text-decoration-line: underline;
+}
+
+.titleText span:hover {
+  opacity: 70%;
+}
+
 .campingName {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .campingImg img {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: 5px;
   margin: 20px 0;
 }
 
-.campingRating {
-  color: #edf034;
-  font-size: 24px;
+.campIntro {
+  font-size: 28px;
+  font-weight: 900;
+  padding: 10px 20px;
+  font-style: italic;
+  margin: 50px 0 100px 0;
+  text-decoration-line: underline;
+  text-decoration-color: #58ef0c;
+  text-decoration-style: double;
 }
 
-.campingContent {
+.campIntro:hover {
+  opacity: 80%;
+}
+
+/* ///////////////////////////////// */
+/*        캠핑 상세보기 내용         */
+/* ///////////////////////////////// */
+
+.campRecommendContent {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.campcontent {
+  width: 100%;
   margin: 50px 0;
 }
 
-.campingContent p {
-  font-size: 16px;
+.campcontentUp {
+  width: 100%;
 }
 
-.campingContent p {
-  font-size: 14px;
+.campcontentDown {
+  width: 100%;
+}
+.campcontentBlock1 {
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
+  background-color: #eeeeee;
+  margin: 30px 50px;
+  vertical-align: top;
+}
+.campcontentBlock2 {
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: #eeeeee;
+  margin: 30px 50px;
+  vertical-align: top;
 }
 
-.campingTag {
-  margin: 100px 0;
-  font-size: 14px;
+.campcontentBlock1:hover {
+  cursor: pointer;
+  box-shadow: 0 15px 20px rgba(92, 89, 89, 0.2),
+    0 10px 14px rgba(92, 79, 79, 0.2);
+  transform: translateY(-10px) translateX(5px);
+  transition: 0.7s;
+}
+
+.campcontentBlock2:hover {
+  cursor: pointer;
+  box-shadow: 0 15px 20px rgba(92, 89, 89, 0.2),
+    0 10px 14px rgba(92, 79, 79, 0.2);
+  transform: translateY(-10px) translateX(5px);
+  transition: 0.7s;
+}
+
+.campcontentBlock1:nth-child(2):hover {
+  background-color: rgb(230, 254, 229);
+  transition: 0.7s;
+}
+
+.campcontentBlock2:nth-child(1):hover {
+  background-color: rgb(255, 249, 220);
+  transition: 0.7s;
+}
+
+.campcontentBlock2:nth-child(2):hover {
+  background-color: rgb(219, 238, 248);
+  transition: 0.7s;
+}
+
+.campcontentTitle {
+  font-size: 26px;
+  padding: 30px 30px 10px 30px;
+  text-align: left;
   font-weight: 900;
 }
 
-.campingTag p {
-  color: rgb(77, 76, 76);
+.campcontentText {
+  width: 90%;
+  color: #514f4f;
+  font-size: 18px;
+  text-align: left;
+  margin: 50px 10px 10px 20px;
+  font-weight: 700;
 }
 
-.campingLocation {
-  margin: 50px 0;
+.campcontentText p {
+  display: block;
+}
+
+.campcontentText p span {
+  color: #2bbd7e;
   font-size: 20px;
+}
+
+.campcontentText input {
+  width: 100%;
+}
+
+.clipboard {
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  float: right;
+}
+
+.clipboardImg {
+  margin-top: 5px;
+  width: 25px;
+  height: 25px;
+}
+
+.clipMapButton {
+  margin: 40px 50px 20px 0;
+  border: none;
+  background-color: rgb(206, 246, 143);
+  cursor: pointer;
+  padding: 10px 60px;
+  float: right;
+  display: block;
+  font-size: 16px;
   font-weight: 900;
 }
+
+.clipMapButton:hover {
+  opacity: 80%;
+}
+
+.clipMapText {
+  font-size: 12px;
+  color: #888;
+  float: right;
+  margin: 5px 5px;
+}
+
+.hpBtn {
+  width: 300px;
+  display: block;
+  margin: 30px auto;
+  padding: 10px 0px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.hpBtn:hover {
+  opacity: 90%;
+}
+
+/* ///////////////////////////////// */
+/*         되돌아가기 버튼           */
+/* ///////////////////////////////// */
 
 .rcBackBlock {
   background-color: #3090d6;
   border: none;
   max-width: 130px;
   margin-left: 43vh;
-  margin-bottom: 50px;
-  border-radius: 1px;
+  margin-bottom: 100px;
+  border-radius: 5px;
   font-size: 16px;
   color: #fff;
   padding: 8px 0;
+  margin: 0 auto;
 }
 
 .rcBackBlock:hover {

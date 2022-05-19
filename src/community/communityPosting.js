@@ -6,6 +6,7 @@ import CoummunityWrite from "./communityWrite";
 
 const CommunityPostingItem = ({ item, onEdit, onDelete }) => {
   const { title, imgUrl, rating } = item;
+
   const handleDeleteClick = () => {
     onDelete(item.id);
   };
@@ -39,13 +40,7 @@ const CommunityPostingItem = ({ item, onEdit, onDelete }) => {
   );
 };
 
-const CommunityPosting = ({
-  items,
-  onDelete,
-  onUpdate,
-  onUpdateSuccess,
-  category,
-}) => {
+const CommunityPosting = ({ items, onDelete, onUpdate, onUpdateSuccess }) => {
   const [editingId, setEditingId] = useState(null);
 
   const handleCancel = () => setEditingId(null);

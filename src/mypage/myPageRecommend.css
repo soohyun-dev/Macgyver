@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+* {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
 p {
   display: inline-block;
 }
@@ -47,7 +53,7 @@ p {
 }
 
 .recommendContentTitle p {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 900;
   padding: 10px 0;
 }
@@ -64,6 +70,13 @@ p {
 .recommendContentContent p {
   font-size: 14px;
   font-weight: 400;
+  background-color: #fff176;
+  padding: 5px 20px;
+}
+
+.rcIntro {
+  font-weight: 700;
+  color: #00bcd4;
 }
 
 .recommendContentButton p {

@@ -55,8 +55,9 @@ const Mypage = () => {
           <span>윤수현</span>님의 페이지.
         </p>
       </section>
-      <CampingContent items={result} />
-
+      <section id="myPageBookmark">
+        <CampingContent items={result} />
+      </section>
       <section>
         <div className="reportTitle">
           <p>작성 글</p>

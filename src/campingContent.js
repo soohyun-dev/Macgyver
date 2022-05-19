@@ -7,7 +7,8 @@ import { useState } from "react";
 import Rating from "./rating";
 
 const CampingContentItem = ({ item }) => {
-  const { imgUrl, rating, title, address, bookmark } = item;
+  const { firstImageUrl, rating, facltNm, featureNm, lineIntro, bookmark } =
+    item;
   const [bookMarkIcon, setBookMarkIcon] = useState(bookmark);
   const bookmarkChange = (v) => {
     item.bookmark = v;
@@ -17,14 +18,14 @@ const CampingContentItem = ({ item }) => {
       <section className="recommend">
         <div className="recommendBlock">
           <div className="recommendImg">
-            <img src={imgUrl} alt={title} />
+            <img src={firstImageUrl} alt={facltNm} />
           </div>
           <div className="rating">
             <Rating value={rating} />
           </div>
           <div className="recommendContent">
             <div className="recommendContentTitle">
-              <p>{title}</p>
+              <p>{facltNm}</p>
               <div style={{ display: "inline" }}>
                 {bookMarkIcon === true ? (
                   <FontAwesomeIcon
@@ -48,8 +49,11 @@ const CampingContentItem = ({ item }) => {
                 )}
               </div>
             </div>
+            <div className="rcIntro">
+              <p>{lineIntro}</p>
+            </div>
             <div className="recommendContentContent">
-              <p>{address}</p>
+              <p>{featureNm}</p>
             </div>
             <Link to={`/recommendContent/${item.id}`} state={{ item: item }}>
               <div className="recommendContentButton">
