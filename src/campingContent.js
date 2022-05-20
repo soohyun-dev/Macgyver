@@ -4,11 +4,9 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Rating from "./rating";
 
 const CampingContentItem = ({ item }) => {
-  const { firstImageUrl, rating, facltNm, featureNm, lineIntro, bookmark } =
-    item;
+  const { firstImageUrl, facltNm, featureNm, lineIntro, bookmark } = item;
   const [bookMarkIcon, setBookMarkIcon] = useState(bookmark);
   const bookmarkChange = (v) => {
     item.bookmark = v;
@@ -19,9 +17,6 @@ const CampingContentItem = ({ item }) => {
         <div className="recommendBlock">
           <div className="recommendImg">
             <img src={firstImageUrl} alt={facltNm} />
-          </div>
-          <div className="rating">
-            <Rating value={rating} />
           </div>
           <div className="recommendContent">
             <div className="recommendContentTitle">

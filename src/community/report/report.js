@@ -3,8 +3,9 @@ import Navi from "../../components/Navi";
 import "./report.css";
 import ReportTitle from "./reportTitle";
 import { useState, useEffect } from "react";
-import PostingList from "../../manager/component/postingList";
 import { getPosting, deletePosting } from "../../api/api";
+import ReportList from "../../manager/component/reportList";
+import item from "../../mock/reportMock.json";
 
 const LIMIT = 8;
 
@@ -54,7 +55,7 @@ const Report = () => {
           <p>작성일</p>
         </div>
       </section>
-      <PostingList items={items} onDelete={handleDelete} />
+      <ReportList items={item} onDelete={handleDelete} />
       <div class="loadButton">
         <button disabled={!hasNext} onClick={handleLoadMore}>
           더보기

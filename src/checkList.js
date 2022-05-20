@@ -3,6 +3,7 @@ import "./checkList.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserTag } from "@fortawesome/free-solid-svg-icons";
 import BottomPage from "./components/bottomPage.";
+import { createCheckList } from "./api/api";
 
 const CheckList = () => {
   const checkOnlyOne1 = (checkThis) => {
@@ -59,7 +60,7 @@ const CheckList = () => {
   };
 
   const report = () => {
-    var msg = {};
+    var msg = [{}];
     var checkBoxes1 = document.getElementsByName("Q1");
     var checkBoxes2 = document.getElementsByName("Q2");
     var checkBoxes3 = document.getElementsByName("Q3");
@@ -99,28 +100,12 @@ const CheckList = () => {
     }
 
     // 결과값 송신
-
-    onclick = () => {
-      const textbox = {
-        inText: this.state.text,
-      };
-      fetch("http://localhost:3001/text", {
-        method: "post", //통신방법
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(textbox),
-      })
-        .then((res) => res.json())
-        .then((json) => {
-          console.log(json);
-          this.setState({
-            text: json.text,
-          });
-        });
+    console.log(msg);
+    const submit = (msg) => {
+      createCheckList(msg);
     };
 
-    console.log(msg);
+    submit();
   };
 
   return (
@@ -291,7 +276,7 @@ const CheckList = () => {
         <button
           type="submit"
           onClick={() => {
-            this.onclick();
+            report();
             alert("제출되었습니다!");
           }}
         >

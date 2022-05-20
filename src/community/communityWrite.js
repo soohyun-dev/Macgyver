@@ -88,6 +88,7 @@ const CoummunityWrite = ({
               <section id="announceWriteSubmit">
                 <div>
                   <button
+                    className="writeButton"
                     type="submit"
                     disabled={isSubmitting}
                     style={{ margin: "0 40px", cursor: "pointer" }}
@@ -96,7 +97,10 @@ const CoummunityWrite = ({
                   </button>
                   {onCancel && <button onClick={onCancel}>취소</button>}
                   {!onCancel && (
-                    <Link to="/community" style={{ fontSize: "16px" }}>
+                    <Link
+                      to="/community"
+                      style={{ fontSize: "16px", padding: "10px 20px" }}
+                    >
                       되돌아가기
                     </Link>
                   )}

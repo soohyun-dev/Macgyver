@@ -4,8 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBullhorn } from "@fortawesome/free-solid-svg-icons";
 import AnnounceMenu from "./announceMenu";
 import { useState, useEffect } from "react";
-import { deletePosting, getPosting, updatePosting } from "../../api/api";
+import { getPosting, updatePosting } from "../../api/api";
 import BottomPage from "../../components/bottomPage.";
+import item from "../../mock/cmMock.json";
 
 const Announce = () => {
   const [offset, setOffset] = useState(0);
@@ -15,12 +16,6 @@ const Announce = () => {
   const [hasNext, setHasNext] = useState(false);
 
   const LIMIT = 6;
-  const handleDelete = async (id) => {
-    const result = await deletePosting(id);
-    if (!result) return;
-
-    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
-  };
 
   const handleLoad = async (options) => {
     let result;
@@ -72,8 +67,7 @@ const Announce = () => {
         <FontAwesomeIcon icon={faBullhorn} className="announceIcon" />
         <p className="announceTitle">맥가이버에서 알려드립니다!!</p>
         <AnnounceMenu
-          items={items}
-          onDelete={handleDelete}
+          items={item}
           onUpdate={updatePosting}
           onUpdateSuccess={handleUpdateSuccess}
         />

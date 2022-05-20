@@ -12,13 +12,16 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import BottomPage from "../components/bottomPage.";
 import styled from "styled-components";
+import { getCamping } from "../api/api";
 
 const Recommend = () => {
+  getCamping();
+
   const Container = styled.div`
     text-align: center;
     width: 90%;
     margin: 0 auto;
-    overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
+    overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리
   `;
   const Button = styled.button`
     margin: 0 20px;
@@ -33,9 +36,9 @@ const Recommend = () => {
   const SliderContainer = styled.div`
     margin: 0 40px;
     width: 100%;
-    display: flex; //이미지들을 가로로 나열합니다.
+    display: flex; //이미지들을 가로로 나열
   `;
-  const TOTAL_SLIDES = 2;
+  const TOTAL_SLIDES = 5;
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);

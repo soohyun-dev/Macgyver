@@ -1,17 +1,18 @@
 import "./reportPosting.css";
 
-const ReportPosting = () => {
+const ReportPosting = (item) => {
+  const { title, user, day } = item;
   return (
     <>
       <section id="reportPost">
         <div className="postName">
-          <p>참좋아요 캠핑장 주기적으로 올라옵니다. 광고 의심됩니다.</p>
+          <p>{title}</p>
         </div>
         <div className="postId">
-          <p>ilsanCamper</p>
+          <p>{user}</p>
         </div>
         <div className="postDay">
-          <p>2022-04-16</p>
+          <p>{day}</p>
         </div>
       </section>
     </>
