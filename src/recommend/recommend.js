@@ -4,18 +4,27 @@ import Navi from "../components/Navi";
 import React, { useEffect, useRef, useState } from "react";
 import RecommendTitle from "./recommendTitle";
 import CampingContent from "../campingContent";
-import campingItems from "../mock/rcMock.json";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import BottomPage from "../components/bottomPage.";
+import BottomPage from "../components/bottomPage";
 import styled from "styled-components";
 import { getCamping } from "../api/api";
 
 const Recommend = () => {
-  getCamping();
+  const [items, setItems] = useState([]);
+
+  const handleLoad = async () => {
+    const camp = await getCamping();
+    setItems(camp);
+  };
+  console.log(items.facltNm);
+
+  useEffect(() => {
+    handleLoad();
+  }, []);
 
   const Container = styled.div`
     text-align: center;
@@ -38,7 +47,7 @@ const Recommend = () => {
     width: 100%;
     display: flex; //이미지들을 가로로 나열
   `;
-  const TOTAL_SLIDES = 5;
+  const TOTAL_SLIDES = 6;
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
@@ -84,7 +93,7 @@ const Recommend = () => {
       <RecommendTitle />
       <Container>
         <SliderContainer ref={slideRef}>
-          <CampingContent items={campingItems} />
+          <CampingContent items={items} />
         </SliderContainer>
         <div className="slideButtonBlock">
           <Button onClick={prevSlide} className="slideButton">

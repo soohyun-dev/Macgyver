@@ -5,7 +5,7 @@ const Navi = () => {
   return (
     <>
       <div className="nav">
-        <Link to="/main">
+        <Link to="/">
           <h1 className="logo">MacGyver</h1>
         </Link>
         <div>

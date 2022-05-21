@@ -5,7 +5,7 @@ import CommunityCatagory from "../components/communityCatagory";
 import CommunityPosting from "./communityPosting";
 import { useEffect, useState } from "react";
 import { deletePosting, getPosting, updatePosting } from "../api/api";
-import BottomPage from "../components/bottomPage.";
+import BottomPage from "../components/bottomPage";
 
 const LIMIT = 6;
 

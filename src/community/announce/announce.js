@@ -5,7 +5,7 @@ import { faBullhorn } from "@fortawesome/free-solid-svg-icons";
 import AnnounceMenu from "./announceMenu";
 import { useState, useEffect } from "react";
 import { getPosting, updatePosting } from "../../api/api";
-import BottomPage from "../../components/bottomPage.";
+import BottomPage from "../../components/bottomPage";
 import item from "../../mock/cmMock.json";
 
 const Announce = () => {

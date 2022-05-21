@@ -2,7 +2,7 @@ import Navi from "./components/Navi";
 import "./checkList.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserTag } from "@fortawesome/free-solid-svg-icons";
-import BottomPage from "./components/bottomPage.";
+import BottomPage from "./components/bottomPage";
 import { createCheckList } from "./api/api";
 
 const CheckList = () => {

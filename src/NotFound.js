@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import BottomPage from "./components/bottomPage.";
+import BottomPage from "./components/bottomPage";
 import Navi from "./components/Navi";
 import "./NotFound.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,7 +19,7 @@ const NotFound = () => {
           </p>
         </div>
         <div className="emptyButton">
-          <Link to="/main">
+          <Link to="/">
             <button>
               <p>
                 되돌아가기

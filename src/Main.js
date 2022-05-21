@@ -40,7 +40,7 @@ const Main = () => {
             </Link>
           </p>
           <p href="login/login.html">
-            <Link to="/Mypage">
+            <Link to="/login">
               <FontAwesomeIcon
                 icon={faUser}
                 className="user"
@@ -55,6 +55,7 @@ const Main = () => {
           <span>MacGyver</span>
         </div>
       </div>
+
       <div className="managerMod">
         <Link to="/Manager">
           <p>관리자모드</p>

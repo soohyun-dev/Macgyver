@@ -1,4 +1,4 @@
-import BottomPage from "../../components/bottomPage.";
+import BottomPage from "../../components/bottomPage";
 import Navi from "../../components/Navi";
 import "./report.css";
 import ReportTitle from "./reportTitle";

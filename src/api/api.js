@@ -1,21 +1,31 @@
-const BASE_URL = "https://learn.codeit.kr/api";
-const base_camp =
-  "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/camp";
+import axios from "axios";
 
-// 추천 캠핑장
 export async function getCamping() {
   const response = await fetch(
-    "https://cors-anywhere.herokuapp.com/http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/camp/1",
+    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/camp/list",
     {
       method: "GET",
     }
   );
   if (!response.ok) {
-    throw new Error("리뷰를 불러오는데 실패했습니다.");
+    throw new Error("리뷰를 불러오는데 실패했습니다");
   }
   const body = await response.json();
+  console.log(body);
   return body;
 }
+
+export function test() {
+  axios
+    .get(
+      "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/camp/1"
+    )
+    .then((data) => {
+      console.log(data.data);
+    });
+}
+
+const BASE_URL = "https://learn.codeit.kr/api";
 
 export async function getPosting({
   order = "createdAt",

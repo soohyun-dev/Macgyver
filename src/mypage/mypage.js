@@ -5,7 +5,7 @@ import "../community/report/reportTitle.css";
 import { Link } from "react-router-dom";
 import CampingContent from "../campingContent";
 import campingItems from "../mock/rcMock.json";
-import BottomPage from "../components/bottomPage.";
+import BottomPage from "../components/bottomPage";
 import { getPosting, deletePosting } from "../api/api";
 import PostingList from "../manager/component/postingList";
 import { useState, useEffect } from "react";

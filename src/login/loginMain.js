@@ -2,40 +2,43 @@ import React from "react";
 import Navi from "../components/Navi";
 import "./loginMain.css";
 import "../style.css";
-import { Link } from "react-router-dom";
+import BottomPage from "../components/bottomPage";
 
 const LoginMain = () => {
   return (
     <>
       <Navi />
       <section id="login">
-        <h1
-          className="logitTitle"
-          style={{ color: "#4b636e", fontSize: "20px" }}
-        >
-          MacGyver
-        </h1>
-        <form>
-          <input type="text" className="loginBlock" placeholder="아이디" />
-          <input
-            type="password"
-            className="loginBlock"
-            placeholder="비밀번호"
-          />
-          <Link to="/myPage">
-            <div className="loginClick">
-              <a href="../myPage.html">로그인</a>
-            </div>
-          </Link>
-          <div className="signUp">
-            <a href="signUp.html">회원가입</a>
-          </div>
-        </form>
-        <div className="link">
-          <a href="loginShit.html">로그인이 안되시나요?</a>
+        <div className="loginTitle">
+          <p>MacGyver Login</p>
         </div>
-        <Link to="/naverLogin">네이버 로그인</Link>
+        <div className="loginExplain_01">
+          <p>
+            *캠핑장 정보를 더욱 효과적으로 추천드리기 위해 <br /> 로그인이
+            필요합니다.
+          </p>
+        </div>
+        <div className="loginBox">
+          <button
+            onClick={() =>
+              window.open(
+                "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/oauth2/authorization/naver",
+                "_blank"
+              )
+            }
+          >
+            <img
+              className="loginImg"
+              src={`${process.env.PUBLIC_URL}/img/naverLogin.png`}
+              alt=""
+            />
+          </button>
+        </div>
+        <div className="loginExplain_02">
+          <p>사용자 정보는 등록된 네이버 로그인 정보를 통해 제공받습니다.</p>
+        </div>
       </section>
+      <BottomPage />
     </>
   );
 };
