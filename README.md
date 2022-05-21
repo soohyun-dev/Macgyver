@@ -1,4 +1,4 @@
-# Macgyver Reac Code 
+# Macgyver React Code 
 <br><br>
 ##깃허브 배포 버전
 https://soohyun-dev.github.io/Macgyver/
