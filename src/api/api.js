@@ -1,5 +1,48 @@
 import axios from "axios";
 
+export async function getBookmark() {
+  const response = await fetch(
+    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/user/mypage/bookmark",
+    {
+      method: "GET",
+    }
+  );
+  if (!response.ok) {
+    throw new Error("북마크 정보를 불러오는데 실패했습니다");
+  }
+  const body = await response.json();
+  console.log(body);
+  return body;
+}
+
+export async function getUser() {
+  const response = await fetch(
+    `http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/admin/userList`,
+    {
+      method: "GET",
+    }
+  );
+  if (!response.ok) {
+    throw new Error("리뷰를 불러오는데 실패했습니다");
+  }
+  const body = await response.json();
+  return body;
+}
+
+export async function deleteUser(id) {
+  const response = await fetch(
+    `http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/admin/userList/${id}`,
+    {
+      method: "DELETE",
+    }
+  );
+  if (!response.ok) {
+    throw new Error("유저를 삭제하는데 실패했습니다.");
+  }
+  const body = await response.json();
+  return body;
+}
+
 export async function getCamping() {
   const response = await fetch(
     "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/camp/list",
@@ -11,18 +54,7 @@ export async function getCamping() {
     throw new Error("리뷰를 불러오는데 실패했습니다");
   }
   const body = await response.json();
-  console.log(body);
   return body;
-}
-
-export function test() {
-  axios
-    .get(
-      "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/camp/1"
-    )
-    .then((data) => {
-      console.log(data.data);
-    });
 }
 
 const BASE_URL = "https://learn.codeit.kr/api";
@@ -75,32 +107,6 @@ export async function deletePosting(id) {
   });
   if (!response.ok) {
     throw new Error("리뷰를 삭제하는데 실패했습니다.");
-  }
-  const body = await response.json();
-  return body;
-}
-
-// 로그인 api GET
-
-export async function getMember() {
-  const response = await fetch("https://api.androidhive.info/contacts/", {
-    method: "GET",
-  });
-  if (!response.ok) {
-    throw new Error("멤버 리스트를 불러오는데 실패했습니다.");
-  }
-  const body = await response.json();
-  return body;
-}
-
-// 로그인 api DELETE
-
-export async function deleteMember(id) {
-  const response = await fetch(`https://api.androidhive.info/contacts/${id}`, {
-    method: "DELETE",
-  });
-  if (!response.ok) {
-    throw new Error("멤버 리스트를 삭제하는데 실패했습니다.");
   }
   const body = await response.json();
   return body;

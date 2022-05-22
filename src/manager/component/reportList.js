@@ -1,6 +1,7 @@
 import "../postManager.css";
 import "../manager.css";
 import "../../community/report/reportPosting.css";
+import { Link } from "react-router-dom";
 
 const ReportListItem = ({ item }) => {
   return (
@@ -8,7 +9,9 @@ const ReportListItem = ({ item }) => {
       <section>
         <div className="managerPosting">
           <div className="postName">
-            <p>{item.title}</p>
+            <Link to={`/posting/${item.id}`} state={{ item: item }}>
+              <p>{item.title}</p>
+            </Link>
           </div>
           <div className="postId">
             <p>{item.user}</p>

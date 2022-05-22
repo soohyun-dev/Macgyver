@@ -1,22 +1,29 @@
-import Navi from "../../components/Navi";
-import "./announce.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBullhorn } from "@fortawesome/free-solid-svg-icons";
-import AnnounceMenu from "./announceMenu";
-import { useState, useEffect } from "react";
-import { getPosting, updatePosting } from "../../api/api";
-import BottomPage from "../../components/bottomPage";
-import item from "../../mock/cmMock.json";
+import React from "react";
+import Navi from "../components/Navi";
+import "./community.css";
+import CommunityCatagory from "../components/communityCatagory";
+import CommunityPosting from "./communityPosting";
+import { useEffect, useState } from "react";
+import { deletePosting, getPosting, updatePosting } from "../api/api";
+import BottomPage from "../components/bottomPage";
 
-const Announce = () => {
+const LIMIT = 6;
+
+const Community = () => {
   const [offset, setOffset] = useState(0);
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [loadingError, setLoadingError] = useState(null);
   const [hasNext, setHasNext] = useState(false);
 
-  const result = items.filter((item) => item.rating === 10);
-  const LIMIT = 6;
+  const result = items.filter((item) => item.rating === 3);
+
+  const handleDelete = async (id) => {
+    const result = await deletePosting(id);
+    if (!result) return;
+
+    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
 
   const handleLoad = async (options) => {
     let result;
@@ -30,7 +37,6 @@ const Announce = () => {
     } finally {
       setIsLoading(false);
     }
-    console.log(result);
 
     const { paging, reviews } = result;
     if (options.offset === 0) {
@@ -61,33 +67,35 @@ const Announce = () => {
   useEffect(() => {
     handleLoad({ offset: 0, limit: LIMIT });
   }, []);
+
   return (
     <>
       <Navi />
-      <section id="announceBlock">
-        <FontAwesomeIcon icon={faBullhorn} className="announceIcon" />
-        <p className="announceTitle">맥가이버에서 알려드립니다!!</p>
-        <AnnounceMenu
+      <CommunityCatagory />
+
+      <section>
+        <div className="postingLocate"></div>
+      </section>
+      <section id="postingBlock">
+        <CommunityPosting
           items={result}
+          onDelete={handleDelete}
           onUpdate={updatePosting}
           onUpdateSuccess={handleUpdateSuccess}
         />
-        <div>
+        <div class="pBbutton">
           {hasNext && (
-            <button
-              className="pButton"
-              disabled={isLoading}
-              onClick={handleLoadMore}
-            >
+            <button disabled={isLoading} onClick={handleLoadMore}>
               더 보기
             </button>
           )}
           {loadingError?.message && <span>{loadingError.message}</span>}
         </div>
       </section>
+
       <BottomPage />
     </>
   );
 };
 
-export default Announce;
+export default Community;

@@ -11,6 +11,7 @@ const INITIAL_VALUES = {
   title: "",
   content: "",
   imgFile: null,
+  rating: 10,
 };
 
 const AnnounceWrite = ({
@@ -40,6 +41,7 @@ const AnnounceWrite = ({
     e.preventDefault();
     const formData = new FormData();
     formData.append("title", values.title);
+    formData.append("rating", values.rating);
     formData.append("content", values.content);
     formData.append("imgFile", values.imgFile);
     let result;
@@ -115,9 +117,13 @@ const AnnounceWrite = ({
               <section id="announceWriteSubmit">
                 <div>
                   <button
+                    className="writeButton"
                     type="submit"
                     disabled={isSubmitting}
                     style={{ margin: "0 40px", cursor: "pointer" }}
+                    onClick={() => {
+                      alert("공지 작성이 완료되었습니다.");
+                    }}
                   >
                     글 작성
                   </button>

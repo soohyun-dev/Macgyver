@@ -3,7 +3,7 @@ import Navi from "../components/Navi";
 import "./manager.css";
 import MemberList from "./component/memberList";
 import { useEffect, useState } from "react";
-import { deleteMember, getMember } from "../api/api";
+import { deleteUser, getUser } from "../api/api";
 
 const LIMIT = 8;
 
@@ -13,20 +13,20 @@ const Manager = () => {
   const [hasNext, setHasNext] = useState(false);
 
   const handleLoad = async (options) => {
-    const { contacts, paging } = await getMember(options);
+    const user = await getUser();
     if (options.offset === 0) {
-      setItems(contacts);
+      setItems(user);
     } else {
-      setItems([...items, ...contacts]);
+      setOffset([...items, ...user]);
     }
-    setOffset(options.offset + contacts.length);
-    setHasNext(paging.hasNext);
+    setItems(user);
+
+    console.log(items);
   };
 
   const handleDelete = async (id) => {
-    const result = await deleteMember(id);
+    const result = await deleteUser(id);
     if (!result) return;
-
     setItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
@@ -37,8 +37,6 @@ const Manager = () => {
   useEffect(() => {
     handleLoad({ offset: 0, limit: LIMIT });
   }, []);
-
-  console.log(items);
 
   return (
     <>

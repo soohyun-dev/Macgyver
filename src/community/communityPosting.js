@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Rating from "../rating";
 import "./communityPosting.css";
 import CoummunityWrite from "./communityWrite";
 
 const CommunityPostingItem = ({ item, onEdit, onDelete }) => {
-  const { title, imgUrl, rating } = item;
+  const { title, imgUrl } = item;
 
   const handleDeleteClick = () => {
     onDelete(item.id);
@@ -21,7 +20,12 @@ const CommunityPostingItem = ({ item, onEdit, onDelete }) => {
         <div className="cmPostingBlock">
           <div className="cmPostingContent">
             <div className="cmPostingTitle">
-              <Link to={`/posting/${item.id}`} state={{ item: item }}>
+              <Link
+                to={`/posting/${item.id}`}
+                state={{
+                  item: item,
+                }}
+              >
                 <p>{title}</p>
               </Link>
             </div>
@@ -30,9 +34,6 @@ const CommunityPostingItem = ({ item, onEdit, onDelete }) => {
             </div>
             <button onClick={handleEditClick}>수정</button>
             <button onClick={handleDeleteClick}>삭제</button>
-            <div className="tag">
-              <Rating value={rating} />
-            </div>
           </div>
         </div>
       </section>

@@ -21,6 +21,16 @@ const communityCatagory = ({ category }) => {
     },
   ];
 
+  //   {categories.map((c) => (
+  //     <p
+  //       key={c.name}
+  //       active={category === c.name}
+  //       onClick={() => onselect(c.name)}
+  //     >
+  //       {c.text}
+  //     </p>
+  //   ))}
+
   return (
     <>
       <section id="communityCatagoryBlock">
@@ -47,15 +57,7 @@ const communityCatagory = ({ category }) => {
               </li>
             </Link>
           </div>
-          {categories.map((c) => (
-            <p
-              key={c.name}
-              active={category === c.name}
-              onClick={() => onselect(c.name)}
-            >
-              {c.text}
-            </p>
-          ))}
+
           <div className="rightBlock">
             <Link to="/report">
               <li>

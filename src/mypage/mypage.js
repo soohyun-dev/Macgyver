@@ -4,18 +4,26 @@ import "../community/report/report.css";
 import "../community/report/reportTitle.css";
 import { Link } from "react-router-dom";
 import CampingContent from "../campingContent";
-import campingItems from "../mock/rcMock.json";
 import BottomPage from "../components/bottomPage";
-import { getPosting, deletePosting } from "../api/api";
+import { getPosting, deletePosting, getBookmark } from "../api/api";
 import PostingList from "../manager/component/postingList";
 import { useState, useEffect } from "react";
 
 const LIMIT = 8;
 
 const Mypage = () => {
-  // 북마크 되어있는 값만 전달
-  const Items = campingItems;
-  const result = Items.filter((item) => item.bookmark === true);
+  // 북마크 되어있는 값만 전
+  // const result = Items.filter((item) => item.bookmark === true);
+
+  const [bookmark, setBookmark] = useState([]);
+  // 북마크 정보
+  const bookmarkHandleLoad = async () => {
+    const bookmark = await getBookmark();
+    setBookmark(bookmark);
+  };
+  useEffect(() => {
+    bookmarkHandleLoad();
+  }, []);
 
   const [offset, setOffset] = useState(0);
   const [items, setItems] = useState([]);
@@ -28,6 +36,7 @@ const Mypage = () => {
     setItems((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
+  // 작성한 글
   const handleLoad = async (options) => {
     const { reviews, paging } = await getPosting(options);
     if (options.offset === 0) {
@@ -56,7 +65,7 @@ const Mypage = () => {
         </p>
       </section>
       <section id="myPageBookmark">
-        <CampingContent items={result} />
+        <CampingContent items={bookmark} />
       </section>
       <section>
         <div className="reportTitle">

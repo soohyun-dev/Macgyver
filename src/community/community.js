@@ -16,6 +16,10 @@ const Community = () => {
   const [loadingError, setLoadingError] = useState(null);
   const [hasNext, setHasNext] = useState(false);
 
+  const result = items.filter(
+    (item) => (item.rating !== 10) & (item.rating !== 4)
+  );
+
   const handleDelete = async (id) => {
     const result = await deletePosting(id);
     if (!result) return;
@@ -76,7 +80,7 @@ const Community = () => {
       </section>
       <section id="postingBlock">
         <CommunityPosting
-          items={items}
+          items={result}
           onDelete={handleDelete}
           onUpdate={updatePosting}
           onUpdateSuccess={handleUpdateSuccess}

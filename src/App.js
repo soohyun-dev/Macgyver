@@ -13,10 +13,9 @@ import CoummunityWrite from "./community/communityWrite";
 import RecommendContent from "./recommend/recommendContent";
 import AnnounceContent from "./community/announce/announceContent";
 import ReportPostingContent from "./community/report/reportPostingContent";
-import Hot from "./community/catagory/hot";
-import Tip from "./community/catagory/tip";
-import Free from "./community/catagory/free";
-import Review from "./community/catagory/review";
+import Tip from "./community/tip";
+import Free from "./community/free";
+import Review from "./community/review";
 import Manager from "./manager/manager";
 import PostManager from "./manager/postManager";
 import AnnounceWrite from "./manager/announceWrite";
@@ -35,7 +34,7 @@ const App = () => {
         <Route path="/recommendContent/:id" element={<RecommendContent />} />
         <Route path="/map" element={<Map />} />
         <Route path="/community" element={<Community />} />
-        <Route path="/hot" element={<Hot />} />
+        <Route path="/hot" element={<Community />} />
         <Route path="/tip" element={<Tip />} />
         <Route path="/free" element={<Free />} />
         <Route path="/review" element={<Review />} />

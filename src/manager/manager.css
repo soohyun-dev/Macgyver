@@ -104,6 +104,14 @@ p {
   font-weight: 700;
 }
 
+.managerPosting {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 10px 10px 0 0;
+  text-decoration: none;
+  font-weight: 700;
+}
+
 .managerId {
   max-width: 33%;
   width: 100%;

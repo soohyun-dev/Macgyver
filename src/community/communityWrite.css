@@ -1,3 +1,9 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+
+* {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
 p {
   display: inline;
 }
@@ -30,6 +36,11 @@ p {
   color: #000;
 }
 
+.annWriteTitle input {
+  width: 300px;
+  height: 20px;
+}
+
 .announceWrite p {
   background-color: #000;
   color: #fff;
@@ -51,13 +62,13 @@ p {
   text-align: center;
 }
 
-.annWriteTitle {
+.cmWriteTitle {
   font-size: 20px;
   margin: 10px 0px;
 }
 
-.annWriteTitle {
-  margin: 0 20px;
+.cmWriteTitle p {
+  margin-right: 10px;
 }
 
 .annWriteFile {
@@ -73,6 +84,28 @@ p {
 .annWriteFile input {
   width: 300px;
   height: 20px;
+}
+
+/*////////////////////////////////////////
+  /////////    게시판 분류   /////////////
+  //////////////////////////////////////// */
+
+.communitySort {
+  margin: 20px 10px;
+}
+
+.communitySort p {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.communitySort input {
+  cursor: pointer;
+  width: 50px;
+}
+
+.communitySort span {
+  font-size: 14px;
 }
 
 .annWriteWrite {
@@ -117,15 +150,40 @@ p {
 }
 
 .writeButton {
-  margin: 0 40px;
+  margin: 0 40px 0 0;
   cursor: pointer;
   border: none;
   padding: 10px 20px;
   background-color: #888;
   color: #fff;
   font-weight: 700;
+  font-size: 15px;
 }
 
 .writeButton:hover {
   opacity: 70%;
+}
+
+.backButton {
+  font-size: 15px;
+  padding: 10px 20px;
+  background-color: #ff8a80;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.backButton:hover {
+  opacity: 70%;
+}
+
+.cancelBtn {
+  font-size: 15px;
+  padding: 10px 20px;
+  background-color: #ff8a80;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 900;
 }

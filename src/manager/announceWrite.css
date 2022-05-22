@@ -76,3 +76,18 @@
   border-radius: 5px;
   margin-left: 20px;
 }
+
+.writeButton {
+  font-size: 16px;
+  margin: 0 40px;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  background-color: #888;
+  color: #fff;
+  font-weight: 700;
+}
+
+.writeButton:hover {
+  opacity: 70%;
+}

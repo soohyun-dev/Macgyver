@@ -38,7 +38,6 @@ const PostManager = () => {
   useEffect(() => {
     handleLoad({ offset: 0, limit: LIMIT });
   }, []);
-
   return (
     <>
       <Navi />

@@ -17,6 +17,7 @@ const Posting = () => {
       <section id="cmPostingBlock">
         <p className="cmPostingTitle">{title}</p>
       </section>
+
       <section id="psImg">
         <div className="cmPostingImg">
           <img src={imgUrl} alt="" />
@@ -33,12 +34,6 @@ const Posting = () => {
           <button className="like">
             <FontAwesomeIcon icon={faHeart} className="star" />
             Like
-          </button>
-        </div>
-        <div className="buttonContainer">
-          <button className="dislike">
-            <FontAwesomeIcon icon={faHeart} className="star" />
-            DisLike
           </button>
         </div>
       </div>

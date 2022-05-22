@@ -9,6 +9,7 @@ const INITIAL_VALUES = {
   title: "",
   content: "",
   imgFile: null,
+  rating: 1,
 };
 
 const CoummunityWrite = ({
@@ -41,7 +42,7 @@ const CoummunityWrite = ({
     formData.append("title", values.title);
     formData.append("content", values.content);
     formData.append("imgFile", values.imgFile);
-    console.log(formData);
+    formData.append("rating", values.rating);
     let result;
     try {
       setSubmittingError(null);
@@ -57,13 +58,25 @@ const CoummunityWrite = ({
     setValues(INITIAL_VALUES);
     onSubmitSuccess(review);
   };
+
+  // 체크 박스 하나만 선택
+  // 나중에 백엔드와 post 할때 rating 은 분류 컬럼 값으로 바꿔주면 됨.
+  const checkOnlyOne = (checkThis) => {
+    const checkboxes = document.getElementsByName("rating");
+    for (let i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i] !== checkThis) {
+        checkboxes[i].checked = false;
+      }
+    }
+  };
+
   return (
     <>
       <section id="announceWrite">
         <div className="announceWriteBlock">
-          <div className="annWriteTitle">
+          <div>
             <form onSubmit={handleSubmit}>
-              <div>
+              <div className="annWriteTitle">
                 <p>제목</p>
                 <input
                   className="titleInput"
@@ -78,6 +91,42 @@ const CoummunityWrite = ({
                   onChange={handleChange}
                 />
               </div>
+              <div className="communitySort">
+                <p>게시판 선택</p>
+                <input
+                  className="SortInput"
+                  type="checkbox"
+                  name="rating"
+                  value="1"
+                  onClick={(e) => checkOnlyOne(e.target)}
+                  onChange={handleInputChange}
+                />
+                <span>팁공유</span>
+                <input
+                  type="checkbox"
+                  name="rating"
+                  value="2"
+                  onClick={(e) => checkOnlyOne(e.target)}
+                  onChange={handleInputChange}
+                />
+                <span>자유</span>
+                <input
+                  type="checkbox"
+                  name="rating"
+                  value="3"
+                  onClick={(e) => checkOnlyOne(e.target)}
+                  onChange={handleInputChange}
+                />
+                <span>후기</span>
+                <input
+                  type="checkbox"
+                  name="rating"
+                  value="4"
+                  onClick={(e) => checkOnlyOne(e.target)}
+                  onChange={handleInputChange}
+                />
+                <span>신고방</span>
+              </div>
               <div className="annWriteWrite">
                 <textarea
                   name="content"
@@ -88,6 +137,9 @@ const CoummunityWrite = ({
               <section id="announceWriteSubmit">
                 <div>
                   <button
+                    onClick={() => {
+                      alert("글 작성이 완료되었습니다.");
+                    }}
                     className="writeButton"
                     type="submit"
                     disabled={isSubmitting}
@@ -95,13 +147,16 @@ const CoummunityWrite = ({
                   >
                     글 작성
                   </button>
-                  {onCancel && <button onClick={onCancel}>취소</button>}
+
+                  {onCancel && (
+                    <button onClick={onCancel} className="cancelBtn">
+                      취소
+                    </button>
+                  )}
                   {!onCancel && (
-                    <Link
-                      to="/community"
-                      style={{ fontSize: "16px", padding: "10px 20px" }}
-                    >
-                      되돌아가기
+                    <Link to="/community">
+                      {" "}
+                      <button className="backButton">되돌아가기</button>
                     </Link>
                   )}
                 </div>
