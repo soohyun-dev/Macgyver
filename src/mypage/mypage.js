@@ -21,6 +21,7 @@ const Mypage = () => {
     const bookmark = await getBookmark();
     setBookmark(bookmark);
   };
+
   useEffect(() => {
     bookmarkHandleLoad();
   }, []);

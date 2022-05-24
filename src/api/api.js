@@ -2,7 +2,7 @@ import axios from "axios";
 
 export async function getBookmark() {
   const response = await fetch(
-    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/user/mypage/bookmark",
+    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/user/mypage",
     {
       method: "GET",
     }
@@ -10,6 +10,7 @@ export async function getBookmark() {
   if (!response.ok) {
     throw new Error("북마크 정보를 불러오는데 실패했습니다");
   }
+  console.log(response);
   const body = await response.json();
   console.log(body);
   return body;
