@@ -1,4 +1,4 @@
-# Macgyver React Code 
+# Macgyver - ML 기반 캠핑장 추천 시스템
 
 <br><br>
 ## 프로젝트 개요
