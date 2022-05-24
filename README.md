@@ -1,5 +1,24 @@
 # Macgyver React Code 
+
 <br><br>
+## 프로젝트 개요
+![image](https://user-images.githubusercontent.com/81623931/169924541-aed15039-72ab-4618-a4e2-22ea7339b678.png)
+
+코로나로 인해 지속적으로 성장해 나아가고 있는 캠핑 산업에 발맞춰서 자신의 선호도에 맞는 캠핑장들을 머신러닝을 통해 분류하여 이용자들에게 추천해주는 시스템을 개발.
+
+## 팀원 구성
+- 윤수현 (팀장) - FrontEnd, UI/UX 
+- 정요원 - BackEnd, DB 구축
+- 지하윤 - BackEnd, DB 구축
+- 채희지 - ML 모델링, 데이터 전처리 분석
+
+## 기술 스택
+![image](https://user-images.githubusercontent.com/81623931/169923984-60d3576f-0207-49aa-a7d1-259ac8044de9.png)
+
+
+## 개발 기록 (FrontEnd)
+
+
 ##깃허브 배포 버전
 https://soohyun-dev.github.io/Macgyver/
 <br><br>
