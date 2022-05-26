@@ -38,10 +38,9 @@ p {
 }
 
 .managerPosting {
-  margin-top: 20px;
+  margin-top: 10px;
   display: inline-block;
   margin-left: 110px;
-
   width: 85%;
   border-bottom: 1px solid #000f;
 }

@@ -14,7 +14,7 @@ const Report = () => {
   const [items, setItems] = useState([]);
   const [hasNext, setHasNext] = useState(false);
 
-  const reusult = items.filter((item) => item.rating === 4);
+  const result = items.filter((item) => item.rating === 4);
 
   const handleDelete = async (id) => {
     const result = await deletePosting(id);
@@ -42,6 +42,10 @@ const Report = () => {
     handleLoad({ offset: 0, limit: LIMIT });
   }, []);
 
+  let today = new Date();
+
+  console.log(today);
+
   return (
     <>
       <Navi />
@@ -57,7 +61,7 @@ const Report = () => {
           <p>작성일</p>
         </div>
       </section>
-      <ReportList items={reusult} onDelete={handleDelete} />
+      <ReportList items={result} onDelete={handleDelete} />
       <div class="loadButton">
         <button disabled={!hasNext} onClick={handleLoadMore}>
           더보기

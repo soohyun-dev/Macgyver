@@ -11,20 +11,34 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import BottomPage from "../components/bottomPage";
 import styled from "styled-components";
-import { getCamping } from "../api/api";
+import { getCamping, getUser3 } from "../api/api";
 
 const Recommend = () => {
   const [items, setItems] = useState([]);
+  const [camps, setCamps] = useState([]);
+  // 추천 캠핑장 정보
+  const handleLoadCamp = async () => {
+    const camps = await getUser3();
+    setCamps(camps.campingID);
+  };
 
+  useEffect(() => {
+    handleLoadCamp();
+  }, []);
+
+  console.log(camps);
+
+  // 모든 캠핑장 정보
   const handleLoad = async () => {
     const camp = await getCamping();
     setItems(camp);
   };
-  console.log(items.facltNm);
 
   useEffect(() => {
     handleLoad();
   }, []);
+
+  // 추천 캠핑장 필터
 
   const Container = styled.div`
     text-align: center;

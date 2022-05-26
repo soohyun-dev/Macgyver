@@ -78,6 +78,7 @@ const Announce = () => {
               className="pButton"
               disabled={isLoading}
               onClick={handleLoadMore}
+              style={{ marginTop: "100px" }}
             >
               더 보기
             </button>

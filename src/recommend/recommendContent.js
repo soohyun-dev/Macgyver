@@ -70,8 +70,9 @@ const RecommendContent = () => {
                   >
                     <img
                       className="clipboardImg"
-                      src="https://cdn.icon-icons.com/icons2/2098/PNG/512/copy_icon_128895.png"
+                      src="https://cdn-icons-png.flaticon.com/512/1621/1621635.png"
                       alt="복사하기"
+                      style={{ fontSize: "15px" }}
                     />
                   </button>
                   <p className="clipMapText">
@@ -83,7 +84,6 @@ const RecommendContent = () => {
                       <FontAwesomeIcon
                         icon={faArrowRightToBracket}
                         className="arrow"
-                        style={{ marginLeft: "10px" }}
                       />
                     </button>
                   </Link>

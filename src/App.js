@@ -23,6 +23,8 @@ import CheckList from "./checkList";
 import LoginMain from "./login/loginMain";
 import NaverLogin from "./NaverLogin";
 import NotFound from "./NotFound";
+import RegisterPage from "./login/signUp";
+import LoginPage from "./login/loginPage";
 
 const App = () => {
   return (
@@ -55,6 +57,9 @@ const App = () => {
         <Route path="/announceWrite" element={<AnnounceWrite />} />
         <Route path="/naverLogin" element={<NaverLogin />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/oauth/callback/kakao"></Route>
+        <Route path="/signUp" element={<RegisterPage />} />
+        <Route path="/loginpage" element={<LoginPage />} />
       </Routes>
     </>
   );

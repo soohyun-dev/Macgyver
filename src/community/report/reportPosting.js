@@ -2,6 +2,7 @@ import "./reportPosting.css";
 
 const ReportPosting = (item) => {
   const { title, user, day } = item;
+
   return (
     <>
       <section id="reportPost">

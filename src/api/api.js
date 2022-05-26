@@ -1,8 +1,23 @@
 import axios from "axios";
 
+export async function getUser3() {
+  const response = await fetch(
+    "http://221.145.28.93:3000/choice/user3?userID=3",
+    {
+      method: "GET",
+    }
+  );
+  if (!response.ok) {
+    throw new Error("리뷰를 불러오는데 실패했습니다");
+  }
+  const body = await response.json();
+  console.log(body);
+  return body;
+}
+
 export async function getBookmark() {
   const response = await fetch(
-    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/user/mypage",
+    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/user/mypage/bookmark",
     {
       method: "GET",
     }
@@ -46,7 +61,7 @@ export async function deleteUser(id) {
 
 export async function getCamping() {
   const response = await fetch(
-    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/camp/list",
+    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/camp/list",
     {
       method: "GET",
     }

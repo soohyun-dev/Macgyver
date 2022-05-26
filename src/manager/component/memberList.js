@@ -10,7 +10,7 @@ const MemberListItem = ({ item, onDelete }) => {
             <p>{item.userid}</p>
           </div>
           <div className="managerPostDay">
-            <p>{item.created_date}</p>
+            <p>{item.signUpDay}</p>
           </div>
           <div className="managerPostModify">
             <button onClick={handleDeleteClick}>회원 삭제</button>

@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getUser3 } from "./api/api";
 
 const CampingContentItem = ({ item }) => {
   const { firstImageUrl, facltNm, featureNm, lineIntro, bookmark } = item;
@@ -11,6 +12,7 @@ const CampingContentItem = ({ item }) => {
   const bookmarkChange = (v) => {
     item.bookmark = v;
   };
+
   return (
     <>
       <section className="recommend">

@@ -4,6 +4,7 @@ import "./manager.css";
 import MemberList from "./component/memberList";
 import { useEffect, useState } from "react";
 import { deleteUser, getUser } from "../api/api";
+import user from "../mock/userMock.json";
 
 const LIMIT = 8;
 
@@ -79,7 +80,7 @@ const Manager = () => {
         </div>
       </section>
 
-      <MemberList items={items} onDelete={handleDelete} />
+      <MemberList items={user} onDelete={handleDelete} />
 
       <div class="loadButton">
         <button disabled={!hasNext} onClick={handleLoadMore}>
