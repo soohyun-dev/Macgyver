@@ -8,12 +8,13 @@ import BottomPage from "../components/bottomPage";
 import { getPosting, deletePosting, getBookmark } from "../api/api";
 import PostingList from "../manager/component/postingList";
 import { useState, useEffect } from "react";
+import Items from "../mock/rcMock.json";
 
 const LIMIT = 8;
 
 const Mypage = () => {
   // 북마크 되어있는 값만 전
-  // const result = Items.filter((item) => item.bookmark === true);
+  const result = Items.filter((item) => item.bookmark === true);
 
   const [bookmark, setBookmark] = useState([]);
   // 북마크 정보
@@ -66,7 +67,7 @@ const Mypage = () => {
         </p>
       </section>
       <section id="myPageBookmark">
-        <CampingContent items={bookmark} />
+        <CampingContent items={result} />
       </section>
       <section>
         <div className="reportTitle">

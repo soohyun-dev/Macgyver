@@ -12,6 +12,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import BottomPage from "../components/bottomPage";
 import styled from "styled-components";
 import { getCamping, getUser3 } from "../api/api";
+import item from "../mock/rcMock.json";
 
 const Recommend = () => {
   const [items, setItems] = useState([]);
@@ -26,7 +27,16 @@ const Recommend = () => {
     handleLoadCamp();
   }, []);
 
-  console.log(camps);
+  console.log(item);
+
+  //   const result = [];
+  //   for (var i = 0; i < camps.length; i++) {
+  //     result.push(item[camps[i] - 1]);
+  //   }
+  //   const result2 = JSON.stringify(result);
+  //   setItems(result2);
+
+  //   console.log(camps);
 
   // 모든 캠핑장 정보
   const handleLoad = async () => {
@@ -107,7 +117,7 @@ const Recommend = () => {
       <RecommendTitle />
       <Container>
         <SliderContainer ref={slideRef}>
-          <CampingContent items={items} />
+          <CampingContent items={item} />
         </SliderContainer>
         <div className="slideButtonBlock">
           <Button onClick={prevSlide} className="slideButton">

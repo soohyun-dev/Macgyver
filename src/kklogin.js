@@ -3,37 +3,27 @@ import React, { useEffect, useState } from "react";
 import KaKaoLogin from "react-kakao-login";
 import styled from "styled-components";
 
-function Login() {
-  const [data, setData] = useState("");
+const { Kakao } = window;
 
-  const code = new URL(window.location.href).searchParams.get("code");
-  console.log(code);
+function Login() {
   const responseKaKao = (res) => {
-    setData(res);
+    const code = new URL(window.location.href).searchParams.get("code");
+    console.log(process.env.REACT_APP_KAKAO_INIT_KEY);
+
+    Kakao.init(process.env.REACT_APP_KAKAO_INIT_KEY);
 
     const profile = JSON.stringify(res);
     console.log(profile);
 
     localStorage.setItem("user", JSON.stringify(res));
 
-    const req = new Request(
+    fetch(
       `http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/oauth/token?code=${code}`,
       {
         method: "GET",
         headers: {
           "content-type": "application/json",
-        },
-      }
-    );
-
-    console.log(req);
-    
-    fetch(
-      `http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/oauth/token?code=${code}`,
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
+          Accept: "application/json",
         },
       }
     )

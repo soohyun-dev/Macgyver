@@ -55,7 +55,7 @@ const Posting = () => {
 
       <hr style={{ opacity: "30%" }} />
 
-      <section id="comment">
+      {/* <section id="comment">
         <div className="cmPostingComment">
           <div className="commentWrite">
             <div className="commentContent">
@@ -89,7 +89,7 @@ const Posting = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

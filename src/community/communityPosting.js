@@ -32,8 +32,8 @@ const CommunityPostingItem = ({ item, onEdit, onDelete }) => {
             <div className="cmPostingImg">
               <img src={imgUrl} alt={title} />
             </div>
-            <button onClick={handleEditClick}>수정</button>
-            <button onClick={handleDeleteClick}>삭제</button>
+            {/* <button onClick={handleEditClick}>수정</button>
+            <button onClick={handleDeleteClick}>삭제</button> */}
           </div>
         </div>
       </section>

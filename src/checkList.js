@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserTag } from "@fortawesome/free-solid-svg-icons";
 import BottomPage from "./components/bottomPage";
 import { createCheckList } from "./api/api";
+import { Link } from "react-router-dom";
 
 const CheckList = () => {
   const checkOnlyOne1 = (checkThis) => {
@@ -283,6 +284,7 @@ const CheckList = () => {
           제출
         </button>
       </section>
+
       <BottomPage />
     </>
   );

@@ -2,8 +2,8 @@ import Navi from "../components/Navi";
 import "./loginMain.css";
 import "../style.css";
 import BottomPage from "../components/bottomPage";
+import Login from "../kklogin";
 import Klogin from "../klogin";
-import { Link } from "react-router-dom";
 
 const LoginMain = () => {
   return (
@@ -21,7 +21,6 @@ const LoginMain = () => {
         </div>
         <div className="loginBox">
           <Klogin />
-
           {/* 
           네이버 로그인 Btn
           <button
