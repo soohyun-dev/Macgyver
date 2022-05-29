@@ -3,12 +3,17 @@ import "./checkList.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserTag } from "@fortawesome/free-solid-svg-icons";
 import BottomPage from "./components/bottomPage";
-import { createCheckList } from "./api/api";
+import { createCheckList, postCheckList } from "./api/api";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
+
+const token = window.localStorage.getItem("token");
 
 const CheckList = () => {
+  const [result, setResult] = useState([]);
   const checkOnlyOne1 = (checkThis) => {
-    const checkboxes1 = document.getElementsByName("Q1");
+    const checkboxes1 = document.getElementsByName("q1");
     for (let i = 0; i < checkboxes1.length; i++) {
       if (checkboxes1[i] !== checkThis) {
         checkboxes1[i].checked = false;
@@ -17,7 +22,7 @@ const CheckList = () => {
   };
 
   const checkOnlyOne2 = (checkThis) => {
-    const checkboxes1 = document.getElementsByName("Q2");
+    const checkboxes1 = document.getElementsByName("q2");
     for (let i = 0; i < checkboxes1.length; i++) {
       if (checkboxes1[i] !== checkThis) {
         checkboxes1[i].checked = false;
@@ -25,7 +30,7 @@ const CheckList = () => {
     }
   };
   const checkOnlyOne3 = (checkThis) => {
-    const checkboxes1 = document.getElementsByName("Q3");
+    const checkboxes1 = document.getElementsByName("q3");
     for (let i = 0; i < checkboxes1.length; i++) {
       if (checkboxes1[i] !== checkThis) {
         checkboxes1[i].checked = false;
@@ -34,7 +39,7 @@ const CheckList = () => {
   };
 
   const checkOnlyOne4 = (checkThis) => {
-    const checkboxes1 = document.getElementsByName("Q4");
+    const checkboxes1 = document.getElementsByName("q4");
     for (let i = 0; i < checkboxes1.length; i++) {
       if (checkboxes1[i] !== checkThis) {
         checkboxes1[i].checked = false;
@@ -43,7 +48,7 @@ const CheckList = () => {
   };
 
   const checkOnlyOne5 = (checkThis) => {
-    const checkboxes1 = document.getElementsByName("Q5");
+    const checkboxes1 = document.getElementsByName("q5");
     for (let i = 0; i < checkboxes1.length; i++) {
       if (checkboxes1[i] !== checkThis) {
         checkboxes1[i].checked = false;
@@ -52,7 +57,7 @@ const CheckList = () => {
   };
 
   const checkOnlyOne6 = (checkThis) => {
-    const checkboxes1 = document.getElementsByName("Q6");
+    const checkboxes1 = document.getElementsByName("q6");
     for (let i = 0; i < checkboxes1.length; i++) {
       if (checkboxes1[i] !== checkThis) {
         checkboxes1[i].checked = false;
@@ -61,52 +66,50 @@ const CheckList = () => {
   };
 
   const report = () => {
-    var msg = [{}];
-    var checkBoxes1 = document.getElementsByName("Q1");
-    var checkBoxes2 = document.getElementsByName("Q2");
-    var checkBoxes3 = document.getElementsByName("Q3");
-    var checkBoxes4 = document.getElementsByName("Q4");
-    var checkBoxes5 = document.getElementsByName("Q5");
-    var checkBoxes6 = document.getElementsByName("Q6");
+    var list = new Object();
+    var msg = {};
+    var checkBoxes1 = document.getElementsByName("q1");
+    var checkBoxes2 = document.getElementsByName("q2");
+    var checkBoxes3 = document.getElementsByName("q3");
+    var checkBoxes4 = document.getElementsByName("q4");
+    var checkBoxes5 = document.getElementsByName("q5");
+    var checkBoxes6 = document.getElementsByName("q6");
 
     for (var i = 0; i < checkBoxes1.length; i++) {
       if (checkBoxes1[i].checked) {
-        msg["Q1"] = checkBoxes1[i].value;
+        list.q1 = checkBoxes1[i].value;
       }
     }
     for (var j = 0; j < checkBoxes2.length; j++) {
       if (checkBoxes2[j].checked) {
-        msg["Q2"] = checkBoxes2[j].value;
+        list.q2 = checkBoxes2[j].value;
       }
     }
     for (var k = 0; k < checkBoxes3.length; k++) {
       if (checkBoxes3[k].checked) {
-        msg["Q3"] = checkBoxes3[k].value;
+        list.q3 = checkBoxes3[k].value;
       }
     }
     for (var l = 0; l < checkBoxes4.length; l++) {
       if (checkBoxes4[l].checked) {
-        msg["Q4"] = checkBoxes4[l].value;
+        list.q4 = checkBoxes4[l].value;
       }
     }
     for (var m = 0; m < checkBoxes5.length; m++) {
       if (checkBoxes5[m].checked) {
-        msg["Q5"] = checkBoxes5[m].value;
+        list.q5 = checkBoxes5[m].value;
       }
     }
     for (var n = 0; n < checkBoxes6.length; n++) {
       if (checkBoxes6[n].checked) {
-        msg["Q6"] = checkBoxes6[n].value;
+        list.q6 = checkBoxes6[n].value;
       }
     }
 
     // 결과값 송신
-    console.log(msg);
-    const submit = (msg) => {
-      createCheckList(msg);
-    };
-
-    submit();
+    console.log(list);
+    setResult(list);
+    postCheckList(list);
   };
 
   return (
@@ -133,7 +136,7 @@ const CheckList = () => {
               <div>
                 <input
                   type="checkbox"
-                  name="Q1"
+                  name="q1"
                   value="1"
                   onClick={(e) => checkOnlyOne1(e.target)}
                 />
@@ -142,7 +145,7 @@ const CheckList = () => {
               <div style={{ backgroundColor: "#ff6434" }}>
                 <input
                   type="checkbox"
-                  name="Q1"
+                  name="q1"
                   value="0"
                   onClick={(e) => checkOnlyOne1(e.target)}
                 />
@@ -158,7 +161,7 @@ const CheckList = () => {
               <div>
                 <input
                   type="checkbox"
-                  name="Q2"
+                  name="q2"
                   value="1"
                   onClick={(e) => checkOnlyOne2(e.target)}
                 />
@@ -167,7 +170,7 @@ const CheckList = () => {
               <div style={{ backgroundColor: "#ff6434" }}>
                 <input
                   type="checkbox"
-                  name="Q2"
+                  name="q2"
                   value="0"
                   onClick={(e) => checkOnlyOne2(e.target)}
                 />
@@ -183,7 +186,7 @@ const CheckList = () => {
               <div>
                 <input
                   type="checkbox"
-                  name="Q3"
+                  name="q3"
                   value="1"
                   onClick={(e) => checkOnlyOne3(e.target)}
                 />
@@ -192,7 +195,7 @@ const CheckList = () => {
               <div style={{ backgroundColor: "#ff6434" }}>
                 <input
                   type="checkbox"
-                  name="Q3"
+                  name="q3"
                   value="0"
                   onClick={(e) => checkOnlyOne3(e.target)}
                 />
@@ -207,7 +210,7 @@ const CheckList = () => {
               <div style={{ backgroundColor: "#0064b7" }}>
                 <input
                   type="checkbox"
-                  name="Q4"
+                  name="q4"
                   value="0"
                   onClick={(e) => checkOnlyOne4(e.target)}
                 />
@@ -216,7 +219,7 @@ const CheckList = () => {
               <div style={{ backgroundColor: "#aa00ff" }}>
                 <input
                   type="checkbox"
-                  name="Q4"
+                  name="q4"
                   value="1"
                   onClick={(e) => checkOnlyOne4(e.target)}
                 />
@@ -232,7 +235,7 @@ const CheckList = () => {
               <div style={{ backgroundColor: "#0064b7" }}>
                 <input
                   type="checkbox"
-                  name="Q5"
+                  name="q5"
                   value="0"
                   onClick={(e) => checkOnlyOne5(e.target)}
                 />
@@ -241,7 +244,7 @@ const CheckList = () => {
               <div style={{ backgroundColor: "#aa00ff" }}>
                 <input
                   type="checkbox"
-                  name="Q5"
+                  name="q5"
                   value="1"
                   onClick={(e) => checkOnlyOne5(e.target)}
                 />
@@ -256,7 +259,7 @@ const CheckList = () => {
               <div style={{ backgroundColor: "#0064b7" }}>
                 <input
                   type="checkbox"
-                  name="Q6"
+                  name="q6"
                   value="0"
                   onClick={(e) => checkOnlyOne6(e.target)}
                 />
@@ -265,7 +268,7 @@ const CheckList = () => {
               <div style={{ backgroundColor: "#aa00ff" }}>
                 <input
                   type="checkbox"
-                  name="Q6"
+                  name="q6"
                   value="1"
                   onClick={(e) => checkOnlyOne6(e.target)}
                 />

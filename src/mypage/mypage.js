@@ -5,14 +5,39 @@ import "../community/report/reportTitle.css";
 import { Link } from "react-router-dom";
 import CampingContent from "../campingContent";
 import BottomPage from "../components/bottomPage";
-import { getPosting, deletePosting, getBookmark } from "../api/api";
+import {
+  getPosting,
+  deletePosting,
+  getBookmark,
+  getProfile,
+  getMyPage,
+} from "../api/api";
 import PostingList from "../manager/component/postingList";
 import { useState, useEffect } from "react";
 import Items from "../mock/rcMock.json";
+import { useNavigate } from "react-router-dom";
 
 const LIMIT = 8;
+const bookmarkCheck = true;
+
+const profile = window.localStorage.getItem("profile");
+console.log(profile);
 
 const Mypage = () => {
+  // 마이페이지 해당 유저 정보 불러오기
+  const [user, setUser] = useState([]);
+
+  const loadUser = async () => {
+    const information = await getMyPage();
+    setUser(information);
+  };
+
+  useEffect(() => {
+    loadUser();
+  }, []);
+  // 유저정보 출력해보기
+
+  getMyPage();
   // 북마크 되어있는 값만 전
   const result = Items.filter((item) => item.bookmark === true);
 
@@ -26,6 +51,8 @@ const Mypage = () => {
   useEffect(() => {
     bookmarkHandleLoad();
   }, []);
+
+  console.log(bookmark);
 
   const [offset, setOffset] = useState(0);
   const [items, setItems] = useState([]);
@@ -63,11 +90,11 @@ const Mypage = () => {
       <Navi />
       <section id="myPageTitle">
         <p className="titleText">
-          <span>윤수현</span>님의 페이지.
+          <span>{user.nickname}</span>님의 페이지.
         </p>
       </section>
       <section id="myPageBookmark">
-        <CampingContent items={result} />
+        <CampingContent items={bookmark} />
       </section>
       <section>
         <div className="reportTitle">

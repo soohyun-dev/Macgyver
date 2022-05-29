@@ -11,23 +11,22 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import BottomPage from "../components/bottomPage";
 import styled from "styled-components";
-import { getCamping, getUser3 } from "../api/api";
-import item from "../mock/rcMock.json";
+import { getCamping } from "../api/api";
 
 const Recommend = () => {
   const [items, setItems] = useState([]);
-  const [camps, setCamps] = useState([]);
-  // 추천 캠핑장 정보
-  const handleLoadCamp = async () => {
-    const camps = await getUser3();
-    setCamps(camps.campingID);
-  };
+  //   const [camps, setCamps] = useState([]);
+  //   // 추천 캠핑장 정보
+  //   const handleLoadCamp = async () => {
+  //     const camps = await getUser3();
+  //     setCamps(camps.campingID);
+  //   };
 
-  useEffect(() => {
-    handleLoadCamp();
-  }, []);
+  //   useEffect(() => {
+  //     handleLoadCamp();
+  //   }, []);
 
-  console.log(item);
+  //   console.log(item);
 
   //   const result = [];
   //   for (var i = 0; i < camps.length; i++) {
@@ -47,6 +46,8 @@ const Recommend = () => {
   useEffect(() => {
     handleLoad();
   }, []);
+
+  console.log(items);
 
   // 추천 캠핑장 필터
 
@@ -117,7 +118,7 @@ const Recommend = () => {
       <RecommendTitle />
       <Container>
         <SliderContainer ref={slideRef}>
-          <CampingContent items={item} />
+          <CampingContent items={items} />
         </SliderContainer>
         <div className="slideButtonBlock">
           <Button onClick={prevSlide} className="slideButton">

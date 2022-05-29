@@ -4,7 +4,7 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { getUser3 } from "./api/api";
+import { deleteBookmark, getUser3, postBookmark } from "./api/api";
 
 const CampingContentItem = ({ item }) => {
   const { firstImageUrl, facltNm, featureNm, lineIntro, bookmark } = item;
@@ -31,6 +31,7 @@ const CampingContentItem = ({ item }) => {
                     onClick={() => {
                       bookmarkChange(false);
                       setBookMarkIcon(!bookMarkIcon);
+                      deleteBookmark(item.id);
                     }}
                   />
                 ) : (
@@ -41,6 +42,7 @@ const CampingContentItem = ({ item }) => {
                     onClick={() => {
                       bookmarkChange(true);
                       setBookMarkIcon(!bookMarkIcon);
+                      postBookmark(item.id);
                     }}
                   />
                 )}
@@ -65,11 +67,19 @@ const CampingContentItem = ({ item }) => {
 };
 
 const CampingContent = ({ items }) => {
+  console.log(Object.keys(items).length);
+  console.log(items);
   return (
     <>
-      {items.map((item) => {
-        return <CampingContentItem item={item} />;
-      })}
+      <div>
+        {Object.keys(items).length === 12 ? (
+          <CampingContentItem item={items} />
+        ) : (
+          items.map((item) => {
+            return <CampingContentItem item={item} />;
+          })
+        )}
+      </div>
     </>
   );
 };

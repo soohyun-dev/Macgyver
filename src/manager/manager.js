@@ -80,7 +80,7 @@ const Manager = () => {
         </div>
       </section>
 
-      <MemberList items={user} onDelete={handleDelete} />
+      <MemberList items={items} onDelete={handleDelete} />
 
       <div class="loadButton">
         <button disabled={!hasNext} onClick={handleLoadMore}>

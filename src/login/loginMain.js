@@ -2,8 +2,7 @@ import Navi from "../components/Navi";
 import "./loginMain.css";
 import "../style.css";
 import BottomPage from "../components/bottomPage";
-import Login from "../kklogin";
-import Klogin from "../klogin";
+import KakaoLogin from "../kakaoLogin";
 
 const LoginMain = () => {
   return (
@@ -20,7 +19,7 @@ const LoginMain = () => {
           </p>
         </div>
         <div className="loginBox">
-          <Klogin />
+          <KakaoLogin />
           {/* 
           네이버 로그인 Btn
           <button
