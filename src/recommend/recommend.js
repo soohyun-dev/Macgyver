@@ -11,10 +11,14 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import BottomPage from "../components/bottomPage";
 import styled from "styled-components";
-import { getCamping } from "../api/api";
+import { getCamping, getCheck, getUser3 } from "../api/api";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Recommend = () => {
+  const navigate = useNavigate();
   const [items, setItems] = useState([]);
+
   //   const [camps, setCamps] = useState([]);
   //   // 추천 캠핑장 정보
   //   const handleLoadCamp = async () => {
@@ -26,20 +30,34 @@ const Recommend = () => {
   //     handleLoadCamp();
   //   }, []);
 
-  //   console.log(item);
-
   //   const result = [];
   //   for (var i = 0; i < camps.length; i++) {
-  //     result.push(item[camps[i] - 1]);
+  //     result.push(items[camps[i] - 1]);
   //   }
   //   const result2 = JSON.stringify(result);
   //   setItems(result2);
 
   //   console.log(camps);
 
-  // 모든 캠핑장 정보
+  // 응답에 맞게 페이지를 랜더링
+
+  //   const handleLoad2 = async () => {
+  //     const tmp = await getCheck();
+  //     setCheck(tmp);
+  //   };
+
+  //   useEffect(() => {
+  //     handleLoad2();
+  //   }, []);
+
+  //   console.log("체크리스트", check);
+
+  ///////////////////////////////////////////////////////////////////////////
+  //                          캠핑장 정보 불러오기
+  ///////////////////////////////////////////////////////////////////////////
   const handleLoad = async () => {
     const camp = await getCamping();
+    console.log(camp);
     setItems(camp);
   };
 
@@ -47,7 +65,13 @@ const Recommend = () => {
     handleLoad();
   }, []);
 
-  console.log(items);
+  ////////////////////////////////////////////////////////////////////////////
+  //       체크리스트 정보가 없으면 체크리스트 페이지로 이동시키는 코드
+  ///////////////////////////////////////////////////////////////////////////
+  console.log("아이템", items);
+  if (items.length === 0) {
+    navigate("../checkList");
+  }
 
   // 추천 캠핑장 필터
 

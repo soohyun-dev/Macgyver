@@ -2,7 +2,32 @@ import axios from "axios";
 
 const token = window.localStorage.getItem("token");
 
-// 북마크 추가
+////////////////////////////////////////////////////////////////////////////
+//       체크리스트 정보가 없으면 체크리스트 페이지로 이동시키는 코드
+///////////////////////////////////////////////////////////////////////////
+export async function getCheck() {
+  const response = await fetch(
+    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/camp",
+    {
+      method: "GET",
+      headers: {
+        "content-type": "application/json",
+        Authorization: token,
+        request: token,
+      },
+    }
+  );
+  if (!response.ok) {
+    throw new Error("유저 체크리스트 정보를 불러오는데 실패했습니다");
+  }
+  const body = response;
+  console.log("체크리스트", body);
+  return body;
+}
+
+////////////////////////////////////////////////////////
+//                  북마크 추가
+////////////////////////////////////////////////////////
 export async function postBookmark(id) {
   const response = await fetch(
     `http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/bookmark/${id}`,
@@ -23,7 +48,9 @@ export async function postBookmark(id) {
   return body;
 }
 
-// 북마크 해제
+////////////////////////////////////////////////////////
+//                  북마크 해제
+////////////////////////////////////////////////////////
 export async function deleteBookmark(id) {
   const response = await fetch(
     `http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/bookmark/${id}`,
@@ -44,7 +71,9 @@ export async function deleteBookmark(id) {
   return body;
 }
 
-// 체크리스트 결과 송신
+////////////////////////////////////////////////////////
+//            체크리스트 결과 송신
+////////////////////////////////////////////////////////
 export async function postCheckList(result) {
   const response = await fetch(
     "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/user/prefer",
@@ -65,8 +94,9 @@ export async function postCheckList(result) {
   const body = await response.json();
   return body;
 }
-
-// 유저 정보3 불러오기
+////////////////////////////////////////////////////////
+//              유저 정보3 불러오기
+////////////////////////////////////////////////////////
 export async function getUser3() {
   const response = await fetch(
     "http://221.145.28.93:3000/choice/user3?userID=3",
@@ -138,12 +168,14 @@ export async function getUser() {
     }
   );
   if (!response.ok) {
-    throw new Error("리뷰를 불러오는데 실패했습니다");
+    throw new Error("유저 정보를 불러오는데 실패했습니다");
   }
   const body = await response.json();
   return body;
 }
-
+////////////////////////////////////////////////////////
+//                  유저 정보 삭제
+////////////////////////////////////////////////////////
 export async function deleteUser(id) {
   const response = await fetch(
     `http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/admin/userList/${id}`,
@@ -166,10 +198,12 @@ export async function deleteUser(id) {
   const body = await response.json();
   return body;
 }
-
+////////////////////////////////////////////////////////
+//                  캠핑장 불러오기
+////////////////////////////////////////////////////////
 export async function getCamping() {
   const response = await fetch(
-    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/camp/list",
+    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/camp/recommend",
     {
       method: "GET",
       headers: {
@@ -182,11 +216,14 @@ export async function getCamping() {
     throw new Error("캠핑장을 불러오는데 실패했습니다");
   }
   const body = await response.json();
+  console.log(body);
   return body;
 }
 
 const BASE_URL = "https://learn.codeit.kr/api";
-
+////////////////////////////////////////////////////////
+//               게시물 불러오기
+////////////////////////////////////////////////////////
 export async function getPosting({
   order = "createdAt",
   offset = 0,
@@ -201,7 +238,9 @@ export async function getPosting({
   return body;
 }
 
-// 생성
+////////////////////////////////////////////////////////
+//                  게시물 생성
+////////////////////////////////////////////////////////
 export async function createPosting(formData) {
   const response = await fetch(`${BASE_URL}/film-reviews`, {
     method: "POST",
@@ -214,7 +253,9 @@ export async function createPosting(formData) {
   return body;
 }
 
-// 수정
+////////////////////////////////////////////////////////
+//                   게시물 수정
+////////////////////////////////////////////////////////
 export async function updatePosting(id, formData) {
   const response = await fetch(`${BASE_URL}/film-reviews/${id}`, {
     method: "PUT",
@@ -227,7 +268,9 @@ export async function updatePosting(id, formData) {
   return body;
 }
 
-// 삭제
+////////////////////////////////////////////////////////
+//                    게시물 삭제
+////////////////////////////////////////////////////////
 
 export async function deletePosting(id) {
   const response = await fetch(`${BASE_URL}/film-reviews/${id}`, {

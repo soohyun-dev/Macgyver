@@ -5,20 +5,12 @@ import "../community/report/reportTitle.css";
 import { Link } from "react-router-dom";
 import CampingContent from "../campingContent";
 import BottomPage from "../components/bottomPage";
-import {
-  getPosting,
-  deletePosting,
-  getBookmark,
-  getProfile,
-  getMyPage,
-} from "../api/api";
+import { getPosting, deletePosting, getBookmark, getMyPage } from "../api/api";
 import PostingList from "../manager/component/postingList";
 import { useState, useEffect } from "react";
 import Items from "../mock/rcMock.json";
-import { useNavigate } from "react-router-dom";
 
 const LIMIT = 8;
-const bookmarkCheck = true;
 
 const profile = window.localStorage.getItem("profile");
 console.log(profile);
@@ -26,6 +18,8 @@ console.log(profile);
 const Mypage = () => {
   // 마이페이지 해당 유저 정보 불러오기
   const [user, setUser] = useState([]);
+
+  // 응답에 맞게 페이지를 랜더링
 
   const loadUser = async () => {
     const information = await getMyPage();
@@ -36,6 +30,7 @@ const Mypage = () => {
     loadUser();
   }, []);
   // 유저정보 출력해보기
+  console.log(user);
 
   getMyPage();
   // 북마크 되어있는 값만 전
@@ -85,6 +80,12 @@ const Mypage = () => {
     handleLoad({ offset: 0, limit: LIMIT });
   }, []);
 
+  //   let n = user.nickname;
+  //   if (n === undefined) {
+  //     setTimeout(() => {
+  //       window.location.reload();
+  //     }, 1000);
+  //   }
   return (
     <>
       <Navi />

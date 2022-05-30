@@ -6,10 +6,15 @@ p {
   padding: 20px 0;
 }
 
+.signUpDelText {
+  padding-top: 50px;
+}
+
 .signUpDelText p {
   color: rgb(231, 36, 36);
   display: inline-block;
   font-weight: 700;
+  font-size: 18px;
 }
 
 .signUpDelText p:nth-child(1) {

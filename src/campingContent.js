@@ -67,8 +67,6 @@ const CampingContentItem = ({ item }) => {
 };
 
 const CampingContent = ({ items }) => {
-  console.log(Object.keys(items).length);
-  console.log(items);
   return (
     <>
       <div>

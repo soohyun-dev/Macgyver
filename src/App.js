@@ -21,7 +21,6 @@ import PostManager from "./manager/postManager";
 import AnnounceWrite from "./manager/announceWrite";
 import CheckList from "./checkList";
 import LoginMain from "./login/loginMain";
-import NaverLogin from "./NaverLogin";
 import NotFound from "./NotFound";
 import RegisterPage from "./login/signUp";
 import LoginPage from "./login/loginPage";
@@ -55,7 +54,6 @@ const App = () => {
         <Route path="/manager" element={<Manager />} />
         <Route path="/postManager" element={<PostManager />} />
         <Route path="/announceWrite" element={<AnnounceWrite />} />
-        <Route path="/naverLogin" element={<NaverLogin />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/oauth/callback/kakao"></Route>
         <Route path="/signUp" element={<RegisterPage />} />

@@ -14,6 +14,7 @@ const RecommendTitle = () => {
   useEffect(() => {
     loadUser();
   }, []);
+  console.log("유저", user);
 
   return (
     <section id="myPageTitle">
