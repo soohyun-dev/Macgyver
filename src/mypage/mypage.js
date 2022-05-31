@@ -7,7 +7,7 @@ import CampingContent from "../campingContent";
 import BottomPage from "../components/bottomPage";
 import { getPosting, deletePosting, getBookmark, getMyPage } from "../api/api";
 import PostingList from "../manager/component/postingList";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Items from "../mock/rcMock.json";
 
 const LIMIT = 8;
@@ -18,7 +18,7 @@ console.log(profile);
 const Mypage = () => {
   // 마이페이지 해당 유저 정보 불러오기
   const [user, setUser] = useState([]);
-
+  const tmp = [];
   // 응답에 맞게 페이지를 랜더링
 
   const loadUser = async () => {
@@ -86,6 +86,15 @@ const Mypage = () => {
   //       window.location.reload();
   //     }, 1000);
   //   }
+
+  const mounted = useRef(false);
+  useEffect(() => {
+    if (!mounted.current) {
+      mounted.current = true;
+    } else {
+      window.location.reload();
+    }
+  }, []);
   return (
     <>
       <Navi />
@@ -117,7 +126,7 @@ const Mypage = () => {
         </div>
       </section>
 
-      <PostingList items={items} onDelete={handleDelete} />
+      <PostingList items={tmp} onDelete={handleDelete} />
 
       <div class="loadButton">
         <button disabled={!hasNext} onClick={handleLoadMore}>

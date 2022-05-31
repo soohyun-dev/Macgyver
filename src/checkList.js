@@ -112,6 +112,11 @@ const CheckList = () => {
     postCheckList(list);
   };
 
+  function submitSuccess() {
+    alert("제출 완료되었습니다! 추천페이지로 이동됩니다.");
+    window.location.href = "./Recommend";
+  }
+
   return (
     <>
       <Navi />
@@ -281,7 +286,7 @@ const CheckList = () => {
           type="submit"
           onClick={() => {
             report();
-            alert("제출되었습니다!");
+            submitSuccess();
           }}
         >
           제출

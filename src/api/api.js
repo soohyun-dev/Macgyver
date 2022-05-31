@@ -2,26 +2,26 @@ import axios from "axios";
 
 const token = window.localStorage.getItem("token");
 
-////////////////////////////////////////////////////////////////////////////
-//       체크리스트 정보가 없으면 체크리스트 페이지로 이동시키는 코드
-///////////////////////////////////////////////////////////////////////////
-export async function getCheck() {
+////////////////////////////////////////////////////////
+//            북마크 되어있는지 체크 (색상)
+////////////////////////////////////////////////////////
+
+export async function bookmarkCheck() {
   const response = await fetch(
-    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/camp",
+    "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/bookmark/ids",
     {
       method: "GET",
       headers: {
         "content-type": "application/json",
         Authorization: token,
-        request: token,
       },
     }
   );
   if (!response.ok) {
-    throw new Error("유저 체크리스트 정보를 불러오는데 실패했습니다");
+    throw new Error("북마크 아이콘 정보를 불러오는데 실패했습니다");
   }
-  const body = response;
-  console.log("체크리스트", body);
+  const body = await response.json();
+  console.log(body);
   return body;
 }
 
@@ -130,9 +130,7 @@ export async function getBookmark() {
   if (!response.ok) {
     throw new Error("북마크 정보를 불러오는데 실패했습니다");
   }
-  console.log("북마크", response);
   const body = await response.json();
-  console.log(body);
   return body;
 }
 ////////////////////////////////////////////////////////

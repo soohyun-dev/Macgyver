@@ -59,6 +59,7 @@ const Recommend = () => {
     const camp = await getCamping();
     console.log(camp);
     setItems(camp);
+    console.log("키값", items);
   };
 
   useEffect(() => {
@@ -73,7 +74,7 @@ const Recommend = () => {
     navigate("../checkList");
   }
 
-  // 추천 캠핑장 필터
+  //   // 추천 캠핑장 필터
 
   const Container = styled.div`
     text-align: center;
@@ -140,10 +141,12 @@ const Recommend = () => {
         </div>
       </div>
       <RecommendTitle />
-      <Container>
+
+      <Container style={{ width: "100%" }}>
         <SliderContainer ref={slideRef}>
           <CampingContent items={items} />
         </SliderContainer>
+
         <div className="slideButtonBlock">
           <Button onClick={prevSlide} className="slideButton">
             <FontAwesomeIcon icon={faArrowLeft} />
@@ -154,6 +157,7 @@ const Recommend = () => {
           </Button>
         </div>
       </Container>
+
       <BottomPage />
     </>
   );
