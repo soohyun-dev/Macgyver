@@ -14,7 +14,7 @@
 코로나로 인해 지속적으로 성장해 나아가고 있는 캠핑 산업에 발맞춰서 자신의 선호도에 맞는 캠핑장들을 머신러닝을 통해 분류하여 이용자들에게 추천해주는 시스템을 개발.
 
 ## 기술 스택
-![image](https://user-images.githubusercontent.com/81623931/169923984-60d3576f-0207-49aa-a7d1-259ac8044de9.png)
+![image](https://user-images.githubusercontent.com/81623931/171070671-1cf7e62d-e4ea-4733-8880-671141f1c9eb.png)
 
 
 ## 시스템 아키텍쳐
