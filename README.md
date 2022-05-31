@@ -16,6 +16,11 @@
 ![image](https://user-images.githubusercontent.com/81623931/169923984-60d3576f-0207-49aa-a7d1-259ac8044de9.png)
 
 
+## 시스템 아키텍쳐
+
+![image](https://user-images.githubusercontent.com/81623931/171070487-360b1381-b9b8-4168-b593-08f61e89988e.png)
+
+
 ## 개발 기록 (FrontEnd)
 
 
