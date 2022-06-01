@@ -14,10 +14,10 @@ const ReportListItem = ({ item }) => {
             </Link>
           </div>
           <div className="postId">
-            <p>{item.user}</p>
+            <p>{item.writer}</p>
           </div>
           <div className="postDay">
-            <p>{item.day}</p>
+            <p>{item.createdDate}</p>
           </div>
         </div>
       </section>

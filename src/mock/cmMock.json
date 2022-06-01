@@ -1,39 +1,74 @@
-[
-  {
-    "id": "1",
-    "title": "맥가이버 5월 스타벅스 이벤트!!",
-    "imgUrl": "https://cdn.imweb.me/upload/S201805215b02afce63ebe/a815694e7595c.jpg",
-    "content": "캠핑장 후기를 커뮤니티에 올려주신 분들중에 추첨해서 스타벅스 커피를 쏩니다!!"
+{
+  "0": {
+    "id": 14,
+    "addr1": "경기도 양주시 백석읍 기산로440번길 177",
+    "facltNm": "대궐오토캠핑장",
+    "featureNm": null,
+    "firstImageUrl": "https://gocamping.or.kr/upload/camp/725/thumb/thumb_720_23020AQIhPInUf2tdGSnoHxA.jpg",
+    "lineIntro": "아늑한 산속 오토캠핑장과 글램핑"
   },
-
-  {
-    "id": "2",
-    "title": "신규 캠핑장 예정 안내",
-    "imgUrl": "https://www.gyeongju.go.kr/upload/content/thumb/20200428/24F347BD8AE241D9B2B3FCA410B17329.jpg",
-    "content": "6월 신규 캠핑장 예정 안내입니다."
+  "1": {
+    "id": 16,
+    "addr1": "강원도 강릉시 왕산면 대기리 953번지",
+    "facltNm": "대기리산촌체험학교야영장",
+    "featureNm": null,
+    "firstImageUrl": null,
+    "lineIntro": null
   },
-  {
-    "id": "3",
-    "title": "코로나와 무더위를 이겨내자!! 계곡 주위 캠핑장 추천",
-    "imgUrl": "https://www.gyeongju.go.kr/upload/content/thumb/20200428/24F347BD8AE241D9B2B3FCA410B17329.jpg",
-    "content": "코로나와 무더위를 이겨내자!! 계곡 주위 캠핑장 추천입니다."
+  "2": {
+    "id": 19,
+    "addr1": "충북 제천시 봉양읍 옥전리 59-4번지",
+    "facltNm": "미소가든펜션야영장",
+    "featureNm": "펜션, 계곡 평상, 노래방",
+    "firstImageUrl": "https://gocamping.or.kr/upload/camp/1178/thumb/thumb_720_3882MAosfllBM0KkUjsYN33i.jpg",
+    "lineIntro": "숲속 캠핑장에 다양한 부대시설은 덤"
   },
-  {
-    "id": "4",
-    "title": "서울 내 베스트 3 캠핑장 소개",
-    "imgUrl": "https://www.gyeongju.go.kr/upload/content/thumb/20200428/24F347BD8AE241D9B2B3FCA410B17329.jpg",
-    "content": "서울 내 베스트3 캠핑장 소개입니다."
+  "3": {
+    "id": 21,
+    "addr1": "전라북도 완주군 화산면 종리",
+    "facltNm": "민들레동산 캠핑장",
+    "featureNm": "넓은 부지에 메타세콰이어가 숲을 이루고 개울이 흐르는 다소 특이한 곳이다. 숲산책과 염소의 방목을 구경할수 았다.",
+    "firstImageUrl": "https://gocamping.or.kr/upload/camp/1182/thumb/thumb_720_3667CamphYIrLzhKaE6JSOuo.jpg",
+    "lineIntro": "다람쥐들의 낙원인 민들레동산캠핑장에서 귀여운 다람쥐들과 캠핑을!"
   },
-  {
-    "id": "5",
-    "title": "5월 신규 캠핑장 개장 안내",
-    "imgUrl": "https://www.gyeongju.go.kr/upload/content/thumb/20200428/24F347BD8AE241D9B2B3FCA410B17329.jpg",
-    "content": "5월 신규 캠핑장 개장 리스트입니다."
+  "4": {
+    "id": 24,
+    "addr1": "강원도 영월군 영월읍 동강로 124-10",
+    "facltNm": "동강글램핑",
+    "featureNm": null,
+    "firstImageUrl": "https://gocamping.or.kr/upload/camp/862/thumb/thumb_720_23240VAFXt22n8FX0UmK8fK9.jpg",
+    "lineIntro": null
   },
-  {
-    "id": "6",
-    "title": "광고 및 스팸성 게시물들 및 관련 유저들은 신고방에 바로 신고해주세요!",
-    "imgUrl": "https://www.gyeongju.go.kr/upload/content/thumb/20200428/24F347BD8AE241D9B2B3FCA410B17329.jpg",
-    "content": "광고 및 스팸성 게시물들 및 관련 유저들은 신고방에 바로 신고해주세요."
+  "5": {
+    "id": 25,
+    "addr1": "인천 강화군 길상면 동검길 159-13",
+    "facltNm": "동검도노을캠핑장",
+    "featureNm": null,
+    "firstImageUrl": "https://gocamping.or.kr/upload/camp/866/thumb/thumb_720_0210doTpcD0QrJTQnYauD1V6.jpg",
+    "lineIntro": "답답한 도시를 떠나 아름다운 갯벌, 아름다운 노을빛이 기다리는 동검도 노을캠핑장에서 멋진 추억을 남겨보세요."
+  },
+  "6": {
+    "id": 26,
+    "addr1": "제주특별자치도 서귀포시 안덕면 동광리",
+    "facltNm": "동광농촌체험마을",
+    "featureNm": null,
+    "firstImageUrl": null,
+    "lineIntro": null
+  },
+  "7": {
+    "id": 28,
+    "addr1": "강원도 횡성군 서원면 압곡로 203",
+    "facltNm": "횡성동당미계곡캠핑장",
+    "featureNm": null,
+    "firstImageUrl": null,
+    "lineIntro": null
+  },
+  "8": {
+    "id": 29,
+    "addr1": "강원도 삼척시 근덕면 동막리",
+    "facltNm": "동막골야영장",
+    "featureNm": null,
+    "firstImageUrl": "https://gocamping.or.kr/upload/camp/874/thumb/thumb_720_13712WhNY69dFiH3EnXzvJl7.jpg",
+    "lineIntro": null
   }
-]
+}

@@ -43,3 +43,13 @@
   transition: 0.1s;
   text-decoration: underline;
 }
+
+.logout {
+  cursor: pointer;
+  background-color: rgb(226, 133, 133);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #fff;
+  font-weight: 900;
+}

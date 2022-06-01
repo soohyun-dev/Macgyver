@@ -3,7 +3,7 @@ import Navi from "../../components/Navi";
 import "./report.css";
 import ReportTitle from "./reportTitle";
 import { useState, useEffect } from "react";
-import { getPosting, deletePosting } from "../../api/api";
+import { getPosting, deletePosting, getNotice } from "../../api/api";
 import ReportList from "../../manager/component/reportList";
 import item from "../../mock/reportMock.json";
 
@@ -13,8 +13,6 @@ const Report = () => {
   const [offset, setOffset] = useState(0);
   const [items, setItems] = useState([]);
   const [hasNext, setHasNext] = useState(false);
-
-  const result = items.filter((item) => item.rating === 4);
 
   const handleDelete = async (id) => {
     const result = await deletePosting(id);
@@ -38,13 +36,19 @@ const Report = () => {
     handleLoad({ offset, limit: LIMIT });
   };
 
-  useEffect(() => {
-    handleLoad({ offset: 0, limit: LIMIT });
-  }, []);
-
   let today = new Date();
 
-  console.log(today);
+  const [notice, setNotice] = useState([]);
+
+  const result = notice.filter((item) => item.category === "4");
+  const noticeLoad = async () => {
+    const chk = await getNotice();
+    setNotice(chk);
+  };
+
+  useEffect(() => {
+    noticeLoad();
+  }, []);
 
   return (
     <>

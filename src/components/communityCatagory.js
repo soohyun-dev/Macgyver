@@ -1,44 +1,22 @@
 import { Link } from "react-router-dom";
 import "./communityCatagory.css";
 
-const communityCatagory = ({ category }) => {
-  const categories = [
-    {
-      name: "hot",
-      text: "HOT",
-    },
-    {
-      name: "tip",
-      text: "팁공유",
-    },
-    {
-      name: "free",
-      text: "자유",
-    },
-    {
-      name: "review",
-      text: "후기",
-    },
-  ];
-
-  //   {categories.map((c) => (
-  //     <p
-  //       key={c.name}
-  //       active={category === c.name}
-  //       onClick={() => onselect(c.name)}
-  //     >
-  //       {c.text}
-  //     </p>
-  //   ))}
-
+const communityCatagory = () => {
   return (
     <>
       <section id="communityCatagoryBlock">
         <div>
           <div className="leftBlock">
-            <Link to="/hot">
-              <li style={{ backgroundColor: "#ff5983" }}>
-                <p>HOT</p>
+            <Link to="/community">
+              <li
+                style={{
+                  backgroundColor: "#ff5983",
+                  fontSize: "13px",
+                  height: "28px",
+                  width: "65px",
+                }}
+              >
+                <p>전체보기</p>
               </li>
             </Link>
             <Link to="/tip">

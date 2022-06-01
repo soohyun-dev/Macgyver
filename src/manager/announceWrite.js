@@ -60,6 +60,11 @@ const AnnounceWrite = ({
     onSubmitSuccess(review);
   };
 
+  function submitSuccess() {
+    alert("공지 등록이 완료되었습니다! 공지사항 페이지로 이동됩니다.");
+    window.location.href = "./announce";
+  }
+
   return (
     <>
       <Navi />
@@ -122,7 +127,7 @@ const AnnounceWrite = ({
                     disabled={isSubmitting}
                     style={{ margin: "0 40px", cursor: "pointer" }}
                     onClick={() => {
-                      alert("공지 작성이 완료되었습니다.");
+                      submitSuccess();
                     }}
                   >
                     글 작성

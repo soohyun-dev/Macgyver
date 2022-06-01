@@ -4,7 +4,13 @@ import "./community.css";
 import CommunityCatagory from "../components/communityCatagory";
 import CommunityPosting from "./communityPosting";
 import { useEffect, useState } from "react";
-import { deletePosting, getPosting, updatePosting } from "../api/api";
+import {
+  deleteMyNotice,
+  deletePosting,
+  getNotice,
+  getPosting,
+  updatePosting,
+} from "../api/api";
 import BottomPage from "../components/bottomPage";
 
 const LIMIT = 6;
@@ -16,15 +22,11 @@ const Community = () => {
   const [loadingError, setLoadingError] = useState(null);
   const [hasNext, setHasNext] = useState(false);
 
-  const result = items.filter(
-    (item) => (item.rating !== 10) & (item.rating !== 4)
-  );
-
   const handleDelete = async (id) => {
-    const result = await deletePosting(id);
+    const result = await deleteMyNotice(id);
     if (!result) return;
 
-    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    setNotice((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
   const handleLoad = async (options) => {
@@ -65,9 +67,19 @@ const Community = () => {
       ];
     });
   };
+  const [notice, setNotice] = useState([]);
 
+  const result = notice.filter(
+    (item) =>
+      item.category === "1" || item.category === "2" || item.category === "3"
+  );
+
+  const handleLoad2 = async () => {
+    const chk = await getNotice();
+    setNotice(chk);
+  };
   useEffect(() => {
-    handleLoad({ offset: 0, limit: LIMIT });
+    handleLoad2();
   }, []);
 
   return (

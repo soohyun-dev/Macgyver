@@ -24,6 +24,7 @@ import LoginMain from "./login/loginMain";
 import NotFound from "./NotFound";
 import RegisterPage from "./login/signUp";
 import LoginPage from "./login/loginPage";
+import New from "./recommend/New";
 
 const App = () => {
   return (
@@ -31,11 +32,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/checkList" element={<CheckList />} />
+        <Route path="/New" element={<New />} />
         <Route path="/recommend" element={<Recommend />} />
         <Route path="/recommendContent/:id" element={<RecommendContent />} />
         <Route path="/map" element={<Map />} />
         <Route path="/community" element={<Community />} />
-        <Route path="/hot" element={<Community />} />
         <Route path="/tip" element={<Tip />} />
         <Route path="/free" element={<Free />} />
         <Route path="/review" element={<Review />} />

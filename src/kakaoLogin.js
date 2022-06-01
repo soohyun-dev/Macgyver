@@ -5,7 +5,7 @@ import "./kakaoLogin.css";
 
 const KakaoLogin = () => {
   // 카카오 개발자 앱 키 선언
-  const REST_API_KEY = "a31288d41e5fc2bfcf3d40ec4cf3b196"; // RestAPI 키
+  const REST_API_KEY = "카카오RestAPI키"; // RestAPI 키
   const REDIRECT_URI = "http://localhost:3000/Macgyver/login"; // redirect 주소
   const KAKAO_AUTH_URI = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
   // 인가코드 받아오기
@@ -43,6 +43,7 @@ const KakaoLogin = () => {
       // 위에서 setItem 을 사용하여 내부에 저장시킨 토크을 다시 불러온다.
       // 이때, 내부 저장소에서 가져온 토큰을 다시 token 이라는 변수에 담는다.
       const token = window.localStorage.getItem("token");
+
       ////////////////////////////////////////////////////////////
       //               백엔드로 토큰 다시 넘기기
       ////////////////////////////////////////////////////////////

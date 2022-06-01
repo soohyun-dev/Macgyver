@@ -4,7 +4,12 @@ import "./manager.css";
 import { Link } from "react-router-dom";
 import PostingList from "./component/postingList";
 import { useEffect, useState } from "react";
-import { getPosting, deletePosting } from "../api/api";
+import {
+  getPosting,
+  deletePosting,
+  getNotice,
+  deleteMyNotice,
+} from "../api/api";
 
 const LIMIT = 8;
 
@@ -14,10 +19,10 @@ const PostManager = () => {
   const [hasNext, setHasNext] = useState(false);
 
   const handleDelete = async (id) => {
-    const result = await deletePosting(id);
+    const result = await deleteMyNotice(id);
     if (!result) return;
 
-    setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    setNotice((prevItems) => prevItems.filter((item) => item.id !== id));
   };
 
   const handleLoad = async (options) => {
@@ -35,9 +40,17 @@ const PostManager = () => {
     handleLoad({ offset, limit: LIMIT });
   };
 
+  const [notice, setNotice] = useState([]);
+
+  const noticeLoad = async () => {
+    const chk = await getNotice();
+    setNotice(chk);
+  };
+
   useEffect(() => {
-    handleLoad({ offset: 0, limit: LIMIT });
+    noticeLoad();
   }, []);
+
   return (
     <>
       <Navi />
@@ -84,7 +97,7 @@ const PostManager = () => {
         </div>
       </section>
 
-      <PostingList items={items} onDelete={handleDelete} />
+      <PostingList items={notice} onDelete={handleDelete} />
       <div class="loadButton">
         <button disabled={!hasNext} onClick={handleLoadMore}>
           더보기

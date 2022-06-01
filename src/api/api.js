@@ -2,6 +2,101 @@ import axios from "axios";
 
 const token = window.localStorage.getItem("token");
 
+///////////////////////////////////////////////////////
+//                  글 생성
+////////////////////////////////////////////////////////
+export async function createNotice(formData) {
+  const response = await fetch(
+    `http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/posts`,
+    {
+      method: "POST",
+      body: formData,
+    }
+  );
+  if (!response.ok) {
+    throw new Error("글을 작성하는데 실패했습니다.");
+  }
+  const body = await response.json();
+  return body;
+}
+
+////////////////////////////////////////////////////////
+//                  작성글 삭제
+////////////////////////////////////////////////////////
+export async function deleteMyNotice(id) {
+  const response = await fetch(
+    `http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/posts/${id}`,
+    {
+      method: "DELETE",
+    }
+  );
+  if (!response.ok) {
+    throw new Error("게시물을 삭제하는데 실패했습니다.");
+  }
+  const body = await response.json();
+  return body;
+}
+
+////////////////////////////////////////////////////////
+//                  작성글 조회
+////////////////////////////////////////////////////////
+export async function getMyNotice() {
+  const response = await fetch(
+    `http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/user/post`,
+    {
+      method: "GET",
+      headers: {
+        "content-type": "application/json",
+        Authorization: token,
+      },
+    }
+  );
+  if (!response.ok) {
+    throw new Error("작성글 정보를 불러오는데 실패했습니다");
+  }
+  const body = await response.json();
+  console.log("게시물 체크", body);
+  return body;
+}
+
+////////////////////////////////////////////////////////
+//                  게시물 조회
+////////////////////////////////////////////////////////
+export async function getNotice() {
+  const response = await fetch(
+    `http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/posts`,
+    {
+      method: "GET",
+    }
+  );
+  if (!response.ok) {
+    throw new Error("공지 정보를 불러오는데 실패했습니다");
+  }
+  const body = await response.json();
+  console.log("게시물 체크", body);
+  return body;
+}
+
+////////////////////////////////////////////////////////
+//            시나리오2 캠핑장 정보
+////////////////////////////////////////////////////////
+
+export async function camp2() {
+  const response = await fetch("http://221.145.28.93:3000/recomm?userID=257", {
+    method: "GET",
+    headers: {
+      "content-type": "application/json",
+      Authorization: token,
+    },
+  });
+  if (!response.ok) {
+    throw new Error("북마크 아이콘 정보를 불러오는데 실패했습니다");
+  }
+
+  const body = await response.json();
+  return body;
+}
+
 ////////////////////////////////////////////////////////
 //            북마크 되어있는지 체크 (색상)
 ////////////////////////////////////////////////////////
@@ -21,7 +116,6 @@ export async function bookmarkCheck() {
     throw new Error("북마크 아이콘 정보를 불러오는데 실패했습니다");
   }
   const body = await response.json();
-  console.log(body);
   return body;
 }
 
@@ -92,23 +186,6 @@ export async function postCheckList(result) {
     throw new Error("체크리스트 결과를 전달하는데 실패했습니다");
   }
   const body = await response.json();
-  return body;
-}
-////////////////////////////////////////////////////////
-//              유저 정보3 불러오기
-////////////////////////////////////////////////////////
-export async function getUser3() {
-  const response = await fetch(
-    "http://221.145.28.93:3000/choice/user3?userID=3",
-    {
-      method: "GET",
-    }
-  );
-  if (!response.ok) {
-    throw new Error("리뷰를 불러오는데 실패했습니다");
-  }
-  const body = await response.json();
-  console.log(body);
   return body;
 }
 
@@ -214,7 +291,6 @@ export async function getCamping() {
     throw new Error("캠핑장을 불러오는데 실패했습니다");
   }
   const body = await response.json();
-  console.log(body);
   return body;
 }
 

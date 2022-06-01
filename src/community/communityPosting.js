@@ -2,9 +2,14 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./communityPosting.css";
 import CoummunityWrite from "./communityWrite";
+import Logo from "../MacGyver.jpg";
 
 const CommunityPostingItem = ({ item, onEdit, onDelete }) => {
   const { title, imgUrl } = item;
+
+  console.log(imgUrl);
+
+  const ImageUrl = imgUrl === null ? Logo : imgUrl;
 
   const handleDeleteClick = () => {
     onDelete(item.id);
@@ -30,7 +35,7 @@ const CommunityPostingItem = ({ item, onEdit, onDelete }) => {
               </Link>
             </div>
             <div className="cmPostingImg">
-              <img src={imgUrl} alt={title} />
+              <img src={ImageUrl} alt={title} />
             </div>
             {/* <button onClick={handleEditClick}>수정</button>
             <button onClick={handleDeleteClick}>삭제</button> */}

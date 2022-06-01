@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBullhorn } from "@fortawesome/free-solid-svg-icons";
 import AnnounceMenu from "./announceMenu";
 import { useState, useEffect } from "react";
-import { getPosting, updatePosting } from "../../api/api";
+import { getNotice, getPosting, updatePosting } from "../../api/api";
 import BottomPage from "../../components/bottomPage";
 import item from "../../mock/cmMock.json";
 
@@ -15,7 +15,8 @@ const Announce = () => {
   const [loadingError, setLoadingError] = useState(null);
   const [hasNext, setHasNext] = useState(false);
 
-  const result = items.filter((item) => item.rating === 10);
+  const [notice, setNotice] = useState([]);
+
   const LIMIT = 6;
 
   const handleLoad = async (options) => {
@@ -30,7 +31,6 @@ const Announce = () => {
     } finally {
       setIsLoading(false);
     }
-    console.log(result);
 
     const { paging, reviews } = result;
     if (options.offset === 0) {
@@ -58,9 +58,16 @@ const Announce = () => {
     });
   };
 
+  const result = notice.filter((item) => item.category === "5");
+  const noticeLoad = async () => {
+    const chk = await getNotice();
+    setNotice(chk);
+  };
+
   useEffect(() => {
-    handleLoad({ offset: 0, limit: LIMIT });
+    noticeLoad();
   }, []);
+
   return (
     <>
       <Navi />

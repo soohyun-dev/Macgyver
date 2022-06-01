@@ -13,7 +13,6 @@ import {
 import Logo from "./MacGyver.jpg";
 
 const CampingContentItem = ({ item }) => {
-  console.log("아이템", item);
   const { id, firstImageUrl, facltNm, addr1, lineIntro, bookmark } = item;
   const [bookMarkIcon, setBookMarkIcon] = useState(bookmark);
   const bookmarkChange = (v) => {
@@ -30,10 +29,6 @@ const CampingContentItem = ({ item }) => {
     setCheck(information);
   };
 
-  useEffect(() => {
-    loadBookmark();
-  }, []);
-
   //////////////////////////////////////////////////////////////////////
   //          북마크 아이콘 색깔변경을 위한 북마크 저장 확인
   //////////////////////////////////////////////////////////////////////
@@ -45,6 +40,7 @@ const CampingContentItem = ({ item }) => {
   };
 
   useEffect(() => {
+    loadBookmark();
     bookmarkHandleLoad();
   }, []);
 

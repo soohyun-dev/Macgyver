@@ -5,7 +5,13 @@ import "../community/report/reportTitle.css";
 import { Link } from "react-router-dom";
 import CampingContent from "../campingContent";
 import BottomPage from "../components/bottomPage";
-import { getPosting, deletePosting, getBookmark, getMyPage } from "../api/api";
+import {
+  getPosting,
+  deletePosting,
+  getBookmark,
+  getMyPage,
+  getMyNotice,
+} from "../api/api";
 import PostingList from "../manager/component/postingList";
 import { useState, useEffect, useRef } from "react";
 import Items from "../mock/rcMock.json";
@@ -26,11 +32,7 @@ const Mypage = () => {
     setUser(information);
   };
 
-  useEffect(() => {
-    loadUser();
-  }, []);
   // 유저정보 출력해보기
-  console.log(user);
 
   getMyPage();
   // 북마크 되어있는 값만 전
@@ -42,12 +44,6 @@ const Mypage = () => {
     const bookmark = await getBookmark();
     setBookmark(bookmark);
   };
-
-  useEffect(() => {
-    bookmarkHandleLoad();
-  }, []);
-
-  console.log(bookmark);
 
   const [offset, setOffset] = useState(0);
   const [items, setItems] = useState([]);
@@ -76,10 +72,6 @@ const Mypage = () => {
     handleLoad({ offset, limit: LIMIT });
   };
 
-  useEffect(() => {
-    handleLoad({ offset: 0, limit: LIMIT });
-  }, []);
-
   //   let n = user.nickname;
   //   if (n === undefined) {
   //     setTimeout(() => {
@@ -87,14 +79,20 @@ const Mypage = () => {
   //     }, 1000);
   //   }
 
-  const mounted = useRef(false);
+  const [notice, setNotice] = useState([]);
+  const cnt = localStorage.length;
+
+  const noticeLoad = async () => {
+    const chk = await getMyNotice();
+    setNotice(chk);
+  };
+
   useEffect(() => {
-    if (!mounted.current) {
-      mounted.current = true;
-    } else {
-      window.location.reload();
-    }
+    loadUser();
+    bookmarkHandleLoad();
+    noticeLoad();
   }, []);
+
   return (
     <>
       <Navi />
@@ -126,7 +124,7 @@ const Mypage = () => {
         </div>
       </section>
 
-      <PostingList items={tmp} onDelete={handleDelete} />
+      <PostingList items={notice} onDelete={handleDelete} />
 
       <div class="loadButton">
         <button disabled={!hasNext} onClick={handleLoadMore}>

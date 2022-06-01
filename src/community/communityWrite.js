@@ -2,7 +2,7 @@ import { useState } from "react";
 import FileInput from "../components/fileInput";
 import "./communityWrite.css";
 import handleCreateSuccess from "./community";
-import { createPosting } from "../api/api";
+import { createNotice, createPosting } from "../api/api";
 import { Link } from "react-router-dom";
 
 const INITIAL_VALUES = {
@@ -17,7 +17,7 @@ const CoummunityWrite = ({
   initialPreview,
   onSubmitSuccess = handleCreateSuccess,
   onCancel,
-  onSubmit = createPosting,
+  onSubmit = createNotice,
 }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submittingError, setSubmittingError] = useState(null);
@@ -41,8 +41,7 @@ const CoummunityWrite = ({
     console.log(formData);
     formData.append("title", values.title);
     formData.append("content", values.content);
-    formData.append("imgFile", values.imgFile);
-    formData.append("rating", values.rating);
+    formData.append("imgFile", values.imgUrl);
     let result;
     try {
       setSubmittingError(null);
@@ -69,6 +68,11 @@ const CoummunityWrite = ({
       }
     }
   };
+
+  function submitSuccess() {
+    alert("게시물 등록이 완료되었습니다! 커뮤니티 페이지로 이동됩니다.");
+    window.location.href = "./Community";
+  }
 
   return (
     <>
@@ -138,7 +142,7 @@ const CoummunityWrite = ({
                 <div>
                   <button
                     onClick={() => {
-                      alert("글 작성이 완료되었습니다.");
+                      submitSuccess();
                     }}
                     className="writeButton"
                     type="submit"

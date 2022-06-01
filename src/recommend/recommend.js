@@ -2,7 +2,6 @@ import "./recommend.css";
 import "../style.css";
 import Navi from "../components/Navi";
 import React, { useEffect, useRef, useState } from "react";
-import RecommendTitle from "./recommendTitle";
 import CampingContent from "../campingContent";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,13 +10,26 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import BottomPage from "../components/bottomPage";
 import styled from "styled-components";
-import { getCamping, getCheck, getUser3 } from "../api/api";
+import "./recommendTitle.css";
+import {
+  bookmarkCheck,
+  camp2,
+  getCamping,
+  getCheck,
+  getUser3,
+} from "../api/api";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import item from "../mock/rcMock.json";
 
 const Recommend = () => {
   const navigate = useNavigate();
   const [items, setItems] = useState([]);
+  const [items2, setItems2] = useState([]);
+
+  const profile = window.localStorage.getItem("profile");
+
+  console.log(profile);
 
   //   const [camps, setCamps] = useState([]);
   //   // 추천 캠핑장 정보
@@ -55,73 +67,54 @@ const Recommend = () => {
   ///////////////////////////////////////////////////////////////////////////
   //                          캠핑장 정보 불러오기
   ///////////////////////////////////////////////////////////////////////////
-  const handleLoad = async () => {
-    const camp = await getCamping();
-    console.log(camp);
-    setItems(camp);
-    console.log("키값", items);
+
+  var sor = [];
+
+  const handleLoad2 = async () => {
+    const cam = await camp2();
+    const count = Object.keys(cam).length;
+    console.log(count);
+    for (var i = 0; i < count - 1; i++) {
+      sor.push(cam[i]);
+    }
+    console.log(sor);
+    setItems(sor);
   };
 
+  //   var sor = [];
+  //   const handleLoad = async () => {
+  //     const cam = await camp2();
+
+  //     const count = Object.keys(cam).length;
+  //     console.log(count);
+  //     for (var i = 0; i < count - 1; i++) {
+  //       sor.push(cam[i]);
+  //     }
+  //     console.log(sor);
+  //     setItems(sor);
+  //   };
+
   useEffect(() => {
-    handleLoad();
+    handleLoad2();
   }, []);
+
+  // 시나리오 1
+  //   const handleLoad = async () => {
+  //     const camp = await getCamping();
+  //     console.log(camp);
+  //     setItems(camp);
+  //     console.log("키값", items);
+  //   };
 
   ////////////////////////////////////////////////////////////////////////////
   //       체크리스트 정보가 없으면 체크리스트 페이지로 이동시키는 코드
   ///////////////////////////////////////////////////////////////////////////
-  console.log("아이템", items);
-  if (items.length === 0) {
-    navigate("../checkList");
-  }
+  //   console.log("아이템", items);
+  //   if (items.length === 0) {
+  //     navigate("../checkList");
+  //   }
 
   //   // 추천 캠핑장 필터
-
-  const Container = styled.div`
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-    overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리
-  `;
-  const Button = styled.button`
-    margin: 0 20px;
-    padding: 10px 30px;
-    cursor: pointer;
-    border: none;
-    &:hover {
-      transition: all 0.3s ease-in-out;
-      opacity: 60%;
-    }
-  `;
-  const SliderContainer = styled.div`
-    margin: 0 40px;
-    width: 100%;
-    display: flex; //이미지들을 가로로 나열
-  `;
-  const TOTAL_SLIDES = 6;
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slideRef = useRef(null);
-
-  const nextSlide = () => {
-    if (currentSlide >= TOTAL_SLIDES) {
-      // 더 이상 넘어갈 슬라이드가 없으면 슬라이드를 초기화합니다.
-      setCurrentSlide(0);
-    } else {
-      setCurrentSlide(currentSlide + 1);
-    }
-  };
-  const prevSlide = () => {
-    if (currentSlide === 0) {
-      setCurrentSlide(TOTAL_SLIDES);
-    } else {
-      setCurrentSlide(currentSlide - 1);
-    }
-  };
-
-  useEffect(() => {
-    slideRef.current.style.transition = "all 0.2s ease-in-out";
-    slideRef.current.style.transform = `translateX(-${currentSlide}00%)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
-  }, [currentSlide]);
 
   return (
     <>
@@ -140,23 +133,13 @@ const Recommend = () => {
           </Link>
         </div>
       </div>
-      <RecommendTitle />
+      <section id="myPageTitle">
+        <p className="titleText">다음과 같은 캠핑장들을 추천해드려요!</p>
+      </section>
 
-      <Container style={{ width: "100%" }}>
-        <SliderContainer ref={slideRef}>
-          <CampingContent items={items} />
-        </SliderContainer>
-
-        <div className="slideButtonBlock">
-          <Button onClick={prevSlide} className="slideButton">
-            <FontAwesomeIcon icon={faArrowLeft} />
-          </Button>
-          <p className="slideText">Page {currentSlide + 1}</p>
-          <Button onClick={nextSlide} className="slideButton">
-            <FontAwesomeIcon icon={faArrowRight} />
-          </Button>
-        </div>
-      </Container>
+      <div className="CampingList">
+        <CampingContent items={items} />
+      </div>
 
       <BottomPage />
     </>
