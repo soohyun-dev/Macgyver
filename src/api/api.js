@@ -81,8 +81,8 @@ export async function getNotice() {
 //            시나리오2 캠핑장 정보
 ////////////////////////////////////////////////////////
 
-export async function camp2() {
-  const response = await fetch("http://221.145.28.93:3000/recomm?userID=257", {
+export async function camp2(id) {
+  const response = await fetch(`http://221.145.28.93:3000/recomm?userID=257`, {
     method: "GET",
     headers: {
       "content-type": "application/json",

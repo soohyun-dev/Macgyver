@@ -5,7 +5,7 @@ import "./kakaoLogin.css";
 
 const KakaoLogin = () => {
   // 카카오 개발자 앱 키 선언
-  const REST_API_KEY = "카카오RestAPI키"; // RestAPI 키
+  const REST_API_KEY = "a31288d41e5fc2bfcf3d40ec4cf3b196"; // RestAPI 키
   const REDIRECT_URI = "http://localhost:3000/Macgyver/login"; // redirect 주소
   const KAKAO_AUTH_URI = `https://kauth.kakao.com/oauth/authorize?client_id=${REST_API_KEY}&redirect_uri=${REDIRECT_URI}&response_type=code`;
   // 인가코드 받아오기
@@ -64,7 +64,7 @@ const KakaoLogin = () => {
           // 위에서 백엔드가 토큰을 잘받고 처리해서 유저정보를 다시 넘겨준다면, 그 응답을 처리한다.
           // data 라는 변수에 유저 정보를 저장하고, setItem을 사용해 로컬에 다시 저장한다.
           .then((data) => {
-            window.localStorage.setItem("profile", data);
+            window.localStorage.setItem("profile", JSON.stringify(data));
             console.log(data);
             // 만약, 유저정보를 잘 불러왔다면 navigate를 사용해 프론트엔드에서 설정한 마이페이지 경로를 설정해서 이동시킨다.
             if (data) {

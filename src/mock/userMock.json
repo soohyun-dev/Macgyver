@@ -1,52 +1,55 @@
-[
-  {
-    "id": 1,
-    "userid": "name1@naver.com",
-    "username": "name1",
-    "tel": "010-1111-1111",
-    "sex": "F",
-    "birthyear": "2000",
-    "birtyday": "01-01",
-    "signUpDay": "2022-04-16"
+{
+  "data": {
+    "createdDate": "2022-05-30T23:11:17",
+    "modifiedDate": "2022-05-30T23:11:17",
+    "id": 259,
+    "kakaoid": 2260498201,
+    "nickname": "지하윤",
+    "email": "evelynzi940@gmail.com",
+    "gender": "female",
+    "birthday": "0405",
+    "role": "USER"
   },
-  {
-    "id": 2,
-    "userid": "sunjoo@naver.com",
-    "username": "sunjoo",
-    "tel": "010-1111-1111",
-    "sex": "F",
-    "birthyear": "2000",
-    "birtyday": "01-01",
-    "signUpDay": "2022-04-16"
+  "status": 200,
+  "statusText": "",
+  "headers": {
+    "access-control-allow-credentials": "true",
+    "access-control-allow-origin": "http://localhost:3000",
+    "access-control-expose-headers": "Authorization, *",
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "connection": "keep-alive",
+    "content-type": "application/json",
+    "date": "Thu, 02 Jun 2022 04:11:55 GMT",
+    "expires": "0",
+    "keep-alive": "timeout=60",
+    "pragma": "no-cache",
+    "transfer-encoding": "chunked",
+    "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-xss-protection": "1; mode=block"
   },
-  {
-    "id": 3,
-    "userid": "soohyun@naver.com",
-    "username": "soohyun",
-    "tel": "010-1111-1111",
-    "sex": "M",
-    "birthyear": "2000",
-    "birtyday": "01-01",
-    "signUpDay": "2022-04-16"
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "transformRequest": [null],
+    "transformResponse": [null],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "env": { "FormData": null },
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJldmVseW56aTk0MEBnbWFpbC5jb20iLCJuaWNrbmFtZSI6IuyngO2VmOycpCIsImlkIjoyMjYwNDk4MjAxLCJleHAiOjE2NTUwMDU0Nzd9.0yPhgUXBofOaWILHQbKK5LoSxyQfjrZeU8Q5nJ6n_rQOGXsUtRh1B2WVB9u3eLF6QYYfIQpa7I-iMYnMHa7DRg",
+      "request": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJldmVseW56aTk0MEBnbWFpbC5jb20iLCJuaWNrbmFtZSI6IuyngO2VmOycpCIsImlkIjoyMjYwNDk4MjAxLCJleHAiOjE2NTUwMDU0Nzd9.0yPhgUXBofOaWILHQbKK5LoSxyQfjrZeU8Q5nJ6n_rQOGXsUtRh1B2WVB9u3eLF6QYYfIQpa7I-iMYnMHa7DRg"
+    },
+    "method": "get",
+    "url": "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/user/mypage"
   },
-  {
-    "id": 4,
-    "userid": "chemi@naver.com",
-    "username": "chemi",
-    "tel": "010-1111-1111",
-    "sex": "M",
-    "birthyear": "2000",
-    "birtyday": "01-01",
-    "signUpDay": "2022-04-15"
-  },
-  {
-    "id": 5,
-    "userid": "ruby@naver.com",
-    "username": "ruby",
-    "tel": "010-1111-1111",
-    "sex": "M",
-    "birthyear": "2000",
-    "birtyday": "01-01",
-    "signUpDay": "2022-04-15"
-  }
-]
+  "request": {}
+}

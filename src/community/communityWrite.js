@@ -35,6 +35,7 @@ const CoummunityWrite = ({
     handleChange(name, value);
   };
 
+  // 작성
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -61,7 +62,7 @@ const CoummunityWrite = ({
   // 체크 박스 하나만 선택
   // 나중에 백엔드와 post 할때 rating 은 분류 컬럼 값으로 바꿔주면 됨.
   const checkOnlyOne = (checkThis) => {
-    const checkboxes = document.getElementsByName("rating");
+    const checkboxes = document.getElementsByName("category");
     for (let i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i] !== checkThis) {
         checkboxes[i].checked = false;

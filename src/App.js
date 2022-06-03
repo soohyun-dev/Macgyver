@@ -5,7 +5,6 @@ import Recommend from "./recommend/recommend";
 import Community from "./community/community";
 import Map from "./Map";
 import Mypage from "./mypage/mypage";
-import SignUpDel from "./mypage/signUpDel";
 import Posting from "./community/posting";
 import Announce from "./community/announce/announce";
 import Report from "./community/report/report";
@@ -20,11 +19,9 @@ import Manager from "./manager/manager";
 import PostManager from "./manager/postManager";
 import AnnounceWrite from "./manager/announceWrite";
 import CheckList from "./checkList";
-import LoginMain from "./login/loginMain";
 import NotFound from "./NotFound";
-import RegisterPage from "./login/signUp";
-import LoginPage from "./login/loginPage";
 import New from "./recommend/New";
+import LoginMain from "./login/loginMain";
 
 const App = () => {
   return (
@@ -51,14 +48,11 @@ const App = () => {
         />
         <Route path="/login" element={<LoginMain />} />
         <Route path="/mypage" element={<Mypage />} />
-        <Route path="/signUpDel" element={<SignUpDel />} />
         <Route path="/manager" element={<Manager />} />
         <Route path="/postManager" element={<PostManager />} />
         <Route path="/announceWrite" element={<AnnounceWrite />} />
         <Route path="*" element={<NotFound />} />
         <Route path="/oauth/callback/kakao"></Route>
-        <Route path="/signUp" element={<RegisterPage />} />
-        <Route path="/loginpage" element={<LoginPage />} />
       </Routes>
     </>
   );

@@ -114,7 +114,7 @@ const CheckList = () => {
 
   function submitSuccess() {
     alert("제출 완료되었습니다! 추천페이지로 이동됩니다.");
-    window.location.href = "./Recommend";
+    window.location.href = "./New";
   }
 
   return (

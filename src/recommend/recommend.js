@@ -9,27 +9,15 @@ import { faArrowRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import BottomPage from "../components/bottomPage";
-import styled from "styled-components";
 import "./recommendTitle.css";
-import {
-  bookmarkCheck,
-  camp2,
-  getCamping,
-  getCheck,
-  getUser3,
-} from "../api/api";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
-import item from "../mock/rcMock.json";
+import { camp2 } from "../api/api";
 
 const Recommend = () => {
-  const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const [items2, setItems2] = useState([]);
 
-  const profile = window.localStorage.getItem("profile");
-
-  console.log(profile);
+  var data = localStorage.getItem("profile");
+  const userID = JSON.parse(data).data.id;
 
   //   const [camps, setCamps] = useState([]);
   //   // 추천 캠핑장 정보
@@ -69,8 +57,10 @@ const Recommend = () => {
   ///////////////////////////////////////////////////////////////////////////
 
   var sor = [];
+  console.log(JSON.parse(data).data.id);
 
   const handleLoad2 = async () => {
+    setItems2(data);
     const cam = await camp2();
     const count = Object.keys(cam).length;
     console.log(count);
@@ -80,6 +70,8 @@ const Recommend = () => {
     console.log(sor);
     setItems(sor);
   };
+
+  console.log(items);
 
   //   var sor = [];
   //   const handleLoad = async () => {

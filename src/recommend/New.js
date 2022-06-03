@@ -27,6 +27,7 @@ const New = () => {
   useEffect(() => {
     handleLoad2();
   }, []);
+  console.log(items);
 
   return (
     <>

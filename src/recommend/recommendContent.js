@@ -12,12 +12,10 @@ const RecommendContent = () => {
   const {
     facltNm,
     firstImageUrl,
+    featureNm,
     lineIntro,
     addr1,
     operPdCl,
-    themaEnvrnCl,
-    eqpmnLendCl,
-    animalCmgCl,
     homepage,
     resveUrl,
   } = item;
@@ -102,7 +100,10 @@ const RecommendContent = () => {
               <div className="campcontentBlock2">
                 <div className="campcontentTitle">이런 특징들이 있어요!</div>
                 <div className="campcontentText">
-                  <p>
+                  <div>
+                    <p>"{featureNm}"</p>
+                  </div>
+                  {/* <p>
                     <span style={{ color: "#ff844c" }}>특징 :</span>{" "}
                     {themaEnvrnCl}
                   </p>
@@ -112,7 +113,7 @@ const RecommendContent = () => {
                   </p>
                   <p style={{ marginTop: "10px" }}>
                     <span>애완견 동반 :</span> {animalCmgCl}
-                  </p>
+                  </p> */}
                 </div>
               </div>
               <div className="campcontentBlock2">

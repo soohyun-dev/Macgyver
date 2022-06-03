@@ -45,6 +45,7 @@ const CampingContentItem = ({ item }) => {
   }, []);
 
   const ImageUrl = firstImageUrl === "" ? Logo : firstImageUrl;
+
   const comment = lineIntro === "" ? "캠핑장 추천은 역시 MacGyver" : lineIntro;
 
   const cc = (id) => {

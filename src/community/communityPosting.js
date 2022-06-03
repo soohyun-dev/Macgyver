@@ -7,8 +7,6 @@ import Logo from "../MacGyver.jpg";
 const CommunityPostingItem = ({ item, onEdit, onDelete }) => {
   const { title, imgUrl } = item;
 
-  console.log(imgUrl);
-
   const ImageUrl = imgUrl === null ? Logo : imgUrl;
 
   const handleDeleteClick = () => {

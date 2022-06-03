@@ -29,7 +29,7 @@ const Posting = () => {
         </div>
       </section>
 
-      <div className="likeDiv">
+      {/* <div className="likeDiv">
         <div className="buttonContainer">
           <button className="like">
             <FontAwesomeIcon icon={faHeart} className="star" />
@@ -37,9 +37,9 @@ const Posting = () => {
           </button>
         </div>
       </div>
-      <hr />
+      <hr /> */}
 
-      <section>
+      {/* <section>
         <div className="cmPostingComment">
           <div>
             <p>댓글</p>
@@ -51,7 +51,7 @@ const Posting = () => {
             <button type="submit">등록</button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <hr style={{ opacity: "30%" }} />
 
