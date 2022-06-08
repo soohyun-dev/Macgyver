@@ -82,6 +82,7 @@ const Community = () => {
     handleLoad2();
   }, []);
 
+  console.log(JSON.stringify(result));
   return (
     <>
       <Navi />

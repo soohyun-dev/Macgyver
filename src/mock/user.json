@@ -1,0 +1,55 @@
+{
+  "data": {
+    "createdDate": "2022-05-29T17:52:44",
+    "modifiedDate": "2022-05-29T17:52:44",
+    "id": 257,
+    "kakaoid": 2256016594,
+    "nickname": "윤수현",
+    "email": "ysh235h@daum.net",
+    "gender": "male",
+    "birthday": "1228",
+    "role": "USER"
+  },
+  "status": 200,
+  "statusText": "",
+  "headers": {
+    "access-control-allow-credentials": "true",
+    "access-control-allow-origin": "http://localhost:3000",
+    "access-control-expose-headers": "Authorization, *",
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "connection": "keep-alive",
+    "content-type": "application/json",
+    "date": "Thu, 02 Jun 2022 11:22:38 GMT",
+    "expires": "0",
+    "keep-alive": "timeout=60",
+    "pragma": "no-cache",
+    "transfer-encoding": "chunked",
+    "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "x-xss-protection": "1; mode=block"
+  },
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "transformRequest": [null],
+    "transformResponse": [null],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "env": { "FormData": null },
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ5c2gyMzVoQGRhdW0ubmV0Iiwibmlja25hbWUiOiLsnKTsiJjtmIQiLCJpZCI6MjI1NjAxNjU5NCwiZXhwIjoxNjU1MDMyODgzfQ.05ZzkrrQKKG-fKAY0B76GccK06XnU3FwmDeug113MsOKtFGAdtXZzP5tYCG11czUOe_6XM3TIEefk0DKcLEGDw",
+      "request": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ5c2gyMzVoQGRhdW0ubmV0Iiwibmlja25hbWUiOiLsnKTsiJjtmIQiLCJpZCI6MjI1NjAxNjU5NCwiZXhwIjoxNjU1MDMyODgzfQ.05ZzkrrQKKG-fKAY0B76GccK06XnU3FwmDeug113MsOKtFGAdtXZzP5tYCG11czUOe_6XM3TIEefk0DKcLEGDw"
+    },
+    "method": "get",
+    "url": "http://ec2-3-35-91-109.ap-northeast-2.compute.amazonaws.com:8081/api/user/mypage"
+  },
+  "request": {}
+}

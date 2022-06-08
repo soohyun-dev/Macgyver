@@ -1,0 +1,62 @@
+[
+  {
+    "id": 6,
+    "category": "5",
+    "title": "광고 및 스팸성 게시물들 및 관련 유저들은 신고방에 바로 신고해주세요!",
+    "writer": "ysh235h@daum.net",
+    "content": "광고 및 스팸성 게시물들 및 관련 유저들은 신고방에 바로 신고해주세요.",
+    "createdDate": "2022-06-01T16:25:27",
+    "imgUrl": "https://www.gyeongju.go.kr/upload/content/thumb/20200428/24F347BD8AE241D9B2B3FCA410B17329.jpg",
+    "userid": 257
+  },
+  {
+    "id": 5,
+    "category": "5",
+    "title": "5월 신규 캠핑장 개장 안내",
+    "writer": "ysh235h@daum.net",
+    "content": "5월 신규 캠핑장 개장 리스트입니다.",
+    "createdDate": "2022-06-01T16:20:17",
+    "imgUrl": "https://www.gyeongju.go.kr/upload/content/thumb/20200428/24F347BD8AE241D9B2B3FCA410B17329.jpg",
+    "userid": 257
+  },
+  {
+    "id": 4,
+    "category": "5",
+    "title": "서울 내 베스트 3 캠핑장 소개",
+    "writer": "evelynzi940@gmail.com",
+    "content": "서울 내 베스트3 캠핑장 소개입니다.",
+    "createdDate": "2022-05-31T20:23:41",
+    "imgUrl": "https://www.gyeongju.go.kr/upload/content/thumb/20200428/24F347BD8AE241D9B2B3FCA410B17329.jpg",
+    "userid": 259
+  },
+  {
+    "id": 3,
+    "category": "5",
+    "title": "코로나와 무더위를 이겨내자!! 계곡 주위 캠핑장 추천",
+    "writer": "evelynzi940@gmail.com",
+    "content": "코로나와 무더위를 이겨내자!! 계곡 주위 캠핑장 추천입니다.",
+    "createdDate": "2022-05-31T20:21:18",
+    "imgUrl": "https://www.gyeongju.go.kr/upload/content/thumb/20200428/24F347BD8AE241D9B2B3FCA410B17329.jpg",
+    "userid": 259
+  },
+  {
+    "id": 2,
+    "category": "5",
+    "title": "신규 캠핑장 예정 안내",
+    "writer": "evelynzi940@gmail.com",
+    "content": "6월 신규 캠핑장 예정 안내입니다.",
+    "createdDate": "2022-05-31T20:17:17",
+    "imgUrl": "https://www.gyeongju.go.kr/upload/content/thumb/20200428/24F347BD8AE241D9B2B3FCA410B17329.jpg",
+    "userid": 259
+  },
+  {
+    "id": 1,
+    "category": "5",
+    "title": "맥가이버 5월 스타벅스 이벤트!!",
+    "writer": "evelynzi940@gmail.com",
+    "content": "캠핑장 후기를 커뮤니티에 올려주신 분들중에 추첨해서 스타벅스 커피를 쏩니다!!",
+    "createdDate": "2022-05-31T20:15:17",
+    "imgUrl": "https://cdn.imweb.me/upload/S201805215b02afce63ebe/a815694e7595c.jpg",
+    "userid": 259
+  }
+]

@@ -27,7 +27,7 @@ const New = () => {
   useEffect(() => {
     handleLoad2();
   }, []);
-  console.log(items);
+  console.log(JSON.stringify(items));
 
   return (
     <>

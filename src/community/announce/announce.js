@@ -68,6 +68,8 @@ const Announce = () => {
     noticeLoad();
   }, []);
 
+  console.log(JSON.stringify(result));
+
   return (
     <>
       <Navi />

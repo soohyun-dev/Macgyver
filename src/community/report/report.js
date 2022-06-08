@@ -50,6 +50,8 @@ const Report = () => {
     noticeLoad();
   }, []);
 
+  console.log(JSON.stringify(result));
+
   return (
     <>
       <Navi />
