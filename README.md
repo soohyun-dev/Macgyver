@@ -1,6 +1,10 @@
 # Macgyver - ML 기반 캠핑장 추천 시스템
 
 
+https://user-images.githubusercontent.com/81623931/196641177-81a2758e-1a59-4e5b-99a0-ef4c76cee3e8.mp4
+
+
+
 ## 팀원 구성
 - 윤수현 (팀장) - FrontEnd, UI/UX 
 - 정요원 - BackEnd, DB 구축
