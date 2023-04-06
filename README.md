@@ -26,8 +26,6 @@ https://user-images.githubusercontent.com/81623931/196641177-81a2758e-1a59-4e5b-
 ## 개발 기록 (FrontEnd)
 
 
-##깃허브 배포 버전
-https://soohyun-dev.github.io/Macgyver/
 <br><br>
 ## 2022년 5월 5일 ~ 6일 
 React Code 생성
